@@ -29,12 +29,12 @@ const root = createRoot(container);
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
+// root.render(
   <React.StrictMode>
-      <Provider>
-
+      {/*<Provider>*/}
       <Header/>
     <App />
-      </Provider>
-      <RouterProvider router={router}/>
+      {/*</Provider>*/}
+      {/*<RouterProvider router={router}/>*/}
   </React.StrictMode>,
 )
