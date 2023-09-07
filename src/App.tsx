@@ -5,7 +5,7 @@ import './App.css'
 import {Players} from "./features/players/Players";
 
 function App() {
-    const [player, setPlayer] = useState(0)
+    // const [player, setPlayer] = useState(0)
 
     return (
         <>
