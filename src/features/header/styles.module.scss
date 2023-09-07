@@ -1,6 +1,16 @@
 .header {
-  height: 50px;
+  height: 70px;
   box-shadow: 1px 2px 1px 1px lightgray;
+  background-color: rgba(130,231,169,0.99);
   grid-area: header;
   display: flex;
+  width: 1500px;
+  justify-content: end;
+}
+
+.button {
+  display: flex;
+  justify-content: end;
+  align-content: end;
+  height: 40px;
 }
