@@ -6,6 +6,7 @@ import {Header} from "./features/header/Header";
 import {Players} from "./features/players/Players";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Provider} from "react-redux";
+import {Login} from "./features/auth/Login/Login";
 
 
 const router = createBrowserRouter([
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/login',
-        // element: <Login/>,
+        element: <Login/>,
 
     },
     {
