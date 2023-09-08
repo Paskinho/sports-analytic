@@ -1,5 +1,6 @@
 import {useAppDispatch} from "../../../common/components/hooks/useAppDispatch";
 import {useNavigate} from "react-router-dom";
+import {Button} from "../../../components/ui/button";
 
 
 
@@ -29,6 +30,9 @@ export const Login = () => {
 
 
     return (
-        <div>Login</div>
+        <div>
+            <Button variant={'primary'} onClick={loginHandler}>SignIn</Button>
+            <div>Forgot Password</div>
+        </div>
     )
 }
