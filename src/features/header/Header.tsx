@@ -5,7 +5,6 @@ import {Players} from "../players/Players";
 export const Header = () => {
     return (
     <header className={s.header}>
-
     <div className={s.button}>
         <Button variant={"primary"}>Sign In</Button>
     </div>
