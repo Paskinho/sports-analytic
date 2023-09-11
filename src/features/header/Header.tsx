@@ -7,7 +7,7 @@ export const Header = () => {
     return (
     <header className={s.header}>
         <div className={s.typography}>
-        <Typography variant={'link1'}>Home</Typography>
+        <Typography variant={'link1'} color={'inherit'} onClick={()=> alert('Home')}>Home</Typography>
         </div>
     <div className={s.button}>
         <Button variant={"primary"}>Sign In</Button>
