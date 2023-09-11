@@ -6,11 +6,14 @@ import {useNavigate} from "react-router-dom";
 
 export const Header = () => {
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const navToHome = () => {
-        // return navigate('/Home')
-        return alert("Home!")
+        return navigate('/Home')
+    }
+
+    const navToPlayers = () => {
+        return navigate('/Players')
     }
 
 
@@ -21,7 +24,7 @@ export const Header = () => {
         <Typography variant={'caption'} color={'inherit'} onClick={navToHome}>Home</Typography>
         </div>
         <div className={s.typography}>
-            <Typography variant={'caption'} color={'inherit'} onClick={navToHome}>Players</Typography>
+            <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
         </div>
     <div className={s.button}>
         <Button variant={"primary"}>Sign In</Button>

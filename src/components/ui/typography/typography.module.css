@@ -46,6 +46,7 @@
 .caption {
     @include typography(var(--font-size-xs), var(--line-height-s), var(--font-weight-regular));
     background-color: white;
+    cursor: pointer;
 }
 
 .link1,
