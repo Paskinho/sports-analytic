@@ -10,10 +10,12 @@ export const Players = () => {
     }
 
 
-    return <div className={s.players}>
+    return (
+        <div className={s.players}>
         <div><input placeholder={"Search player"}/>
             <Button onClick={onSearchPlayers} className={s.buttonSearchPlayer} variant={'primary'}>Search</Button>
         </div>
         <div><Player/></div>
     </div>
+    )
 }
