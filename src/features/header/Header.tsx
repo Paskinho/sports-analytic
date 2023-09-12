@@ -16,15 +16,27 @@ export const Header = () => {
         return navigate('/Players')
     }
 
+    const navToTeams = () => {
+        return navigate('/Teams')
+    }
+
+    const navToStatistics = () => {
+        return navigate('/Statistics')
+    }
+
+    const navToSubscription = () => {
+        return navigate('/Subscription')
+    }
+
 
     return (
         <header className={s.header}>
             <div className={s.typography}>
                 <Typography variant={'caption'} color={'inherit'} onClick={navToHome}>Home</Typography>
                 <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
-                <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Teams</Typography>
-                <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Statistics</Typography>
-                <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Subscription</Typography>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToStatistics}>Statistics</Typography>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToSubscription}>Subscription</Typography>
             </div>
             <div className={s.button}>
                 <Button variant={"primary"}>Sign In</Button>
