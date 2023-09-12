@@ -11,8 +11,7 @@ import axios from "axios";
 // })
 
 export const instance = {
-    method: 'GET',
-    url: 'https://api-football-v1.p.rapidapi.com/v3/timezone',
+    url: 'https://api-football-v1.p.rapidapi.com/v3/',
     headers: {
         'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
