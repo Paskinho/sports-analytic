@@ -7,6 +7,7 @@ import {Players} from "./features/players/Players";
 import {BrowserRouter, createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Provider} from "react-redux";
 import {Login} from "./features/auth/Login/Login";
+import {Virgil} from "./features/players/player/Liverpool/Virgil";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: '/players',
         element: <Players/>
     },
+    {
+        path:"/Virgil",
+        element: <Virgil/>
+    }
 ])
 
 const container = document.getElementById('root')!;
