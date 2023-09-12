@@ -17,18 +17,15 @@ export const Header = () => {
     }
 
 
-
     return (
-    <header className={s.header}>
-        <div className={s.typography}>
-        <Typography variant={'caption'} color={'inherit'} onClick={navToHome}>Home</Typography>
-        </div>
-        <div className={s.typography}>
-            <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
-        </div>
-    <div className={s.button}>
-        <Button variant={"primary"}>Sign In</Button>
-    </div>
-    </header>
+        <header className={s.header}>
+            <div className={s.typography}>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToHome}>Home</Typography>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
+            </div>
+            <div className={s.button}>
+                <Button variant={"primary"}>Sign In</Button>
+            </div>
+        </header>
     )
 }
