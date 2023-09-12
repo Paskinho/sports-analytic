@@ -5,7 +5,7 @@
   grid-area: header;
   display: flex;
   width: 1500px;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   padding-right: 50px;
 }
@@ -19,6 +19,8 @@
 
 .typography {
   display: flex;
-  justify-content: start;
+  width: 450px;
+  justify-content: space-around;
   align-content: start;
+
 }

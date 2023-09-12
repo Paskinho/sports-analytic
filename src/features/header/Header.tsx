@@ -22,6 +22,9 @@ export const Header = () => {
             <div className={s.typography}>
                 <Typography variant={'caption'} color={'inherit'} onClick={navToHome}>Home</Typography>
                 <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Teams</Typography>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Statistics</Typography>
+                <Typography variant={'caption'} color={'inherit'} onClick={navToPlayers}>Subscription</Typography>
             </div>
             <div className={s.button}>
                 <Button variant={"primary"}>Sign In</Button>
