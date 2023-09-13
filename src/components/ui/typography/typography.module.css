@@ -29,6 +29,8 @@
 
 .subtitle1 {
     @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-bold));
+    color: white;
+    cursor: pointer;
 }
 
 .body2 {
@@ -41,11 +43,13 @@
 
 .overline {
     @include typography(var(--font-size-xs), var(--line-height-s), var(--font-weight-bold));
+
 }
 
 .caption {
     @include typography(var(--font-size-xs), var(--line-height-s), var(--font-weight-regular));
     cursor: pointer;
+    color: black;
 }
 
 .link1,

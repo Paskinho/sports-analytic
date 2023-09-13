@@ -1,7 +1,7 @@
 .header {
   height: 70px;
   box-shadow: 1px 2px 1px 1px lightgray;
-  background-color: rgba(130,231,169,0.99);
+  background-color: rgb(255, 44, 0);
   grid-area: header;
   display: flex;
   width: 1500px;
@@ -22,5 +22,5 @@
   width: 450px;
   justify-content: space-around;
   align-content: start;
-
 }
+
