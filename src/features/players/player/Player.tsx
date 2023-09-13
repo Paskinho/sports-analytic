@@ -1,7 +1,11 @@
 import {Typography} from "../../../components/ui/typography";
 import {useNavigate} from "react-router-dom";
+import {PlayerType} from "./player.slice";
 
-export const Player = () => {
+
+
+
+export const Player = (props: PlayerType) => {
 
     const navigate = useNavigate()
 
