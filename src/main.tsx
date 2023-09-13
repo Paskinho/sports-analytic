@@ -43,6 +43,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <App />
       </BrowserRouter>
       {/*</Provider>*/}
-      {/*<RouterProvider router={router}/>*/}
+      <RouterProvider router={router}/>
   </React.StrictMode>,
 )
