@@ -10,14 +10,14 @@ import axios from "axios";
 //
 // })
 
-export const instance = axios.create {
+export const instance = axios.create ({
     baseURL: 'https://api-football-v1.p.rapidapi.com/v3/',
     withCredentials: true,
     headers: {
         'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
     }
-};
+});
 
 try {
     const response = await axios.request(instance);
