@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <Players/>
     },
     {
-        path:"/Virgil",
+        path:"/virgil",
         element: <Virgil/>
     }
 ])

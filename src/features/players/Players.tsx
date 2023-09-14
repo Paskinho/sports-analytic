@@ -16,7 +16,7 @@ export const Players = () => {
 
 
     const getPlayers = () => {
-        dispatch(playersThunks.getPlayers()).then((res) => {
+         dispatch(playersThunks.getPlayers()).then((res) => {
             toast.success('Successfully')
         })
     }
