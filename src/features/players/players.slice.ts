@@ -1,4 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {playersApi} from "./players.api";
 
 
 const slice = createSlice({
@@ -9,5 +10,11 @@ const slice = createSlice({
     reducers:{}
 })
 
+const getPlayers = createAsyncThunk('players', async(arg, thunkApi)=> {
+    const res = await playersApi.getPlayers(arg)
+    return {players: res.data}
+})
+
 export const playersReducer = slice.reducer
 export const playersActions = slice.actions
+export const playersThunks = {getPlayers}
