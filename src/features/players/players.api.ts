@@ -1,7 +1,12 @@
 import {instance} from "../../common/api/common.api";
 
 export const PlayersApi = {
- getPlayer: () => {
-     return instance.get('players')
+ getPlayer: (arg: ArgPlayersType) => {
+     return instance.get('players', arg)
  }
+}
+
+export type ArgPlayersType = {
+    id: string
+    season: string
 }

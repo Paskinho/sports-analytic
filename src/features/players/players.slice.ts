@@ -8,3 +8,6 @@ const slice = createSlice({
     },
     reducers:{}
 })
+
+export const playersReducer = slice.reducer
+export const playersActions = slice.actions
