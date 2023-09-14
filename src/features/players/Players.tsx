@@ -8,7 +8,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 export const Players = () => {
 
 
-    const dispatch = useAppDispatch()
+    // const dispatch = useAppDispatch()
 
     const onSearchPlayers = () => {
         return alert("Successfully search")
@@ -16,9 +16,9 @@ export const Players = () => {
 
 
     const getPlayers = () => {
-         dispatch(playersThunks.getPlayers()).then((res) => {
-            toast.success('Successfully')
-        })
+        //  dispatch(playersThunks.getPlayers()).then(() => {
+        //     toast.success('Successfully')
+        // })
     }
 
 

@@ -8,12 +8,13 @@ import {BrowserRouter, createBrowserRouter, RouterProvider} from "react-router-d
 import {Provider} from "react-redux";
 import {Login} from "./features/auth/Login/Login";
 import {Virgil} from "./features/players/player/Liverpool/Virgil";
+import {store} from "./app/store";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <div>Hello world!</div>,
+        element: <div>I'm Uladzislau Paskanau. This is my site</div>,
     },
     {
         path: '/login',
@@ -33,6 +34,14 @@ const router = createBrowserRouter([
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+
+// root.render(
+//     <Provider store={store}>
+//         <Header/>
+//         <App />
+//         <RouterProvider router={router} />
+//     </Provider>
+// );
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 // root.render(
