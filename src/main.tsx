@@ -43,13 +43,15 @@ const root = createRoot(container);
 //     </Provider>
 // );
 
-ReactDOM.render(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
 // root.render(
   <React.StrictMode>
-          <Provider store={store}>
-                 <Header/>
-               <App />
-              <RouterProvider router={router} />
-              </Provider>
+      <BrowserRouter store={store}>
+      {/*<Provider>*/}
+      <Header/>
+    <App />
+      </BrowserRouter>
+      {/*</Provider>*/}
+      <RouterProvider router={router}/>
   </React.StrictMode>,
 )

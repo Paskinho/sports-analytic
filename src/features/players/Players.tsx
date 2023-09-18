@@ -8,7 +8,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 export const Players = () => {
 
 
-    const dispatch = useAppDispatch()
+    // const dispatch = useAppDispatch()
 
     const onSearchPlayers = () => {
         return alert("Successfully search")
