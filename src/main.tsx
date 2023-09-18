@@ -35,23 +35,25 @@ const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 
-// root.render(
-//     <Provider store={store}>
-//         <Header/>
-//         <App />
-//         <RouterProvider router={router} />
-//     </Provider>
-// );
+root.render(
+    <Provider store={store}>
+        <BrowserRouter>
+        <Header/>
+        <App />
+        </BrowserRouter>
+        <RouterProvider router={router} />
+    </Provider>
+);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-// root.render(
-  <React.StrictMode>
-      <BrowserRouter store={store}>
-      {/*<Provider>*/}
-      <Header/>
-    <App />
-      </BrowserRouter>
-      {/*</Provider>*/}
-      <RouterProvider router={router}/>
-  </React.StrictMode>,
-)
+// ReactDOM.createRoot(document.getElementById('root')!).render(
+// // root.render(
+//   <React.StrictMode>
+//       <BrowserRouter store={store}>
+//       {/*<Provider>*/}
+//       <Header/>
+//     <App />
+//       </BrowserRouter>
+//       {/*</Provider>*/}
+//       <RouterProvider router={router}/>
+//   </React.StrictMode>,
+// )

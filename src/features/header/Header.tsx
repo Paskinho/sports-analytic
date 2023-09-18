@@ -7,7 +7,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 export const Header = () => {
 
     const navigate = useNavigate()
-    // const dispatch = useAppDispatch()
+    const dispatch = useAppDispatch()
 
     const navToHome = () => {
         return navigate('/Home')
@@ -29,9 +29,6 @@ export const Header = () => {
         return navigate('/Subscription')
     }
 
-    const getPlayers = () => {
-        return
-    }
 
     return (
         <header className={s.header}>
