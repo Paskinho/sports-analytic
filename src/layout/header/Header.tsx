@@ -4,6 +4,7 @@ import {Typography} from "../../components/ui/typography";
 import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
+import {Logo} from "../../components/logo/Logo";
 
 export const Header = () => {
 
@@ -33,13 +34,15 @@ export const Header = () => {
 
     return (
         <StyledHeader>
-            <div className={s.typography}>
+
+            <nav className={s.typography}>
+                <Logo/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToStatistics}>Statistics</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToSubscription}>Subscription</Typography>
-            </div>
+            </nav>
             <div className={s.button}>
                 <Button variant={"primary"}>Sign In</Button>
             </div>
