@@ -16,7 +16,7 @@ export const Player = (props: PlayerType) => {
 
     return <StyledTable>
         <StyledTd>
-            <th>Player</th>
+            <StyledTh>Player</StyledTh>
         <div>
             <Typography variant={'caption'} onClick={Virg}>Virgil Van Dijk</Typography>
             </div>
@@ -25,18 +25,25 @@ export const Player = (props: PlayerType) => {
         <div><Typography variant={'caption'} onClick={Virg}>Alisson Becker</Typography></div>
         </StyledTd>
         <StyledTd>
-            <th>Country</th>
+            <StyledTh>Country</StyledTh>
             <Typography variant={'caption'}>Netherlands</Typography>
             <Typography variant={'caption'}>Egypt</Typography>
             <Typography variant={'caption'}>Uruguay</Typography>
             <Typography variant={'caption'}>Brazil</Typography>
         </StyledTd>
         <StyledTd>
-            <th>Club</th>
+            <StyledTh>Club</StyledTh>
             <Typography variant={'caption'}>Liverpool</Typography>
             <Typography variant={'caption'}>Liverpool</Typography>
             <Typography variant={'caption'}>Liverpool</Typography>
             <Typography variant={'caption'}>Liverpool</Typography>
+        </StyledTd>
+        <StyledTd>
+            <StyledTh>Age</StyledTh>
+            <Typography variant={'caption'}>31</Typography>
+            <Typography variant={'caption'}>31</Typography>
+            <Typography variant={'caption'}>24</Typography>
+            <Typography variant={'caption'}>30</Typography>
         </StyledTd>
     </StyledTable>
 }
@@ -49,6 +56,9 @@ const StyledTd = styled.td `
 
 const StyledTable = styled.table `
   //background-color: beige;
- 
-  
+`
+
+const StyledTh = styled.th `
+display: flex;
+  justify-content: center;
 `
