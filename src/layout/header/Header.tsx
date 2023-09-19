@@ -3,6 +3,7 @@ import s from "./styles.module.scss"
 import {Typography} from "../../components/ui/typography";
 import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
+import styled from "styled-components";
 
 export const Header = () => {
 
@@ -31,7 +32,7 @@ export const Header = () => {
 
 
     return (
-        <header className={s.header}>
+        <StyledHeader>
             <div className={s.typography}>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
@@ -42,6 +43,18 @@ export const Header = () => {
             <div className={s.button}>
                 <Button variant={"primary"}>Sign In</Button>
             </div>
-        </header>
+        </StyledHeader>
     )
 }
+
+
+const StyledHeader  = styled.header `
+  height: 70px;
+  box-shadow: 1px 2px 1px 1px lightgray;
+  background-color: rgb(255, 44, 0);
+  grid-area: header;
+  display: flex;
+  width: 1500px;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;`
