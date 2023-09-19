@@ -16,6 +16,7 @@ export const Player = (props: PlayerType) => {
 
     return <StyledTable>
         <StyledTd>
+            <th>Player</th>
         <div>
             <Typography variant={'caption'} onClick={Virg}>Virgil Van Dijk</Typography>
             </div>
@@ -24,12 +25,14 @@ export const Player = (props: PlayerType) => {
         <div><Typography variant={'caption'} onClick={Virg}>Alisson Becker</Typography></div>
         </StyledTd>
         <StyledTd>
+            <th>Country</th>
             <Typography variant={'caption'}>Netherlands</Typography>
             <Typography variant={'caption'}>Egypt</Typography>
             <Typography variant={'caption'}>Uruguay</Typography>
             <Typography variant={'caption'}>Brazil</Typography>
         </StyledTd>
         <StyledTd>
+            <th>Club</th>
             <Typography variant={'caption'}>Liverpool</Typography>
             <Typography variant={'caption'}>Liverpool</Typography>
             <Typography variant={'caption'}>Liverpool</Typography>
@@ -39,13 +42,13 @@ export const Player = (props: PlayerType) => {
 }
 
 const StyledTd = styled.td `
-border-color: #1a1a1a;
+  border: 1px solid black
   //border-width: 50px;
 `
 
 
 const StyledTable = styled.table `
-border-color: #535bf2;
-  border-width: 50px;
-  background-color: beige;
+  //background-color: beige;
+ 
+  
 `
