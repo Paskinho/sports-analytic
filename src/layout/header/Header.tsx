@@ -1,5 +1,5 @@
 import {Button} from "../../components/ui/button";
-import s from "../header/styles.module.scss"
+import s from "./styles.module.scss"
 import {Typography} from "../../components/ui/typography";
 import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
