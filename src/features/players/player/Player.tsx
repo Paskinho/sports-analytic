@@ -13,12 +13,26 @@ export const Player = (props: PlayerType) => {
         return navigate("/Virgil")
     }
 
-    return <div>
+    return <table>
+        <td>
         <div>
             <Typography variant={'caption'} onClick={Virg}>Virgil Van Dijk</Typography>
             </div>
         <div><Typography variant={'caption'} onClick={Virg}>Mohamed Salah</Typography></div>
         <div><Typography variant={'caption'} onClick={Virg}>Darwin Nunez</Typography></div>
         <div><Typography variant={'caption'} onClick={Virg}>Alisson Becker</Typography></div>
-    </div>
+        </td>
+        <td>
+            <Typography variant={'caption'}>Netherlands</Typography>
+            <Typography variant={'caption'}>Egypt</Typography>
+            <Typography variant={'caption'}>Uruguay</Typography>
+            <Typography variant={'caption'}>Brazil</Typography>
+        </td>
+        <td>
+            <Typography variant={'caption'}>Liverpool</Typography>
+            <Typography variant={'caption'}>Liverpool</Typography>
+            <Typography variant={'caption'}>Liverpool</Typography>
+            <Typography variant={'caption'}>Liverpool</Typography>
+        </td>
+    </table>
 }
