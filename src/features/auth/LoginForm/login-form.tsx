@@ -21,7 +21,7 @@ export const LoginForm = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <TextField {...register("email")}  label='email'/>
             <TextField {...register("password")}  label='password'/>
-            <Button type={"submit"}></Button>
+            <Button type={"submit"}>Login</Button>
         </form>
     );
 };
