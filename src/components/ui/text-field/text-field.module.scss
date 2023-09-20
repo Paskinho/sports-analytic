@@ -38,7 +38,7 @@
   }
 
   &.error {
-    border-color: var(--color-danger-300);
+    border-color: red;
     color: var(--color-danger-300);
   }
 }
