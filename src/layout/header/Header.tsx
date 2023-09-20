@@ -12,7 +12,7 @@ export const Header = () => {
     const dispatch = useAppDispatch()
 
     const navToHome = () => {
-        return navigate('/Home')
+        return navigate('/Main')
     }
 
     const navToPlayers = () => {
