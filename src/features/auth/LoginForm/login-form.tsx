@@ -22,10 +22,8 @@ export const LoginForm = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <TextField {...register("email")}  label='email'/>
             <TextField {...register("password")}  label='password'/>
-            <CheckBox/>
+            {/*<CheckBox {...register('rememberMe')} label={'remember me'}/>*/}
             <Button type={"submit"}>Login</Button>
         </form>
     );
 };
-
-
