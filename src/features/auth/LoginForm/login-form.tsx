@@ -2,6 +2,7 @@ import React from 'react';
 import {Button} from "../../../components/ui/button";
 import {TextField} from "../../../components/ui/text-field";
 import {useForm} from "react-hook-form";
+import {CheckBox} from "../../../components/ui/checkbox/checkbox";
 
 type FormValues = {
     email: string,
