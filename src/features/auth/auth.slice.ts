@@ -3,6 +3,7 @@ import {createSlice} from "@reduxjs/toolkit";
 const slice = createSlice({
     name: "auth",
     initialState: {
+  profile: null as ProfileType | null,
 
     },
     reducers: {}
@@ -24,3 +25,5 @@ export type ProfileType = {
     token: string,
     tokenDeathTime: number
 }
+
+export const authReducer = slice.reducer
