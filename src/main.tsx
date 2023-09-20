@@ -9,7 +9,7 @@ import {Provider} from "react-redux";
 import {Login} from "./features/auth/Login/Login";
 import {Virgil} from "./features/players/player/Liverpool/Virgil";
 import {store} from "./app/store";
-import {Main} from "./features/main/Main";
+import {Main} from "./layout/sections/main/Main";
 
 
 const router = createBrowserRouter([
