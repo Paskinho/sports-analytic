@@ -31,6 +31,10 @@ export const Header = () => {
         return navigate('/Subscription')
     }
 
+    const navToLogin = () => {
+        return navigate('Login')
+    }
+
 
     return (
         <StyledHeader>
@@ -45,7 +49,7 @@ export const Header = () => {
                             onClick={navToSubscription}>Subscription</Typography>
             </StyledNav>
             <div className={s.button}>
-                <Button variant={"primary"}>Sign In</Button>
+                <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
             </div>
         </StyledHeader>
     )

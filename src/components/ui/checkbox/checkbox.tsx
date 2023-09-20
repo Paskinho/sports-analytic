@@ -18,7 +18,7 @@ export type CheckboxProps = {
     position?: "left";
 };
 
-export const CheckBox = ({
+export const Checkbox = ({
                              className,
                              checked,
                              onChange,
