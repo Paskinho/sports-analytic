@@ -21,6 +21,7 @@ export const LoginForm = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <TextField {...register("email")}  label='email'/>
             <TextField {...register("password")}  label='password'/>
+            <CheckBox/>
             <Button type={"submit"}>Login</Button>
         </form>
     );
