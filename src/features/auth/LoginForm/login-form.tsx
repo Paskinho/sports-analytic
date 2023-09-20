@@ -28,8 +28,15 @@ export const LoginForm = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <TextField {...register("email")}  label='email'/>
-            <TextField {...register("password")}  label='password'/>
+            <TextField {...register("email",
+                {required: 'Email is required',
+                pattern: {value: `emailRegex`, message: 'Invalid email'} // уточнить по emailRegex
+                }
+            )}  label='email'/>
+            <TextField {...register("password",{
+                required: 'Password is required',
+                minLength: {value: 3, message: "Password has to be at least 3 characters long"}
+            })}  label='password'/>
             {/*<Checkbox onCheckedChange={onChange} checked={value} label={'remember me'}  />*/}
             <Button type={"submit"}>Login</Button>
         </form>
