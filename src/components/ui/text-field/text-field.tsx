@@ -1,7 +1,7 @@
 import {ComponentProps, ComponentPropsWithoutRef, forwardRef} from 'react';
 import {Typography} from "../typography";
 import s from './text-field.module.scss'
-
+import { clsx } from 'clsx'
 
 export type TextFieldProps = {
     onValueChange?: (value: string) => void
