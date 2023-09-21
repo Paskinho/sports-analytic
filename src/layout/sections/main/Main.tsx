@@ -27,5 +27,5 @@ const Photo = styled.img`
 `
 
 const MainTitle = styled.h1`
-    
+   font-size: 1.5em;
 `
