@@ -1,30 +1,31 @@
 import React from 'react';
 import {Typography} from "../../../../../components/ui/typography";
 import styled from "styled-components";
+import {StyledTable, StyledTd, StyledTh} from "../../../../../components/StyledTable";
 
 export const LastStat = () => {
     return (
         <div>
             <StatTitle>Shots</StatTitle>
             <StatDescription>
-                <table>
-                    <td>
-                        <th>Pos.</th>
+                <StyledTable>
+                    <StyledTd>
+                        <StyledTh>Pos.</StyledTh>
                         <Typography>1</Typography>
-                    </td>
-                    <td>
-                        <th>Player</th>
+                    </StyledTd>
+                    <StyledTd>
+                        <StyledTh>Player</StyledTh>
                         <Typography>Salah</Typography>
-                    </td>
-                    <td>
-                        <th>Shots</th>
+                    </StyledTd>
+                    <StyledTd>
+                        <StyledTh>Shots</StyledTh>
                         <Typography>24(9 in target)</Typography>
-                    </td>
-                    <td>
-                        <th>Conversation</th>
+                    </StyledTd>
+                    <StyledTd>
+                        <StyledTh>Conversation</StyledTh>
                         <Typography>37,5%</Typography>
-                    </td>
-                </table>
+                    </StyledTd>
+                </StyledTable>
             </StatDescription>
         </div>
     );
@@ -37,3 +38,4 @@ const StatTitle = styled.h3`
 
 const StatDescription = styled.div `
 `
+

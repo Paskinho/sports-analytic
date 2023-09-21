@@ -2,6 +2,7 @@ import {Typography} from "../../../components/ui/typography";
 import {useNavigate} from "react-router-dom";
 import {PlayerType} from "./player.slice";
 import styled from "styled-components";
+import {StyledTable, StyledTd, StyledTh} from "../../../components/StyledTable";
 
 
 
@@ -47,18 +48,3 @@ export const Player = (props: PlayerType) => {
         </StyledTd>
     </StyledTable>
 }
-
-const StyledTd = styled.td `
-  border: 1px solid black
-  //border-width: 50px;
-`
-
-
-const StyledTable = styled.table `
-  //background-color: beige;
-`
-
-const StyledTh = styled.th `
-display: flex;
-  justify-content: center;
-`
