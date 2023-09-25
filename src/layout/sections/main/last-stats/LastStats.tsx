@@ -9,6 +9,7 @@ export const LastStats = () => {
             <StatsTitle>
                 <FlexWrapper>
                     <LastStat/>
+                    <LastStat/>
                 </FlexWrapper>
             </StatsTitle>
         </StyledStats>
