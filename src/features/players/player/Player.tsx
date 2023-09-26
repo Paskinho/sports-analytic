@@ -5,8 +5,6 @@ import styled from "styled-components";
 import {StyledTable, StyledTd, StyledTh} from "../../../components/StyledTable";
 
 
-
-
 export const Player = (props: PlayerType) => {
 
     const navigate = useNavigate()

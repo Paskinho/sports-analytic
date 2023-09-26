@@ -14,14 +14,12 @@ export const Players = () => {
         return alert("Successfully search")
     }
 
-
     const getPlayers = (players: any) => {
          dispatch(playersThunks.getPlayers()).then((res) => {
             toast.success('Successfully')
         })
 
     }
-
 
     return (
         <div className={s.players}>
