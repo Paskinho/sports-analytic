@@ -8,8 +8,8 @@ export const LastStats = () => {
         <StyledStats>
             <StatsTitle>
                 <FlexWrapper>
-                    <LastStat statTitle={'Shots'} />
-                    <LastStat statTitle={'Tackling'}/>
+                    <LastStat statTitle={'Shots'} namePlayerOne={'Salah'} namePlayerTwo={"Nunez"} statOne={24} statTwo={12}/>
+                    <LastStat statTitle={'Tackling'} namePlayerOne={'Virgil'} namePlayerTwo={"Soboszlai"} statOne={14} statTwo={7}/>
                 </FlexWrapper>
             </StatsTitle>
         </StyledStats>

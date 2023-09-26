@@ -5,7 +5,11 @@ import {StyledTable, StyledTd, StyledTh, StyledTr} from "../../../../../componen
 
 
 type LastStatPropsType = {
-statTitle: string
+    statTitle: string
+    namePlayerOne: string
+    namePlayerTwo: string
+    statOne: number
+    statTwo: numver
 }
 
 export const LastStat = (props: LastStatPropsType) => {
@@ -16,30 +20,30 @@ export const LastStat = (props: LastStatPropsType) => {
                 <StyledTable>
                     <StyledTd>
                         <StyledTr>
-                        <StyledTh>Pos.</StyledTh>
-                        <Typography>1</Typography>
-                        <Typography>2</Typography>
+                            <StyledTh>Pos</StyledTh>
+                            <Typography>1</Typography>
+                            <Typography>2</Typography>
                         </StyledTr>
                     </StyledTd>
                     <StyledTd>
                         <StyledTr>
-                        <StyledTh>Player</StyledTh>
-                        <Typography>Salah</Typography>
-                        <Typography>Nunez</Typography>
+                            <StyledTh>Player</StyledTh>
+                            <Typography>{props.namePlayerOne}</Typography>
+                            <Typography>{props.namePlayerTwo}</Typography>
                         </StyledTr>
                     </StyledTd>
                     <StyledTd>
                         <StyledTr>
-                        <StyledTh>Shots</StyledTh>
-                        <Typography>24(9 in target)</Typography>
-                        <Typography>12(4 in target)</Typography>
+                            <StyledTh>{props.statTitle}</StyledTh>
+                            <Typography>{props.statOne}</Typography>
+                            <Typography>{props.statTwo}</Typography>
                         </StyledTr>
                     </StyledTd>
                     <StyledTd>
                         <StyledTr>
-                        <StyledTh>Conversation</StyledTh>
-                        <Typography>37,5%</Typography>
-                        <Typography>25%</Typography>
+                            <StyledTh>Conversation</StyledTh>
+                            <Typography>37,5%</Typography>
+                            <Typography>25%</Typography>
                         </StyledTr>
                     </StyledTd>
                 </StyledTable>
@@ -53,6 +57,6 @@ const StatTitle = styled.h3`
 
 `
 
-const StatDescription = styled.div `
+const StatDescription = styled.div`
 `
 
