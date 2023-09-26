@@ -56,7 +56,8 @@ export const LastStat = (props: LastStatPropsType) => {
 
 
 const StatTitle = styled.h3`
-
+display: flex;
+  
 `
 
 const StatDescription = styled.div`
