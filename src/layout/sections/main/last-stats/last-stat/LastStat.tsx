@@ -9,7 +9,9 @@ type LastStatPropsType = {
     namePlayerOne: string
     namePlayerTwo: string
     statOne: number
-    statTwo: numver
+    statTwo: number
+    successStatOne: string
+    successStatTwo: string
 }
 
 export const LastStat = (props: LastStatPropsType) => {
@@ -42,8 +44,8 @@ export const LastStat = (props: LastStatPropsType) => {
                     <StyledTd>
                         <StyledTr>
                             <StyledTh>Conversation</StyledTh>
-                            <Typography>37,5%</Typography>
-                            <Typography>25%</Typography>
+                            <Typography>{props.successStatOne}</Typography>
+                            <Typography>{props.successStatTwo}</Typography>
                         </StyledTr>
                     </StyledTd>
                 </StyledTable>
