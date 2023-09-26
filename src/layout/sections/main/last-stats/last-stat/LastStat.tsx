@@ -62,8 +62,9 @@ const StatTitle = styled.h3`
 const StatDescription = styled.div`
 `
 
-const StyledDiv = styled.div `
-display: flex;
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: row;
   align-items: center;
   height: 200px;
   width: 150px;
