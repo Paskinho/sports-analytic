@@ -3,10 +3,15 @@ import {Typography} from "../../../../../components/ui/typography";
 import styled from "styled-components";
 import {StyledTable, StyledTd, StyledTh, StyledTr} from "../../../../../components/StyledTable";
 
-export const LastStat = () => {
+
+type LastStatPropsType = {
+statTitle: string
+}
+
+export const LastStat = (props: LastStatPropsType) => {
     return (
         <div>
-            <StatTitle>Shots</StatTitle>
+            <StatTitle>{props.statTitle}</StatTitle>
             <StatDescription>
                 <StyledTable>
                     <StyledTd>
