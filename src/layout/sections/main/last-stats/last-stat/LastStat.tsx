@@ -16,7 +16,7 @@ type LastStatPropsType = {
 
 export const LastStat = (props: LastStatPropsType) => {
     return (
-        <div>
+        <StyledDiv>
             <StatTitle>{props.statTitle}</StatTitle>
             <StatDescription>
                 <StyledTable>
@@ -50,7 +50,7 @@ export const LastStat = (props: LastStatPropsType) => {
                     </StyledTd>
                 </StyledTable>
             </StatDescription>
-        </div>
+        </StyledDiv>
     );
 };
 
@@ -60,5 +60,12 @@ const StatTitle = styled.h3`
 `
 
 const StatDescription = styled.div`
+`
+
+const StyledDiv = styled.div `
+display: flex;
+  align-items: center;
+  height: 200px;
+  width: 150px;
 `
 
