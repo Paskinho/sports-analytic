@@ -2,6 +2,7 @@ import styled from "styled-components";
 import photo from "../../../assets/images/Ronaldo News.jpeg"
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {LastStats} from "./last-stats/LastStats";
+import {ValuablePlayers} from "../../../features/players/valuablePlayers/valuablePlayers";
 
 export const Main = () => {
     return (
@@ -14,6 +15,7 @@ export const Main = () => {
                 <NewsTitle>History of partnership of PSV and Phillips</NewsTitle>
             </FlexWrapper>
             <LastStats/>
+            <ValuablePlayers/>
         </StyledMain>
 
     );
