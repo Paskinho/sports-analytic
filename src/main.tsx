@@ -10,6 +10,7 @@ import {Login} from "./features/auth/Login/Login";
 import {Virgil} from "./features/players/player/Liverpool/Virgil";
 import {store} from "./app/store";
 import {Main} from "./layout/sections/main/Main";
+import {Footer} from "./layout/footer/Footer";
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
         element: <Players/>
     },
     {
-        path:"/virgil",
+        path: "/virgil",
         element: <Virgil/>
     },
     {
@@ -43,10 +44,11 @@ const root = createRoot(container);
 root.render(
     <Provider store={store}>
         <BrowserRouter>
-        <Header/>
-        <App />
+            <Header/>
+            <App/>
         </BrowserRouter>
-        <RouterProvider router={router} />
+        <RouterProvider router={router}/>
+        <Footer/>
     </Provider>
 );
 
