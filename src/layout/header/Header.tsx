@@ -5,9 +5,14 @@ import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
+import {Menu} from "../../components/menu/Menu";
 
 export const Header = () => {
-
+    return (
+        <StyledHeader>
+            <Menu/>
+        </StyledHeader>
+    )
 
 }
 
@@ -24,9 +29,3 @@ const StyledHeader = styled.header`
   padding-right: 50px;`
 
 
-const StyledNav = styled.nav `
-  display: flex;
-  width: 450px;
-  justify-content: space-around;
-  align-content: start;
-`

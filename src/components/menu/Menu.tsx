@@ -37,7 +37,7 @@ export const Menu = () => {
 
 
     return (
-
+<div>
             <StyledNav>
                 <Logo/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
@@ -50,6 +50,7 @@ export const Menu = () => {
             <div className={s.button}>
                 <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
             </div>
+</div>
 
     )
 };
