@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {Typography} from "../../../../../components/ui/typography";
 import styled from "styled-components";
 import {StyledTable, StyledTd, StyledTh, StyledTr} from "../../../../../components/StyledTable";
