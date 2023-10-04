@@ -1,5 +1,6 @@
 import s from '../../../../common/styles/player.module.scss'
 import styled from "styled-components";
+import {Button} from "../../../../components/ui/button";
 
 
 export const Virgil = () => {
@@ -10,6 +11,7 @@ export const Virgil = () => {
         age: 31 ()
         Nationality: Netherlands
         Club: Liverpool
+        <Button>Watching for {"Virgil"}</Button>
     </form>
     </div>
 }
