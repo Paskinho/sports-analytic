@@ -22,19 +22,19 @@ export const Player = (props: PlayerType) => {
     // },[like])
 
     const addLike = () => {
-
+        setLike(like => like + 1)
     }
 
 
     return <StyledTable>
         <StyledTd>
             <StyledTh>Player</StyledTh>
-        <div>
-            <Typography variant={'caption'} onClick={Virg}>Virgil Van Dijk</Typography>
+            <div>
+                <Typography variant={'caption'} onClick={Virg}>Virgil Van Dijk</Typography>
             </div>
-        <div><Typography variant={'caption'} onClick={Virg}>Mohamed Salah</Typography></div>
-        <div><Typography variant={'caption'} onClick={Virg}>Darwin Nunez</Typography></div>
-        <div><Typography variant={'caption'} onClick={Virg}>Alisson Becker</Typography></div>
+            <div><Typography variant={'caption'} onClick={Virg}>Mohamed Salah</Typography></div>
+            <div><Typography variant={'caption'} onClick={Virg}>Darwin Nunez</Typography></div>
+            <div><Typography variant={'caption'} onClick={Virg}>Alisson Becker</Typography></div>
         </StyledTd>
         <StyledTd>
             <StyledTh>Country</StyledTh>
@@ -59,10 +59,10 @@ export const Player = (props: PlayerType) => {
         </StyledTd>
         <StyledTd>
             <StyledTh>Likes</StyledTh>
-            <Typography variant={'caption'}><Button>{addLike}</Button></Typography>
-            <Typography variant={'caption'}><Button>{like}</Button></Typography>
-            <Typography variant={'caption'}><Button>{like}</Button></Typography>
-            <Typography variant={'caption'}><Button>{like}</Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addLike}>{like}</Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addLike}>{like}</Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addLike}>{like}</Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addLike}>{like}</Button></Typography>
         </StyledTd>
     </StyledTable>
 }
