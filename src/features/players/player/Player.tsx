@@ -3,6 +3,8 @@ import {useNavigate} from "react-router-dom";
 import {PlayerType} from "./player.slice";
 import styled from "styled-components";
 import {StyledTable, StyledTd, StyledTh} from "../../../components/StyledTable";
+import {Button} from "../../../components/ui/button";
+import {useEffect, useState} from "react";
 
 
 export const Player = (props: PlayerType) => {
@@ -12,6 +14,17 @@ export const Player = (props: PlayerType) => {
     const Virg = () => {
         return navigate("/Virgil")
     }
+
+    const [like, setLike] = useState(0)
+
+    // useEffect(()=>{
+    //     setLike(like+1)
+    // },[like])
+
+    const addLike = () => {
+
+    }
+
 
     return <StyledTable>
         <StyledTd>
@@ -43,6 +56,13 @@ export const Player = (props: PlayerType) => {
             <Typography variant={'caption'}>31</Typography>
             <Typography variant={'caption'}>24</Typography>
             <Typography variant={'caption'}>30</Typography>
+        </StyledTd>
+        <StyledTd>
+            <StyledTh>Likes</StyledTh>
+            <Typography variant={'caption'}><Button>{addLike}</Button></Typography>
+            <Typography variant={'caption'}><Button>{like}</Button></Typography>
+            <Typography variant={'caption'}><Button>{like}</Button></Typography>
+            <Typography variant={'caption'}><Button>{like}</Button></Typography>
         </StyledTd>
     </StyledTable>
 }
