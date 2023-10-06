@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {PersonalInformation} from "../../features/profile/PersonalInformation";
+import {PersonalInformation} from "../../features/profile/personal-information";
 
 
 type HeaderProps = {
@@ -47,6 +47,10 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
         return navigate('Login')
     }
 
+    const navToProfile = () => {
+        return navigate ("Profile")
+    }
+
 
     return (
         <StyledHeader>
@@ -65,6 +69,9 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     <img />
                 )}
                 <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
+                <img alt={"Profile logo"}
+                     src={"https://img.freepik.com/premium-photo/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}
+                     onClick={navToProfile}/>
 
             </div>
         </StyledHeader>

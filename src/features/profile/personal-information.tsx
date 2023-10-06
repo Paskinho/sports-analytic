@@ -1,7 +1,15 @@
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {useNavigate} from "react-router-dom";
 
-export const PersonalInformation = () => {
+type PersonalInformationProps = {
+    email: string,
+    avatar: string,
+    name: string,
+    onLogout: () => void
+}
+
+
+export const PersonalInformation = ({email, avatar, name, onLogout}: PersonalInformationProps) => {
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
