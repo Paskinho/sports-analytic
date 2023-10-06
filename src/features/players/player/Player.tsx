@@ -25,6 +25,9 @@ export const Player = (props: PlayerType) => {
         setLike(like => like + 1)
     }
 
+    const addToWatch = () => {
+   return alert("Successfully")
+    }
 
     return <StyledTable>
         <StyledTd>
@@ -63,6 +66,13 @@ export const Player = (props: PlayerType) => {
             <Typography variant={'caption'}><Button onClick={addLike}>{like}</Button></Typography>
             <Typography variant={'caption'}><Button onClick={addLike}>{like}</Button></Typography>
             <Typography variant={'caption'}><Button onClick={addLike}>{like}</Button></Typography>
+        </StyledTd>
+        <StyledTd>
+            <StyledTh>Watch</StyledTh>
+            <Typography variant={'caption'}><Button onClick={addToWatch}>+</Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addToWatch}>+</Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addToWatch}>+</Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addToWatch}>+</Button></Typography>
         </StyledTd>
     </StyledTable>
 }
