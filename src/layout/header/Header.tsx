@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {Profile} from "../../features/profile/Profile";
+import {PersonalInformation} from "../../features/profile/PersonalInformation";
 
 
 type HeaderProps = {
