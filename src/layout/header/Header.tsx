@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
+import {Profile} from "../../features/profile/Profile";
 
 export const Header = () => {
 
@@ -50,6 +51,7 @@ export const Header = () => {
             </StyledNav>
             <div className={s.button}>
                 <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
+                <img/>
             </div>
         </StyledHeader>
     )
