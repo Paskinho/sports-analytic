@@ -7,7 +7,18 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Profile} from "../../features/profile/Profile";
 
-export const Header = () => {
+
+type HeaderProps = {
+    isAuth: boolean
+    userInfo?: {
+        name: string
+        avatar?: string
+        email: string
+    } | null
+}
+
+
+export const Header = ({isAuth, userInfo}: HeaderProps) => {
 
     const navigate = useNavigate()
     const dispatch = useAppDispatch()
@@ -50,8 +61,11 @@ export const Header = () => {
                             onClick={navToSubscription}>Subscription</Typography>
             </StyledNav>
             <div className={s.button}>
+                {isAuth && (
+                    <img />
+                )}
                 <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
-                <img/>
+
             </div>
         </StyledHeader>
     )
