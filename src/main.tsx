@@ -11,6 +11,7 @@ import {Virgil} from "./features/players/player/Liverpool/Virgil";
 import {store} from "./app/store";
 import {Main} from "./layout/sections/main/Main";
 import {Footer} from "./layout/footer/Footer";
+import {PersonalInformation} from "./features/profile/personal-information";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     {
         path: 'main',
         element: <Main/>
+    },
+    {
+        path: "profile",
+        element: <PersonalInformation/>
     }
 ])
 

@@ -2,10 +2,10 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {useNavigate} from "react-router-dom";
 
 type PersonalInformationProps = {
-    email: string,
-    avatar: string,
-    name: string,
-    onLogout: () => void
+    email?: string,
+    avatar?: string,
+    name?: string,
+    onLogout?: () => void
 }
 
 
