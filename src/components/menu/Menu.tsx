@@ -8,7 +8,6 @@ import {Button} from "../ui/button";
 import {Typography} from "../ui/typography";
 
 type MenuProps = {
-    name: string,
     menuItems: Array<string>
 }
 
@@ -26,6 +25,7 @@ export const Menu = (props: MenuProps) => {
                 <Typography variant={'subtitle1'} color={'inherit'}>{props.menuItems[2]}</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'}>{props.menuItems[3]}</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'}>{props.menuItems[4]}</Typography>
+                <Typography variant={'subtitle1'} color={'inherit'}>{props.menuItems[5]}</Typography>
             </StyledNav>
 
 </div>
@@ -35,7 +35,7 @@ export const Menu = (props: MenuProps) => {
 
 const StyledNav = styled.nav`
   display: flex;
-  width: 450px;
+  width: 100vh;
   justify-content: space-around;
   align-content: start;
   `

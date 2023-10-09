@@ -1,9 +1,24 @@
+import styled from "styled-components";
+import {Typography} from "../../../../components/ui/typography";
 
-export const Region = () => {
+type RegionProps = {
+    title: string
+    text: string
+    image: string
+}
+
+export const Region = (props: RegionProps) => {
     return (
-        <div>
-
-        </div>
+        <StyledRegion>
+            <Image src={props.image} alt=''/>
+            <Typography variant={""}>{props.title}</Typography>
+            <Typography variant={""}>{props.text}</Typography>
+        </StyledRegion>
     );
 };
 
+const StyledRegion = styled.div`
+
+`
+
+const Image = styled.img``
