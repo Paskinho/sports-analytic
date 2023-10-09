@@ -12,7 +12,7 @@ export const ValuablePlayers = () => {
         <StyledValPlayers>
             <SectionTitle> VALUABLE PLAYERS</SectionTitle>
             <Menu menuItems={region}/>
-            <FlexWrapper>
+            <FlexWrapper justify={"space-around"}>
                 <Region title={region[0]} text={"European valuable players"} image={""}/>
                 <Region title={region[1]} text={"European valuable players"} image={""}/>
                 <Region title={region[2]} text={"European valuable players"} image={""}/>

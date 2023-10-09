@@ -19,6 +19,12 @@ export const Region = (props: RegionProps) => {
 
 const StyledRegion = styled.div`
 background-color: lightgoldenrodyellow;
+  max-width: 540px;
+  width: 100%;
+  
 `
 
-const Image = styled.img``
+const Image = styled.img`
+  width: 100%;
+  height: 260px
+;`
