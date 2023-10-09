@@ -18,7 +18,7 @@ export const Region = (props: RegionProps) => {
 };
 
 const StyledRegion = styled.div`
-
+background-color: lightgoldenrodyellow;
 `
 
 const Image = styled.img``
