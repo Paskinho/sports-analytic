@@ -18,7 +18,7 @@ export const LastStats = () => {
                     />
                     <LastStat statTitle={'Tackling'}
                               namePlayerOne={'Virgil'}
-                              namePlayerTwo={"Soboszlai"}
+                              namePlayerTwo={"Szoboszlai"}
                               statOne={14}
                               statTwo={7}
                               successStatOne={"74%"}
