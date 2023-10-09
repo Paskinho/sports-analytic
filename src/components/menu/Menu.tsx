@@ -7,7 +7,11 @@ import styled from "styled-components";
 import {Button} from "../ui/button";
 import {Typography} from "../ui/typography";
 
-export const Menu = () => {
+type MenuProps = {
+    menuItems: Array<string>
+}
+
+export const Menu = (props: MenuProps) => {
     const navigate = useNavigate()
     const dispatch = useAppDispatch()
 
@@ -39,7 +43,6 @@ export const Menu = () => {
     return (
 <div>
             <StyledNav>
-                <Logo/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
@@ -47,9 +50,7 @@ export const Menu = () => {
                 <Typography variant={'subtitle1'} color={'inherit'}
                             onClick={navToSubscription}>Subscription</Typography>
             </StyledNav>
-            <div className={s.button}>
-                <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
-            </div>
+
 </div>
 
     )
