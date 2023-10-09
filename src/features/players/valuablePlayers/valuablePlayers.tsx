@@ -4,6 +4,8 @@ import {Menu} from "../../../components/menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Region} from "./regionOfPlayer/Region";
 import {Card} from "../../../components/ui/card";
+import Europe from "../../../assets/images/Europe.png"
+
 
 const region = ["Europe", "Asia", "Africa", "North America", "South America","Australia and Oceania"]
 
@@ -15,7 +17,7 @@ export const ValuablePlayers = () => {
             <Menu menuItems={region}/>
 <Card>
             <FlexWrapper justify={"space-around"}>
-                <Region title={region[0]} text={`${region[0]} valuable players`} image={""}/>
+                <Region title={region[0]} text={`${region[0]} valuable players`} image={Europe}/>
                 <Region title={region[1]} text={`${region[1]} valuable players`} image={""}/>
                 <Region title={region[2]} text={`${region[2]} valuable players`} image={""}/>
                 <Region title={region[3]} text={`${region[3]} valuable players`} image={""}/>
