@@ -21,6 +21,8 @@ const StyledRegion = styled.div`
 background-color: lightgoldenrodyellow;
   max-width: 540px;
   width: 100%;
+  padding: 20px;
+  border: 1px dashed;
   
 `
 

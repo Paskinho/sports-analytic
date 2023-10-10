@@ -21,7 +21,7 @@ export const ValuablePlayers = () => {
             <SectionTitle> VALUABLE PLAYERS</SectionTitle>
             <Menu menuItems={region}/>
 <Card>
-            <FlexWrapper justify={"space-around"} flex-direction={'row'}>
+            <FlexWrapper display={'flex'} justify={"space-around"} flex-direction={'row'}>
                 <Region title={region[0]} text={`${region[0]} valuable players`} image={Europe}/>
                 <Region title={region[1]} text={`${region[1]} valuable players`} image={Asia}/>
                 <Region title={region[2]} text={`${region[2]} valuable players`} image={Africa}/>
