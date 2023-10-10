@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {Typography} from "../../../../components/ui/typography";
+import {Button} from "../../../../components/ui/button";
+import s from '../../../../common/styles/player.module.scss'
 
 type RegionProps = {
     title: string
@@ -13,6 +15,8 @@ export const Region = (props: RegionProps) => {
             <Image src={props.image} alt=''/>
             <Typography variant={""}>{props.title}</Typography>
             <Typography variant={""}>{props.text}</Typography>
+
+            <Button variant={"primary"} onClick={s.flipped}>Click Me</Button>
         </StyledRegion>
     );
 };

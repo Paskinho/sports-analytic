@@ -11,7 +11,6 @@ import NorthAmerica from "../../../assets/images/NorthAmerica.png"
 import SouthAmerica from "../../../assets/images/SouthAmerica.png"
 import Australia from "../../../assets/images/Australia.png"
 
-
 const region = ["Europe", "Asia", "Africa", "North America", "South America","Australia and Oceania"]
 
 
@@ -29,6 +28,7 @@ export const ValuablePlayers = () => {
                 <Region title={region[4]} text={`${region[4]} valuable players`} image={SouthAmerica}/>
                 <Region title={region[5]} text={`${region[5]} valuable players`} image={Australia}/>
             </FlexWrapper>
+
 </Card>
         </StyledValPlayers>
     );

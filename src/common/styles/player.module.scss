@@ -11,3 +11,7 @@
   justify-content: flex-start;
   align-content: flex-start;
 }
+
+.flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
