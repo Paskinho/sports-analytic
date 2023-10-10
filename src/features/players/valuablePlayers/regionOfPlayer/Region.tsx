@@ -3,6 +3,7 @@ import {Typography} from "../../../../components/ui/typography";
 import {Button} from "../../../../components/ui/button";
 import s from '../../../../common/styles/player.module.scss'
 import {Card} from "../../../../components/ui/card";
+import {Toggle} from "../../../../components/ui/toggle";
 
 type RegionProps = {
     title: string
@@ -28,6 +29,7 @@ export const Region = (props: RegionProps) => {
             <Typography variant={""}>{props.title}</Typography>
             <Typography variant={""}>{props.text}</Typography>
             <Button variant={"primary"} onClick={flippedCard}>Click Me</Button>
+            <Toggle></Toggle>
         </StyledRegion>
     );
 };
