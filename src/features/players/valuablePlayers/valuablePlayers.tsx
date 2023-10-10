@@ -5,6 +5,11 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Region} from "./regionOfPlayer/Region";
 import {Card} from "../../../components/ui/card";
 import Europe from "../../../assets/images/Europe.png"
+import Asia from "../../../assets/images/Asia.png"
+import Africa from "../../../assets/images/Africa.png"
+import NorthAmerica from "../../../assets/images/NorthAmerica.png"
+import SouthAmerica from "../../../assets/images/SouthAmerica.png"
+import Australia from "../../../assets/images/Australia.png"
 
 
 const region = ["Europe", "Asia", "Africa", "North America", "South America","Australia and Oceania"]
@@ -18,11 +23,11 @@ export const ValuablePlayers = () => {
 <Card>
             <FlexWrapper justify={"space-around"} flex-direction={'row'}>
                 <Region title={region[0]} text={`${region[0]} valuable players`} image={Europe}/>
-                <Region title={region[1]} text={`${region[1]} valuable players`} image={""}/>
-                <Region title={region[2]} text={`${region[2]} valuable players`} image={""}/>
-                <Region title={region[3]} text={`${region[3]} valuable players`} image={""}/>
-                <Region title={region[4]} text={`${region[4]} valuable players`} image={""}/>
-                <Region title={region[5]} text={`${region[5]} valuable players`} image={""}/>
+                <Region title={region[1]} text={`${region[1]} valuable players`} image={Asia}/>
+                <Region title={region[2]} text={`${region[2]} valuable players`} image={Africa}/>
+                <Region title={region[3]} text={`${region[3]} valuable players`} image={NorthAmerica}/>
+                <Region title={region[4]} text={`${region[4]} valuable players`} image={SouthAmerica}/>
+                <Region title={region[5]} text={`${region[5]} valuable players`} image={Australia}/>
             </FlexWrapper>
 </Card>
         </StyledValPlayers>
