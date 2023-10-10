@@ -15,7 +15,10 @@ type RegionProps = {
 export const Region = (props: RegionProps) => {
 
     const flippedCard = () => {
-        return <Card className={s.flipped}></Card>
+        return (
+            <StyledRegion className={s.flipped}>
+            </StyledRegion>
+        )
 
     }
 

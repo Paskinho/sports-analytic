@@ -19,7 +19,7 @@ export const ValuablePlayers = () => {
         <StyledValPlayers>
             <SectionTitle> VALUABLE PLAYERS</SectionTitle>
             <Menu menuItems={region}/>
-<Card>
+            <Card>
             <FlexWrapper display={'flex'} justify={"space-around"} direction={'row'}>
                 <Region title={region[0]} text={`${region[0]} valuable players`} image={Europe}/>
                 <Region title={region[1]} text={`${region[1]} valuable players`} image={Asia}/>
@@ -28,8 +28,9 @@ export const ValuablePlayers = () => {
                 <Region title={region[4]} text={`${region[4]} valuable players`} image={SouthAmerica}/>
                 <Region title={region[5]} text={`${region[5]} valuable players`} image={Australia}/>
             </FlexWrapper>
+            </Card>
 
-</Card>
+
         </StyledValPlayers>
     );
 };
