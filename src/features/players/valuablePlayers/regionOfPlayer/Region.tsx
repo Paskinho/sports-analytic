@@ -29,7 +29,7 @@ export const Region = (props: RegionProps) => {
             <Typography variant={""}>{props.title}</Typography>
             <Typography variant={""}>{props.text}</Typography>
             <Button variant={"primary"} onClick={flippedCard}>Click Me</Button>
-            <Toggle></Toggle>
+            <Toggle onClick={flippedCard}/>
         </StyledRegion>
     );
 };

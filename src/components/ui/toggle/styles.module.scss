@@ -35,11 +35,11 @@
   }
 
   &[data-state='unchecked'] {
-    background-color: black ;
+    background-color: #ff6363;
   }
 
   &[data-state='checked'] {
-    background-color: rgba(238, 158, 141, 0.99);
+    background-color: #1be1c3;
   }
 }
 

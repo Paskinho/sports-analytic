@@ -12,4 +12,5 @@ const slice = createSlice({
 export type PlayerType = {
     name: string
     club: string
+    like?: number
 }

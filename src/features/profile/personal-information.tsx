@@ -1,5 +1,7 @@
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {useNavigate} from "react-router-dom";
+import {Typography} from "../../components/ui/typography";
+import {TextField} from "../../components/ui/text-field";
 
 type PersonalInformationProps = {
     email?: string,
@@ -15,6 +17,13 @@ export const PersonalInformation = ({email, avatar, name, onLogout}: PersonalInf
     const navigate = useNavigate()
 
     return (
-        <div>Profile</div>
+        <div>Profile
+        <h2>name: {name}
+
+            {!name && <TextField></TextField>}
+        </h2>
+        <h2>email: {email}</h2>
+            {avatar}
+        </div>
     )
 }
