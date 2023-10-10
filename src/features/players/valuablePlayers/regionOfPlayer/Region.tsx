@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Typography} from "../../../../components/ui/typography";
 import {Button} from "../../../../components/ui/button";
 import s from '../../../../common/styles/player.module.scss'
+import {Card} from "../../../../components/ui/card";
 
 type RegionProps = {
     title: string
@@ -9,14 +10,21 @@ type RegionProps = {
     image: string
 }
 
+
+
 export const Region = (props: RegionProps) => {
+
+    const flippedCard = () => {
+        return <Card className={s.flipped}></Card>
+
+    }
+
     return (
         <StyledRegion>
             <Image src={props.image} alt=''/>
             <Typography variant={""}>{props.title}</Typography>
             <Typography variant={""}>{props.text}</Typography>
-
-            <Button variant={"primary"} onClick={s.flipped}>Click Me</Button>
+            <Button variant={"primary"} onClick={flippedCard}>Click Me</Button>
         </StyledRegion>
     );
 };
