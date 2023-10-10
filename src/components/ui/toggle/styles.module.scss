@@ -35,11 +35,11 @@
   }
 
   &[data-state='unchecked'] {
-    background-color: var(--color-light-700);
+    background-color: black ;
   }
 
   &[data-state='checked'] {
-    background-color: var(--color-info-300);
+    background-color: rgba(238, 158, 141, 0.99);
   }
 }
 
@@ -51,7 +51,7 @@
   width: 18px;
   height: 18px;
 
-  background-color: var(--color-dark-900);
+  background-color: #e8aae8;
   border-radius: 9999px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
 
