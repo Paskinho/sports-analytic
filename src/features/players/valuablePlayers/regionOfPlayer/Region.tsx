@@ -20,7 +20,7 @@ export const Region = (props: RegionProps) => {
             <StyledRegionBack>
                 <Typography variant={""}>{props.title}</Typography>
                 <Typography variant={""}>{props.text}</Typography>
-                {/*<Button variant={"primary"} onClick={flippedCard}>Click Me</Button>*/}
+                <Button variant={"primary"} onClick={flippedCard}>Click Me</Button>
             </StyledRegionBack>
         )
 
