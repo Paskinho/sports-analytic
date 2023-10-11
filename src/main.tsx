@@ -12,6 +12,7 @@ import {store} from "./app/store";
 import {Main} from "./layout/sections/main/Main";
 import {Footer} from "./layout/footer/Footer";
 import {PersonalInformation} from "./features/profile/personal-information";
+import {Statistics} from "./features/statistics/Statistics";
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
     {
         path: "profile",
         element: <PersonalInformation/>
+    },
+    {
+        path: "statistics",
+        element: <Statistics/>
     }
 ])
 
