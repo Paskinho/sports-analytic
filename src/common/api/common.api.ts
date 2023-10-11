@@ -21,7 +21,6 @@ export const instance = axios.create ({
     }
 });
 
-// fetch('https://api-football-v1.p.rapidapi.com/v3/players', {mode: 'no-cors'}).then(response => response.json())
 
 try {
     const response = await axios.request(instance);

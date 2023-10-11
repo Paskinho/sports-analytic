@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const StyledTable = styled.table `
   //background-color: beige;
+
   
 `
 
 export const StyledTd = styled.td `
   border: 1px solid black;
-
   height: 50px
   //border-width: 50px;
 `

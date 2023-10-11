@@ -1,4 +1,3 @@
-
 import {Typography} from "../../../../../components/ui/typography";
 import styled from "styled-components";
 import {StyledTable, StyledTd, StyledTh, StyledTr} from "../../../../../components/StyledTable";
@@ -56,8 +55,8 @@ export const LastStat = (props: LastStatPropsType) => {
 
 
 const StatTitle = styled.h3`
-display: flex;
-  
+  display: flex;
+
 `
 
 const StatDescription = styled.div`
