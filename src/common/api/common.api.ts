@@ -12,12 +12,15 @@ import axios from "axios";
 
 export const instance = axios.create ({
     baseURL: 'https://api-football-v1.p.rapidapi.com/v3/',
+    // mode: "cors",
     withCredentials: true,
     headers: {
         'X-RapidAPI-Key': 'ec2759ef83msh761e98cfcedc1b3p1c651bjsn7313dedeb9af',
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
     }
 });
+
+fetch('api-football-v1.p.rapidapi.com', {mode: 'no-cors'}).then(response => response.json())
 
 try {
     const response = await axios.request(instance);
