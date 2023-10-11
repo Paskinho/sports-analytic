@@ -19,8 +19,7 @@ export const PersonalInformation = ({email, avatar, name, onLogout}: PersonalInf
     return (
         <div>Profile
         <h2>name: {name}
-
-            {!name && <TextField></TextField>}
+            {/*{!name && <TextField></TextField>}*/}
         </h2>
         <h2>email: {email}</h2>
             {avatar}

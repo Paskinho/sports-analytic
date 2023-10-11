@@ -17,8 +17,11 @@ export const Region = (props: RegionProps) => {
 
     const flippedCard = () => {
         return (
-            <StyledRegion className={s.flipped}>
-            </StyledRegion>
+            <StyledRegionBack>
+                <Typography variant={""}>{props.title}</Typography>
+                <Typography variant={""}>{props.text}</Typography>
+                {/*<Button variant={"primary"} onClick={flippedCard}>Click Me</Button>*/}
+            </StyledRegionBack>
         )
 
     }
@@ -36,6 +39,15 @@ export const Region = (props: RegionProps) => {
 
 const StyledRegion = styled.div`
 background-color: lightgoldenrodyellow;
+  max-width: 540px;
+  width: 100%;
+  padding: 20px;
+  border: 1px dashed;
+  
+`
+
+const StyledRegionBack = styled.div`
+background-color: rgba(161,231,43,0.99);
   max-width: 540px;
   width: 100%;
   padding: 20px;
