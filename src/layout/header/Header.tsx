@@ -61,8 +61,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToStatistics}>Statistics</Typography>
-                <Typography variant={'subtitle1'} color={'inherit'}
-                            onClick={navToSubscription}>Subscription</Typography>
+                <Typography variant={'subtitle1'} color={'inherit'} onClick={navToSubscription}>Subscription</Typography>
             </StyledNav>
             <div className={s.button}>
                 {isAuth && (
