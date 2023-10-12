@@ -1,8 +1,9 @@
-import {CSSProperties, FC, ReactNode, useState} from "react";
+import {ComponentPropsWithoutRef, CSSProperties, FC, ReactNode, useState} from "react";
 import {AnimatePresence, motion, MotionProps, Variants} from 'framer-motion'
 import s from './styles.module.scss'
 import {clsx} from 'clsx'
 import * as DropdownMenuRadix from '@radix-ui/react-dropdown-menu'
+import {Typography} from "../typography";
 
 export type DropdownProps = {
     /** Use TooltipItem components as children.*/
@@ -114,4 +115,52 @@ export const DropdownItem: FC<DropdownItemProps> = ({
     const classNames = {
         item: clsx(s.item, className),
     }
+    return (
+        <DropdownMenuRadix.Item
+            className={classNames.item}
+            disabled={disabled}
+            onSelect={onSelect}
+            style={style}
+            asChild >
+            <motion.div {...item}>{children}</motion.div>
+        </DropdownMenuRadix.Item>
+    )
+
+}
+
+export type DropdownItemWithIconProps = Omit<DropdownItemProps, 'children'> & {
+    icon: ReactNode
+    text: string
+} & ComponentPropsWithoutRef<'div'>
+
+export const DropdownItemWithIcon: FC<DropdownItemWithIconProps> = ({
+                                                                        icon,
+                                                                        disabled,
+                                                                        onSelect,
+                                                                        text,
+                                                                        className,
+                                                                        style,
+                                                                        ...rest
+                                                                    }) => {
+    const classNames = {
+        item: clsx(s.item, className),
+        itemIcon: s.itemIcon,
+    }
+
+    return (
+        <DropdownMenuRadix.Item
+            className={classNames.item}
+            disabled={disabled}
+            onSelect={onSelect}
+            onClick={event => event.stopPropagation()}
+            style={style}
+            asChild
+            {...rest}
+        >
+            <motion.div {...item}>
+                <div className={classNames.itemIcon}>{icon}</div>
+                <Typography variant="caption">{text}</Typography>
+            </motion.div>
+        </DropdownMenuRadix.Item>
+    )
 }
