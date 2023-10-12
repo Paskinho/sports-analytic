@@ -1,4 +1,4 @@
-import {CSSProperties, ReactNode, useState} from "react";
+import {CSSProperties, FC, ReactNode, useState} from "react";
 import {AnimatePresence, motion, MotionProps, Variants} from 'framer-motion'
 import s from './styles.module.scss'
 import {clsx} from 'clsx'
@@ -62,35 +62,56 @@ export const Dropdown = ({children, trigger, align = 'end', className, style}: D
                 <DropdownMenuRadix.Trigger asChild>{trigger}</DropdownMenuRadix.Trigger>
                 <AnimatePresence>
                     {open &&
-                    <DropdownMenuRadix.Portal forceMount>
-<DropdownMenuRadix.Content
-    asChild
-    forceMount
-    className={classNames.content}
-    align={align}
-    sideOffset={8}
-    style={style}
-    onClick={event => event.stopPropagation()}
->
-<motion.div
-    animate={open ? 'open' : 'closed'}
-    initial="closed"
-    exit="closed"
-    variants={menu}
->
-<DropdownMenuRadix.Arrow className={classNames.arrow} asChild>
-<div className={classNames.arrow}/>
+                        <DropdownMenuRadix.Portal forceMount>
+                            <DropdownMenuRadix.Content
+                                asChild
+                                forceMount
+                                className={classNames.content}
+                                align={align}
+                                sideOffset={8}
+                                style={style}
+                                onClick={event => event.stopPropagation()}
+                            >
+                                <motion.div
+                                    animate={open ? 'open' : 'closed'}
+                                    initial="closed"
+                                    exit="closed"
+                                    variants={menu}
+                                >
+                                    <DropdownMenuRadix.Arrow className={classNames.arrow} asChild>
+                                        <div className={classNames.arrow}/>
 
-</DropdownMenuRadix.Arrow>
-<div className={classNames.itemsBox}>{children}</div>
-</motion.div>
+                                    </DropdownMenuRadix.Arrow>
+                                    <div className={classNames.itemsBox}>{children}</div>
+                                </motion.div>
 
-</DropdownMenuRadix.Content>
-                    </DropdownMenuRadix.Portal>
+                            </DropdownMenuRadix.Content>
+                        </DropdownMenuRadix.Portal>
                     }
                 </AnimatePresence>
             </DropdownMenuRadix.Root>
         </div>
     )
 
+}
+
+export type DropdownItemProps = {
+    children?: ReactNode
+    disabled?: boolean
+    /** Event handler called when the user selects an item (via mouse or keyboard). Calling event.preventDefault in this handler will prevent the dropdown menu from closing when selecting that item. */
+    onSelect?: (event: Event) => void
+    className?: string
+    style?: CSSProperties
+}
+
+export const DropdownItem: FC<DropdownItemProps> = ({
+                                                        children,
+                                                        disabled,
+                                                        onSelect,
+                                                        className,
+                                                        style,
+                                                    }) => {
+    const classNames = {
+        item: clsx(s.item, className),
+    }
 }
