@@ -1,5 +1,6 @@
-import {CSSProperties, ReactNode} from "react";
+import {CSSProperties, ReactNode, useState} from "react";
 import { AnimatePresence, motion, MotionProps, Variants } from 'framer-motion'
+import s from './styles.module.scss'
 
 export type DropdownProps = {
     /** Use TooltipItem components as children.*/
@@ -37,6 +38,10 @@ const item = {
     transition: { opacity: { duration: 0.2 } },
 } satisfies MotionProps
 
-export const Dropdown = () => {
+export const Dropdown = ({children, trigger, align = 'end', className, style }: DropdownProps) => {
+
+    const [open, setOpen] = useState(false)
+
+
 
 }
