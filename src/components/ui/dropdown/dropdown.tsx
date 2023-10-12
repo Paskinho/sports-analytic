@@ -60,7 +60,34 @@ export const Dropdown = ({children, trigger, align = 'end', className, style}: D
         <div>
             <DropdownMenuRadix.Root open={open} onOpenChange={setOpen}>
                 <DropdownMenuRadix.Trigger asChild>{trigger}</DropdownMenuRadix.Trigger>
+                <AnimatePresence>
+                    {open &&
+                    <DropdownMenuRadix.Portal forceMount>
+<DropdownMenuRadix.Content
+    asChild
+    forceMount
+    className={classNames.content}
+    align={align}
+    sideOffset={8}
+    style={style}
+    onClick={event => event.stopPropagation()}
+>
+<motion.div
+    animate={open ? 'open' : 'closed'}
+    initial="closed"
+    exit="closed"
+    variants={menu}
+>
+<DropdownMenuRadix.Arrow>
 
+</DropdownMenuRadix.Arrow>
+
+</motion.div>
+
+</DropdownMenuRadix.Content>
+                    </DropdownMenuRadix.Portal>
+                    }
+                </AnimatePresence>
             </DropdownMenuRadix.Root>
         </div>
     )
