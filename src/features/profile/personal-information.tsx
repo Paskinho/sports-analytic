@@ -2,6 +2,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {useNavigate} from "react-router-dom";
 import Profile from "../../assets/images/Profile.png"
 import styled from "styled-components";
+import {Dropdown} from "../../components/ui/dropdown";
 
 type PersonalInformationProps = {
     email?: string,

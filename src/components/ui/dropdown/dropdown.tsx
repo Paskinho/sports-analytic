@@ -1,7 +1,8 @@
 import {CSSProperties, ReactNode, useState} from "react";
-import { AnimatePresence, motion, MotionProps, Variants } from 'framer-motion'
+import {AnimatePresence, motion, MotionProps, Variants} from 'framer-motion'
 import s from './styles.module.scss'
-import * as clsx from "clsx";
+import {clsx} from 'clsx'
+import * as DropdownMenuRadix from '@radix-ui/react-dropdown-menu'
 
 export type DropdownProps = {
     /** Use TooltipItem components as children.*/
@@ -29,17 +30,21 @@ const menu = {
             staggerChildren: 0.05,
         },
     },
-} satisfies Variants
+}
+satisfies
+Variants
 
 const item = {
     variants: {
-        closed: { x: -16, opacity: 0 },
-        open: { x: 0, opacity: 1 },
+        closed: {x: -16, opacity: 0},
+        open: {x: 0, opacity: 1},
     },
-    transition: { opacity: { duration: 0.2 } },
-} satisfies MotionProps
+    transition: {opacity: {duration: 0.2}},
+}
+satisfies
+MotionProps
 
-export const Dropdown = ({children, trigger, align = 'end', className, style }: DropdownProps) => {
+export const Dropdown = ({children, trigger, align = 'end', className, style}: DropdownProps) => {
 
     const [open, setOpen] = useState(false)
 
@@ -53,7 +58,10 @@ export const Dropdown = ({children, trigger, align = 'end', className, style }: 
 
     return (
         <div>
+            <DropdownMenuRadix.Root open={open} onOpenChange={setOpen}>
+                <DropdownMenuRadix.Trigger asChild>{trigger}</DropdownMenuRadix.Trigger>
 
+            </DropdownMenuRadix.Root>
         </div>
     )
 
