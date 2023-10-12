@@ -1,6 +1,7 @@
 import {CSSProperties, ReactNode, useState} from "react";
 import { AnimatePresence, motion, MotionProps, Variants } from 'framer-motion'
 import s from './styles.module.scss'
+import * as clsx from "clsx";
 
 export type DropdownProps = {
     /** Use TooltipItem components as children.*/
@@ -42,6 +43,12 @@ export const Dropdown = ({children, trigger, align = 'end', className, style }: 
 
     const [open, setOpen] = useState(false)
 
-
+    const classNames = {
+        button: s.button,
+        content: clsx(s.content, className),
+        arrowBox: s.arrowBox,
+        arrow: s.arrow,
+        itemsBox: s.itemsBox,
+    }
 
 }
