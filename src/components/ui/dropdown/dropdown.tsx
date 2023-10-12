@@ -78,10 +78,11 @@ export const Dropdown = ({children, trigger, align = 'end', className, style}: D
     exit="closed"
     variants={menu}
 >
-<DropdownMenuRadix.Arrow>
+<DropdownMenuRadix.Arrow className={classNames.arrow} asChild>
+<div className={classNames.arrow}/>
 
 </DropdownMenuRadix.Arrow>
-
+<div className={classNames.itemsBox}>{children}</div>
 </motion.div>
 
 </DropdownMenuRadix.Content>
