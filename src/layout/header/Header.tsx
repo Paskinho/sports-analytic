@@ -6,7 +6,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {PersonalInformation} from "../../features/profile/personal-information";
-import {Dropdown, DropdownItem} from "../../components/ui/dropdown";
+import {Dropdown, DropdownItem, DropdownItemWithIcon} from "../../components/ui/dropdown";
 
 
 type HeaderProps = {
@@ -78,13 +78,23 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     <img alt={"Profile logo"}
                              src={"https://img.freepik.com/premiumphoto/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}/>
                              {/*onClick={navToProfile}/>*/}
+                    <DropdownItem>
+                        <div>
+                            <img alt={"Profile logo"}
+                                 src={"https://img.freepik.com/premiumphoto/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}/>
+                       <div>
+                           <Typography variant={'subtitle2'}>{userInfo?.name}</Typography>
+                           <Typography variant={'caption'}>{userInfo?.email}</Typography>
+                       </div>
+                        </div>
+                    </DropdownItem>
+                    <DropdownItemWithIcon
+                    icon={}
+                    >
+
+                    </DropdownItemWithIcon>
                 </Dropdown>
-            {/*)}*/}
-            {/*<DropdownItem>*/}
-            {/*    <img alt={"Profile logo"}*/}
-            {/*         src={"https://img.freepik.com/premium-photo/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}*/}
-            {/*         onClick={navToProfile}/>*/}
-            {/*</DropdownItem>*/}
+
         </StyledHeader>
     )
 }
