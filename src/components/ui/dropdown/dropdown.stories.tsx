@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { Edit } from '../../../assets/icons'
+import { Edit } from '../../../assets/icons/edit'
 
 import { Dropdown, DropdownItemWithIcon } from '.'
 import {Button} from "../button";
