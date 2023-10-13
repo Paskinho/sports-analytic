@@ -7,6 +7,7 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {PersonalInformation} from "../../features/profile/personal-information";
 import {Dropdown, DropdownItem, DropdownItemWithIcon} from "../../components/ui/dropdown";
+import PersonalOutline from "../../assets/icons/personalOutline";
 
 
 type HeaderProps = {
@@ -89,10 +90,10 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                         </div>
                     </DropdownItem>
                     <DropdownItemWithIcon
-                    icon={}
-                    >
-
-                    </DropdownItemWithIcon>
+                    icon={<PersonalOutline/>}
+                    text={"Profile"}
+                    onSelect={()=> navigate('/profile')}
+                    />
                 </Dropdown>
 
         </StyledHeader>
