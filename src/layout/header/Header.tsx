@@ -5,10 +5,9 @@ import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {PersonalInformation} from "../../features/profile/personal-information";
 import {Dropdown, DropdownItem, DropdownItemWithIcon} from "../../components/ui/dropdown";
 import PersonalOutline from "../../assets/icons/personalOutline";
-
+import  Logout from '../../assets/icons/logout'
 
 type HeaderProps = {
     isAuth: boolean
@@ -94,12 +93,16 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     text={"Profile"}
                     onSelect={()=> navigate('/profile')}
                     />
+                    <DropdownItemWithIcon icon={<Logout/>} text={"Sign out"}
+
+                                          // onSelect={onSignOut}
+
+                    />
                 </Dropdown>
 
         </StyledHeader>
     )
 }
-
 
 const StyledHeader = styled.header`
   height: 70px;
