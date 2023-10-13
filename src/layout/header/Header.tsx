@@ -6,7 +6,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {PersonalInformation} from "../../features/profile/personal-information";
-import {Dropdown} from "../../components/ui/dropdown";
+import {Dropdown, DropdownItem} from "../../components/ui/dropdown";
 
 
 type HeaderProps = {
@@ -65,14 +65,26 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToSubscription}>Subscription</Typography>
             </StyledNav>
             <div className={s.button}>
-                {isAuth && (
-                    <img />
-                )}
                 <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
-                <img alt={"Profile logo"}
-                     src={"https://img.freepik.com/premium-photo/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}
-                     onClick={navToProfile}/>
+
             </div>
+            {/*{isAuth && (*/}
+                <Dropdown trigger={<Button>
+                    <Typography variant='subtitle'>
+                        {userInfo?.name}
+                     Uladzislau
+                    </Typography>
+                </Button>}>
+                    <img alt={"Profile logo"}
+                             src={"https://img.freepik.com/premiumphoto/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}/>
+                             {/*onClick={navToProfile}/>*/}
+                </Dropdown>
+            {/*)}*/}
+            {/*<DropdownItem>*/}
+            {/*    <img alt={"Profile logo"}*/}
+            {/*         src={"https://img.freepik.com/premium-photo/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}*/}
+            {/*         onClick={navToProfile}/>*/}
+            {/*</DropdownItem>*/}
         </StyledHeader>
     )
 }
