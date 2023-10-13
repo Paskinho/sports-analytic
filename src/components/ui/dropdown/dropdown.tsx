@@ -32,8 +32,7 @@ const menu = {
         },
     },
 }
-satisfies
-Variants
+satisfies Variants
 
 const item = {
     variants: {
@@ -42,8 +41,7 @@ const item = {
     },
     transition: {opacity: {duration: 0.2}},
 }
-satisfies
-MotionProps
+satisfies MotionProps
 
 export const Dropdown = ({children, trigger, align = 'end', className, style}: DropdownProps) => {
 

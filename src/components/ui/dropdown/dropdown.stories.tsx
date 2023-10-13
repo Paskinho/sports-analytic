@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { Edit } from '../../../assets/icons/edit'
+import { Button } from '..'
+import { Edit } from '../../../assets/icons'
 
 import { Dropdown, DropdownItemWithIcon } from '.'
-import {Button} from "../button";
 
 const meta = {
     title: 'Components/Dropdown',
