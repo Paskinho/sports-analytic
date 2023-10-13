@@ -99,7 +99,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 
                     />
                 </Dropdown>
-
+            {!isAuth && <Button variant="primary">Sign In</Button>}
         </StyledHeader>
     )
 }
