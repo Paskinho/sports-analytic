@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from '..'
-import { Edit } from '../../../assets/icons'
+import { Button } from '../button'
+import { Edit } from '../../../assets/icons/edit'
 
 import { Dropdown, DropdownItemWithIcon } from '.'
 
@@ -12,6 +12,7 @@ const meta = {
 
 export default meta
 type Story = StoryObj<typeof meta>
+
 
 export const Default: Story = {
     args: {

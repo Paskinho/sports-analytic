@@ -6,6 +6,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {PersonalInformation} from "../../features/profile/personal-information";
+import {Dropdown} from "../../components/ui/dropdown";
 
 
 type HeaderProps = {
@@ -71,7 +72,6 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                 <img alt={"Profile logo"}
                      src={"https://img.freepik.com/premium-photo/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}
                      onClick={navToProfile}/>
-
             </div>
         </StyledHeader>
     )

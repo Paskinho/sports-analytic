@@ -1,5 +1,5 @@
 import {ComponentPropsWithoutRef, CSSProperties, FC, ReactNode, useState} from "react";
-import {AnimatePresence, motion, MotionProps, Variants} from 'framer-motion'
+import {AnimatePresence, motion, Variants} from 'framer-motion'
 import s from './styles.module.scss'
 import {clsx} from 'clsx'
 import * as DropdownMenuRadix from '@radix-ui/react-dropdown-menu'
@@ -31,8 +31,7 @@ const menu = {
             staggerChildren: 0.05,
         },
     },
-}
-satisfies Variants
+} satisfies Variants;
 
 const item = {
     variants: {
@@ -40,8 +39,7 @@ const item = {
         open: {x: 0, opacity: 1},
     },
     transition: {opacity: {duration: 0.2}},
-}
-satisfies MotionProps
+} satisfies MotionProps;
 
 export const Dropdown = ({children, trigger, align = 'end', className, style}: DropdownProps) => {
 
