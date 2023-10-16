@@ -69,22 +69,22 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 
             </div>
             {/*{isAuth && (*/}
-                <Dropdown trigger={<Button>
-                    <Typography variant='subtitle'>
+                <Dropdown trigger={<button>
+                    <Typography variant='subtitle' className={s.userName}>
                         {userInfo?.name}
                      Uladzislau
                     </Typography>
-                </Button>}>
+                </button>}>
                     <img alt={"Profile logo"}
                              src={"https://img.freepik.com/premiumphoto/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}/>
                              {/*onClick={navToProfile}/>*/}
                     <DropdownItem>
-                        <div>
+                        <div className={s.userInfoContainer}>
                             <img alt={"Profile logo"}
                                  src={"https://img.freepik.com/premiumphoto/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}/>
-                       <div>
-                           <Typography variant={'subtitle2'}>{userInfo?.name}</Typography>
-                           <Typography variant={'caption'}>{userInfo?.email}</Typography>
+                       <div className={s.userDetails}>
+                           <Typography variant={'subtitle2'}>{userInfo?.name} Uladzislau</Typography>
+                           <Typography variant={'caption'}>{userInfo?.email} gmail</Typography>
                        </div>
                         </div>
                     </DropdownItem>
@@ -115,6 +115,19 @@ const StyledHeader = styled.header`
   align-items: center;
   padding-right: 50px;`
 
+// z-index: 2;
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   display: flex;
+//   justify-content: space-between;
+//
+//   padding: 12px 36px;
+//
+//   background: var(--color-dark-700, #171717);
+//   border-bottom: 1px solid var(--color-dark-500, #333);
+//   height: var(--header-height);
 
 const StyledNav = styled.nav `
   display: flex;

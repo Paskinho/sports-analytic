@@ -24,3 +24,19 @@
   align-content: start;
 }
 
+//.userName {
+//  text-decoration: dashed underline;
+//}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfoContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+
