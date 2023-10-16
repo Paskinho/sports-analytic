@@ -18,7 +18,7 @@ export const PersonalInformation = ({email, avatar, name, onLogout}: PersonalInf
     const navigate = useNavigate()
 
     return (
-        <div>Profile
+        <StyledProfile>Profile
             <h2>
                 <StyledImg src={Profile}/>
             </h2>
@@ -27,7 +27,7 @@ export const PersonalInformation = ({email, avatar, name, onLogout}: PersonalInf
             </h2>
             <h2>email: {email}</h2>
             {avatar}
-        </div>
+        </StyledProfile>
     )
 }
 
@@ -35,4 +35,8 @@ const StyledImg = styled.img`
   width: 200px;
   height: 200px;
   border-radius: 20px;
+`
+
+const StyledProfile = styled.div `
+background-color: rgba(208,231,225,0.99);
 `

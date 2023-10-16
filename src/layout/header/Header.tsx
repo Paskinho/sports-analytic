@@ -82,10 +82,10 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                              {/*onClick={navToProfile}/>*/}
                     <DropdownItem>
                         <div className={s.userInfoContainer}>
-                            <img alt={"Profile logo"}
-                                 src={Profile}
-                            className={s.imgHeader}
-                            />
+                            {/*<img alt={"Profile logo"}*/}
+                            {/*     src={Profile}*/}
+                            {/*className={s.imgHeader}*/}
+                            {/*/>*/}
                        <div className={s.userDetails}>
                            <Typography variant={'subtitle2'}>{userInfo?.name} Uladzislau</Typography>
                            <Typography variant={'caption'}>{userInfo?.email} gmail</Typography>
@@ -96,8 +96,9 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     icon={<PersonalOutline/>}
                     text={"Profile"}
                     onSelect={()=> navigate('/profile')}
+                    className={s.userInfoContainer}
                     />
-                    <DropdownItemWithIcon icon={<Logout/>} text={"Sign out"}
+                    <DropdownItemWithIcon className={s.userInfoContainer} icon={<Logout/>} text={"Sign out"}
 
                                           // onSelect={onSignOut}
 
@@ -121,37 +122,10 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   padding: 12px 36px;
   align-items: center;
-;
-  
-  
-  // z-index: 2;
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   display: flex;
-  //   justify-content: space-between;
-  //
-  //   padding: 12px 36px;
-  //
-  //   background: var(--color-dark-700, #171717);
-  //   border-bottom: 1px solid var(--color-dark-500, #333);
-  //   height: var(--header-height);
 `
+  
+  
 
-// z-index: 2;
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   display: flex;
-//   justify-content: space-between;
-//
-//   padding: 12px 36px;
-//
-//   background: var(--color-dark-700, #171717);
-//   border-bottom: 1px solid var(--color-dark-500, #333);
-//   height: var(--header-height);
 
 const StyledNav = styled.nav `
   display: flex;
