@@ -18,13 +18,13 @@ export const Default: Story = {
     args: {
         children: (
             <>
-                <DropdownItemWithIcon icon={<Edit />} text="Изменить" onSelect={() => {}} />
-                <DropdownItemWithIcon icon={<Edit />} text="Удалить" onSelect={() => {}} />
-                <DropdownItemWithIcon icon={<Edit />} text="Удалить" onSelect={() => {}} />
-                <DropdownItemWithIcon icon={<Edit />} text="Удалить" onSelect={() => {}} />
-                <DropdownItemWithIcon icon={<Edit />} text="Удалить" onSelect={() => {}} />
+                <DropdownItemWithIcon icon={<Edit />} text="Change" onSelect={() => {}} />
+                <DropdownItemWithIcon icon={<Edit />} text="Delete" onSelect={() => {}} />
+                <DropdownItemWithIcon icon={<Edit />} text="Delete" onSelect={() => {}} />
+                <DropdownItemWithIcon icon={<Edit />} text="Delete" onSelect={() => {}} />
+                <DropdownItemWithIcon icon={<Edit />} text="Delete" onSelect={() => {}} />
             </>
         ),
-        trigger: <Button>open</Button>,
+        trigger: <button>open</button>,
     },
 }
