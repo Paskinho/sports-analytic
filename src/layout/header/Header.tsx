@@ -105,15 +105,35 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 }
 
 const StyledHeader = styled.header`
-  height: 70px;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   box-shadow: 1px 2px 1px 1px lightgray;
   background-color: rgb(255, 44, 0);
   grid-area: header;
   display: flex;
-  width: 1500px;
   justify-content: space-between;
+  padding: 12px 36px;
   align-items: center;
-  padding-right: 50px;`
+;
+  
+  
+  // z-index: 2;
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   display: flex;
+  //   justify-content: space-between;
+  //
+  //   padding: 12px 36px;
+  //
+  //   background: var(--color-dark-700, #171717);
+  //   border-bottom: 1px solid var(--color-dark-500, #333);
+  //   height: var(--header-height);
+`
 
 // z-index: 2;
 //   position: fixed;
