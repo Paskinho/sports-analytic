@@ -56,7 +56,6 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 
     return (
         <StyledHeader>
-
             <StyledNav>
                 <Logo/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
@@ -87,8 +86,8 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             {/*className={s.imgHeader}*/}
                             {/*/>*/}
                        <div className={s.userDetails}>
-                           <Typography variant={'subtitle2'}>{userInfo?.name} Uladzislau</Typography>
-                           <Typography variant={'caption'}>{userInfo?.email} gmail</Typography>
+                           <Typography variant={'subtitle2'}>{userInfo?.name}Uladzislau</Typography>
+                           <Typography variant={'caption'}>{userInfo?.email}v.paskanov@gmail.com</Typography>
                        </div>
                         </div>
                     </DropdownItem>
@@ -99,9 +98,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     className={s.userInfoContainer}
                     />
                     <DropdownItemWithIcon className={s.userInfoContainer} icon={<Logout/>} text={"Sign out"}
-
                                           // onSelect={onSignOut}
-
                     />
                 </Dropdown>
             {/*{!isAuth && <Button variant="primary">Sign In</Button>}*/}
