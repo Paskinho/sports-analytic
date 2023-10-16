@@ -8,6 +8,7 @@ import {Logo} from "../../components/logo/Logo";
 import {Dropdown, DropdownItem, DropdownItemWithIcon} from "../../components/ui/dropdown";
 import PersonalOutline from "../../assets/icons/personalOutline";
 import  Logout from '../../assets/icons/logout'
+import Profile from "../../assets/images/Profile.png"
 
 type HeaderProps = {
     isAuth: boolean
@@ -76,12 +77,15 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     </Typography>
                 </button>}>
                     <img alt={"Profile logo"}
-                             src={"https://img.freepik.com/premiumphoto/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}/>
+                             src={Profile}
+                         className={s.imgHeader}/>
                              {/*onClick={navToProfile}/>*/}
                     <DropdownItem>
                         <div className={s.userInfoContainer}>
                             <img alt={"Profile logo"}
-                                 src={"https://img.freepik.com/premiumphoto/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg"}/>
+                                 src={Profile}
+                            className={s.imgHeader}
+                            />
                        <div className={s.userDetails}>
                            <Typography variant={'subtitle2'}>{userInfo?.name} Uladzislau</Typography>
                            <Typography variant={'caption'}>{userInfo?.email} gmail</Typography>
@@ -99,7 +103,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 
                     />
                 </Dropdown>
-            {!isAuth && <Button variant="primary">Sign In</Button>}
+            {/*{!isAuth && <Button variant="primary">Sign In</Button>}*/}
         </StyledHeader>
     )
 }
