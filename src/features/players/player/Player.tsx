@@ -6,6 +6,7 @@ import {StyledTable, StyledTd, StyledTh} from "../../../components/StyledTable";
 import {Button} from "../../../components/ui/button";
 import {useEffect, useState} from "react";
 import Eye from "../../../assets/icons/eye";
+import {Slider} from "../../../components/ui/slider";
 
 
 export const Player = (props: PlayerType) => {
@@ -74,6 +75,8 @@ export const Player = (props: PlayerType) => {
             <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
             <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
             <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
+            <Slider/>
+
         </StyledTd>
     </StyledTable>
 }
