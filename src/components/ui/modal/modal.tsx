@@ -1,6 +1,8 @@
 import {ComponentProps, FC} from "react";
 import s from "modal.module.scss"
 import {clsx} from "clsx";
+import {Dialog, DialogPortal} from "@radix-ui/react-dialog";
+import {AnimatePresence} from "framer-motion";
 
 
 export type ModalSize = 'sm' | 'md' | 'lg'
@@ -46,7 +48,19 @@ export const Modal: FC<ModalProps> = ({
         closeButton: s.closeButton,
         contentBox: s.contentBox,
     }
+return (
+    <Dialog open={open} onOpenChange={handleModalClosed}>
+        <AnimatePresence>
+            {open && (
+                <DialogPortal forceMount>
 
+                </DialogPortal>
+            )}
+
+        </AnimatePresence>
+
+    </Dialog>
+)
 
 
 }
