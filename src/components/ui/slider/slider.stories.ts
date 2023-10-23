@@ -1,14 +1,19 @@
 import {Slider} from "./slider";
-import {Meta} from "@storybook/blocks";
-import {Story} from "@storybook/react";
+import {Story, StoryObj} from "@storybook/react";
 
 const meta = {
     title: 'Component/Slider',
     component: Slider
 } satisfies Meta<typeof Slider>
 
+export default meta
+type Story = StoryObj<typeof meta>
+
+
 export const Default: Story = {
     args: {
-        children
+        children: {
+
+        }
     }
 }
