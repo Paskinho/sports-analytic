@@ -9,7 +9,7 @@ import {
     DialogPortal,
     DialogTitle
 } from "@radix-ui/react-dialog";
-import {AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import Close from "../../../assets/icons/close";
 
 
