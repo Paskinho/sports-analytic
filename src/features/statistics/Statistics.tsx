@@ -2,11 +2,14 @@ import {Checkbox} from "../../components/ui/checkbox/checkbox";
 import styled from "styled-components";
 import {Modal} from "../../components/ui/modal";
 import {useState} from "react";
+import {TextField} from "../../components/ui/text-field";
 
 
 export const Statistics = () => {
 
-    const [showModal, setShowModal] = useState(false)
+    const [showModal, setShowModal] = useState(true)
+    const closeModal = () => setShowModal(false)
+    const openModal = () => setShowModal(true)
 
     return (
         <StyledDivStatistics>
@@ -14,7 +17,12 @@ export const Statistics = () => {
             GLOBAL STATISTICS
             GLOBAL STATISTICS
             <Checkbox>+</Checkbox>
-            <Modal open={showModal}> +++++</Modal>
+            <Modal open={showModal} onClose={closeModal} title={'Create compare'}>
+                <form>
+                <TextField label={"Compare player №1"}/>
+                <TextField label={"Compare player №2"}/>
+                </form>
+            </Modal>
         </StyledDivStatistics>
     );
 };
