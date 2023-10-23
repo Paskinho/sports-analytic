@@ -10,6 +10,7 @@ import {
     DialogTitle
 } from "@radix-ui/react-dialog";
 import {AnimatePresence} from "framer-motion";
+import Close from "../../../assets/icons/close";
 
 
 export type ModalSize = 'sm' | 'md' | 'lg'
@@ -106,9 +107,8 @@ export const Modal: FC<ModalProps> = ({
                                         </DialogClose>
                                     )}
                                 </header>
-
+                                <div className={classNames.contentBox}>{children}</div>
                             </motion.div>
-
                         </DialogContent>
                     </DialogPortal>
                 )}
