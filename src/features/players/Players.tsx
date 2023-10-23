@@ -4,7 +4,6 @@ import s from "../players/styles.module.scss"
 import {playersThunks} from "./players.slice";
 import {toast} from "react-toastify";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
-import {Slider} from "../../components/ui/slider";
 
 export const Players = () => {
 
@@ -29,6 +28,7 @@ export const Players = () => {
             </div>
             <Button onClick={getPlayers}>Get Players</Button>
             <div><Player/></div>
+
 
         </div>
     )

@@ -2,10 +2,8 @@ import React from 'react';
 import {Button} from "../../../components/ui/button";
 import {TextField} from "../../../components/ui/text-field";
 import {useController, useForm} from "react-hook-form";
-import {Checkbox} from "../../../components/ui/checkbox/checkbox";
 import {z} from "zod";
-import { zodResolver } from '@hookform/resolvers/zod'
-
+import {zodResolver} from '@hookform/resolvers/zod'
 
 
 const loginSchema = z.object({

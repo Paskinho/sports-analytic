@@ -1,5 +1,5 @@
 import {ComponentProps, FC} from "react";
-import s from "modal.module.scss"
+import s from "./modal.module.scss"
 import {clsx} from "clsx";
 import {
     Dialog,
