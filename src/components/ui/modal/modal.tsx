@@ -1,7 +1,14 @@
 import {ComponentProps, FC} from "react";
 import s from "modal.module.scss"
 import {clsx} from "clsx";
-import {Dialog, DialogClose, DialogContent, DialogOverlay, DialogPortal, DialogTitle} from "@radix-ui/react-dialog";
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogOverlay,
+    DialogPortal,
+    DialogTitle
+} from "@radix-ui/react-dialog";
 import {AnimatePresence} from "framer-motion";
 
 
@@ -78,22 +85,26 @@ export const Modal: FC<ModalProps> = ({
                 {open && (
                     <DialogPortal forceMount>
                         <DialogOverlay asChild>
-<motion.div
-className={classNames.overlay}
-initial={{opacity: 0}}
-animate={{opacity: 1}}
-exit={{opacity: 0}}
-/>
+                            <motion.div
+                                className={classNames.overlay}
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                exit={{opacity: 0}}
+                            />
                         </DialogOverlay>
                         <DialogContent className={classNames.content} asChild forceMount>
                             <motion.div variant={dropIn} initial={'hidden'}
-                            animate={'visible'} exit={"exit"}
+                                        animate={'visible'} exit={"exit"}
                             >
                                 <header className={classNames.header}>
-                                    <DialogTitle asChild={}>
+                                    <DialogTitle asChild>
                                         <h2 className={classNames.title}>{title}</h2>
                                     </DialogTitle>
-
+                                    {showCloseButton && (
+                                        <DialogClose className={classNames.closeButton}>
+                                            <Close/>
+                                        </DialogClose>
+                                    )}
                                 </header>
 
                             </motion.div>
