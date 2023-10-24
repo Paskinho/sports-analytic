@@ -26,8 +26,9 @@ export const Players = () => {
             <div><input placeholder={"Search player"}/>
                 <Button onClick={onSearchPlayers} className={s.buttonSearchPlayer} variant={'primary'}>Search</Button>
             </div>
-            <Button onClick={getPlayers}>Get Players</Button>
+
             <div><Player/></div>
+            <Button onClick={getPlayers}>Get Players</Button>
 
 
         </div>
