@@ -5,7 +5,15 @@ import {useState} from "react";
 import {TextField} from "../../components/ui/text-field";
 import {Button} from "../../components/ui/button";
 import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
 
+const newDeckSchema = z.object({
+    question: z.string().min(3).max(500),
+    answer: z.string().min(3).max(500),
+})
+
+type newCompare = z.infer<typeof newDeckSchema>
 
 export const Statistics = () => {
 
@@ -15,12 +23,16 @@ export const Statistics = () => {
 
 
     const {control, handleSubmit} = useForm({
-
+        resolver: zodResolver(newDeckSchema),
+        defaultValues: {
+            question: "",
+            answer: ""
+        },
     })
 
-    const formCreated = () => {
-        return <div>Okay</div>
-    }
+    const formCreated = handleSubmit((args: newCompare) => {
+        return alert('Success create')
+    })
 
 
     return (
@@ -31,8 +43,8 @@ export const Statistics = () => {
             <Checkbox>+</Checkbox>
             <Modal open={showModal} onClose={closeModal} title={'Create compare'}>
                 <form onSubmit={formCreated}>
-                <TextField label={"Compare player №1"}/>
-                <TextField label={"Compare player №2"}/>
+                    <TextField label={"Compare player №1"}/>
+                    <TextField label={"Compare player №2"}/>
                     <Button type={'submit'}>Add</Button>
                 </form>
             </Modal>
