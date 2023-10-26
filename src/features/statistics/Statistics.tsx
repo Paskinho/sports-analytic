@@ -7,6 +7,7 @@ import {Button} from "../../components/ui/button";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
+import {Table} from '../../components/ui/table'
 
 const newDeckSchema = z.object({
     question: z.string().min(3).max(500),
@@ -48,6 +49,7 @@ export const Statistics = () => {
                     <Button type={'submit'}>Add</Button>
                 </form>
             </Modal>
+            <Table.Root />
         </StyledDivStatistics>
     );
 };
