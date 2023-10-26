@@ -103,7 +103,14 @@ export const Cell: Fc<CellProps> = ({className, ...rest}) => {
 
 }
 
+export type EmptyProps = ComponentProps<'div'>
 
+
+export const Empty: FC<EmptyProps & {mt?: string, mb?: string}>  = ({className, mt = '89px', mb}) => {
+  const classNames = {
+      empty: clsx(className, s.empty)
+  }
+}
 
 export const Table =  {
     Root,
