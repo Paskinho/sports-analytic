@@ -13,8 +13,41 @@ export const Root: FC<RootProps> = ({className,...rest}) => {
     return <table className={classNames.table}/>
 }
 
+export type HeadProps = ComponentProps<"head">
 
-const Table = () => {
-    
+export const Head: FC<HeadProps> = (props) => {
+    return <thead {...props}/>
+
+}
+
+export type Column = {
+    title: string
+    key: string
+    sortable?: boolean
+}
+
+export type Sort = {
+    key: string
+    direction: 'asc' | 'desc'
+} | null
+
+export const Header: FC<
+    Omit<
+        HeadProps & {
+        columns: Column[]
+        sort?: Sort
+        onSort?: (sort: Sort) => void
+}, 'children'
+        >> = ({columns,sort, onSort,...restProps}) => {
+const classNames = {
+    chevron: sort?.direction === "asc" ? "" : s.chevronDown
+}
+
+}
+
+
+export const Table = () => {
+    Root,
+        Head
 
 }
