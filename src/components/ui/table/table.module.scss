@@ -7,3 +7,28 @@
 .chevronDown {
   transform: rotate(180deg);
 }
+
+.headCell {
+  padding: 6px 24px;
+
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-m);
+
+  background-color: var(--color-dark-500);
+
+  > span {
+    user-select: none;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  &.sortable > span {
+    cursor: pointer;
+  }
+
+  svg {
+    transition: transform 0.2s ease-in-out;
+  }
+}

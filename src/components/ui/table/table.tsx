@@ -42,12 +42,61 @@ export const Header: FC<
 const classNames = {
     chevron: sort?.direction === "asc" ? "" : s.chevronDown
 }
+const handleSort = (key: string, sortable?: boolean) => {
+    if (!onSort || !sortable) return
+    if (sort?.key === key) return onSort({key, direction: 'asc'})
+    if(sort?.direction === 'desc') return onSort(null)
+
+    return onSort({
+        key,
+        direction: sort?.direction === 'asc' ? 'desc' : 'asc'
+    })
+}
+
+return (
+    <Head {...restProps}>
+        <Row>
+            {columns.map(({title,key,sortable})=> {
+                <HeadCell/>
+            })}
+        </Row>
+
+    </Head>
+
+)
 
 }
 
 
-export const Table = () => {
+export type RowProps = ComponentProps<'tr'>
+
+export const Row = (props) => {
+    return <tr {...props}/>
+}
+
+export type HeadCellProps = ComponentProps<'th'> & {
+    sortable?: boolean
+}
+
+export const HeadCell: FC<HeadCellProps> = ({className, children, sortable, ...rest}) => {
+    const classNames = {
+        headCell: clsx(className, s.headCell, sortable && s.sortable)
+    }
+
+    return (
+        <th className={classNames.headCell} {...rest}>
+            <span>{children}</span>
+        </th>
+    )
+
+}
+
+
+
+
+export const Table =  {
     Root,
-        Head
+        Head,
+        Header
 
 }
