@@ -94,12 +94,22 @@ export const HeadCell: FC<HeadCellProps> = ({ className, children, sortable, ...
     )
 }
 
+export type CellProps = ComponentProps<'td'>
+
+export const Cell: Fc<CellProps> = ({className, ...rest}) => {
+    const classNames = {
+        cell: clsx(className, s.tableCell)
+    }
+
+}
 
 
 
 export const Table =  {
     Root,
         Head,
-        Header
-
+        Header,
+    Row,
+    HeadCell,
+    Cell
 }
