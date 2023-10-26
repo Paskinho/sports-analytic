@@ -1,6 +1,7 @@
 import {ComponentProps, FC} from "react";
 import {clsx} from "clsx";
 import s from "./table.module.scss"
+import {BiChevronUp} from "react-icons/bi";
 
 export type RootProps = ComponentProps<'table'>
 
@@ -56,9 +57,12 @@ const handleSort = (key: string, sortable?: boolean) => {
 return (
     <Head {...restProps}>
         <Row>
-            {columns.map(({title,key,sortable})=> {
-                <HeadCell/>
-            })}
+            {columns.map(({title,key,sortable})=> (
+                <HeadCell key={key} onClick={handleSort(key,sortable)} sortable={sortable}>
+                    {title}
+                    {sort?.key === key ? <BiChevronUp className={classNames.chevron}/> : ""}
+                </HeadCell>
+            ))}
         </Row>
 
     </Head>
@@ -78,9 +82,9 @@ export type HeadCellProps = ComponentProps<'th'> & {
     sortable?: boolean
 }
 
-export const HeadCell: FC<HeadCellProps> = ({className, children, sortable, ...rest}) => {
+export const HeadCell: FC<HeadCellProps> = ({ className, children, sortable, ...rest }) => {
     const classNames = {
-        headCell: clsx(className, s.headCell, sortable && s.sortable)
+        headCell: clsx(className, s.headCell, sortable && s.sortable),
     }
 
     return (
@@ -88,7 +92,6 @@ export const HeadCell: FC<HeadCellProps> = ({className, children, sortable, ...r
             <span>{children}</span>
         </th>
     )
-
 }
 
 
