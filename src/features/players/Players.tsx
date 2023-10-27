@@ -4,6 +4,8 @@ import s from "../players/styles.module.scss"
 import {playersThunks} from "./players.slice";
 import {toast} from "react-toastify";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
+import {Table}  from '../../components/ui/table'
+
 
 export const Players = () => {
 
@@ -29,6 +31,13 @@ export const Players = () => {
 
             <div><Player/></div>
             <Button onClick={getPlayers}>Get Players</Button>
+            <Table.Root>
+                <Table.Header>
+                    <Table.Body>
+                        asf
+                    </Table.Body>
+                </Table.Header>
+            </Table.Root>
 
 
         </div>

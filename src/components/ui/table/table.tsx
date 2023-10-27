@@ -125,6 +125,9 @@ export const Empty: FC<EmptyProps & { mt?: string, mb?: string }> = ({className,
 
 }
 
+export type TableProps = {}
+export const TableComponent = () => {}
+
 export const Table = {
     Root,
     Head,
