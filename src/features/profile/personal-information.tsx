@@ -2,6 +2,10 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {useNavigate} from "react-router-dom";
 import Profile from "../../assets/images/Profile.png"
 import styled from "styled-components";
+import {Typography} from "../../components/ui/typography";
+import Edit from "../../assets/icons/edit";
+import {Button} from "../../components/ui/button";
+import Camera from "../../assets/icons/camera";
 
 type PersonalInformationProps = {
     email?: string,
@@ -23,10 +27,17 @@ export const PersonalInformation = ({email, avatar, name, onLogout, onAvatarChan
             <h2>
                 <StyledImg src={Profile}/>
             </h2>
-            <h2>name: {name}
+            <Button>
+                <Camera/>
+            </Button>
+            <Typography variant={'h1'}>
+                name: {name}
                 {/*{!name && <TextField></TextField>}*/}
-            </h2>
-            <h2>email: {email}</h2>
+            </Typography>
+            <Button variant={'primary'}><Edit/></Button>
+            <Typography variant={'h1'}>
+                email: {email}
+            </Typography>
             {avatar}
         </StyledProfile>
     )
