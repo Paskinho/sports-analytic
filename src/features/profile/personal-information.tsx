@@ -6,6 +6,7 @@ import {Typography} from "../../components/ui/typography";
 import Edit from "../../assets/icons/edit";
 import {Button} from "../../components/ui/button";
 import Camera from "../../assets/icons/camera";
+import Logout from "../../assets/icons/logout";
 
 type PersonalInformationProps = {
     email?: string,
@@ -17,7 +18,23 @@ type PersonalInformationProps = {
 }
 
 
+
+
+
 export const PersonalInformation = ({email, avatar, name, onLogout, onAvatarChange, onNameChange}: PersonalInformationProps) => {
+
+    const handleAvatarChanged = () => {
+        onAvatarChange('newAvatar')
+    }
+
+    const handleNameChanged = () => {
+        onNameChange('newName')
+    }
+
+    const handleLogout = () => {
+        onLogout()
+    }
+
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
@@ -27,18 +44,22 @@ export const PersonalInformation = ({email, avatar, name, onLogout, onAvatarChan
             <h2>
                 <StyledImg src={Profile}/>
             </h2>
-            <Button>
+            <Button variant={'secondary'} onClick={handleAvatarChanged}>
                 <Camera/>
             </Button>
             <Typography variant={'h1'}>
                 name: {name}
                 {/*{!name && <TextField></TextField>}*/}
             </Typography>
-            <Button variant={'primary'}><Edit/></Button>
+            <Button variant={'secondary'} onClick={handleNameChanged}>
+                <Edit/>
+            </Button>
             <Typography variant={'h1'}>
                 email: {email}
             </Typography>
-            {avatar}
+            <Button variant={"secondary"} onClick={handleLogout}>
+                <Logout/>
+            </Button>
         </StyledProfile>
     )
 }
