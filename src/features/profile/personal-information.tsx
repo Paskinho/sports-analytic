@@ -8,10 +8,12 @@ type PersonalInformationProps = {
     avatar?: string,
     name?: string,
     onLogout?: () => void
+    onAvatarChange: (newAvatar: string) => void
+    onNameChange: (newName: string) => void
 }
 
 
-export const PersonalInformation = ({email, avatar, name, onLogout}: PersonalInformationProps) => {
+export const PersonalInformation = ({email, avatar, name, onLogout, onAvatarChange, onNameChange}: PersonalInformationProps) => {
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
