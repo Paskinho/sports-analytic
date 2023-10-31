@@ -7,6 +7,7 @@ import Edit from "../../assets/icons/edit";
 import {Button} from "../../components/ui/button";
 import Camera from "../../assets/icons/camera";
 import Logout from "../../assets/icons/logout";
+import s from "./styles.module.scss"
 
 type PersonalInformationProps = {
     email?: string,
@@ -47,14 +48,14 @@ export const PersonalInformation = ({email, avatar, name, onLogout, onAvatarChan
             <Button variant={'secondary'} onClick={handleAvatarChanged}>
                 <Camera/>
             </Button>
-            <Typography variant={'h1'}>
+            <Typography variant={'h1'} className={s.name}>
                 name: {name}
                 {/*{!name && <TextField></TextField>}*/}
             </Typography>
             <Button variant={'secondary'} onClick={handleNameChanged}>
                 <Edit/>
             </Button>
-            <Typography variant={'h1'}>
+            <Typography variant={'h1'} className={s.email}>
                 email: {email}
             </Typography>
             <Button variant={"secondary"} onClick={handleLogout}>

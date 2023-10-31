@@ -1,0 +1,18 @@
+.name {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.email {
+  margin-bottom: 13px;
+  color: var(--color-dark-100);
+  text-align: center;
+}
+
+.nameWithEditButton {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
