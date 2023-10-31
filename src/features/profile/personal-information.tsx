@@ -66,6 +66,7 @@ const StyledImg = styled.img`
   width: 200px;
   height: 200px;
   border-radius: 20px;
+  padding: 50px;
 `
 
 const StyledProfile = styled.div `

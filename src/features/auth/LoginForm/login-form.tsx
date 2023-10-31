@@ -4,6 +4,7 @@ import {TextField} from "../../../components/ui/text-field";
 import {useController, useForm} from "react-hook-form";
 import {z} from "zod";
 import {zodResolver} from '@hookform/resolvers/zod'
+import s from "./styles.modules.scss"
 
 
 const loginSchema = z.object({
@@ -51,7 +52,7 @@ export const LoginForm = () => {
                        errorMessage={errors.password?.message}
             />
             {/*<Checkbox onCheckedChange={onChange} checked={value} label={'remember me'}  />*/}
-            <Button type={"submit"}>Login</Button>
+            <Button variant={"primary"} className={s.button}>Login</Button>
         </form>
     );
 };

@@ -2,7 +2,8 @@ import {useAppDispatch} from "../../../common/components/hooks/useAppDispatch";
 import {useNavigate} from "react-router-dom";
 import {Button} from "../../../components/ui/button";
 import {LoginForm} from "../LoginForm/login-form";
-
+import styled from "styled-components";
+import s from "./styles.module.scss"
 
 
 export const Login = () => {
@@ -31,10 +32,14 @@ export const Login = () => {
 
 
     return (
-        <div>
+        <StyledLogin>
             <LoginForm/>
-            <Button variant={'primary'} onClick={loginHandler}>SignIn</Button>
+            <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
             <div>Forgot Password</div>
-        </div>
+        </StyledLogin>
     )
 }
+
+const StyledLogin = styled.div `
+padding: 100px;
+`
