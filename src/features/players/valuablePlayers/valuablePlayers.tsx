@@ -37,6 +37,7 @@ export const ValuablePlayers = () => {
 
 const StyledValPlayers = styled.section `
     min-height: 100vh;
+  padding-top: 20px;
   background-color: rgba(194,231,223,0.99);
 `
 

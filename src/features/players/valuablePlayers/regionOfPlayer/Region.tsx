@@ -12,7 +12,6 @@ type RegionProps = {
 }
 
 
-
 export const Region = (props: RegionProps) => {
 
     const flippedCard = () => {
@@ -38,24 +37,23 @@ export const Region = (props: RegionProps) => {
 };
 
 const StyledRegion = styled.div`
-background-color: lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
   max-width: 540px;
   width: 100%;
   padding: 20px;
   border: 1px dashed;
-  
+
 `
 
 const StyledRegionBack = styled.div`
-background-color: rgba(161,231,43,0.99);
+  background-color: rgba(161, 231, 43, 0.99);
   max-width: 540px;
   width: 100%;
   padding: 20px;
   border: 1px dashed;
-  
+
 `
 
 const Image = styled.img`
   width: 100%;
-  height: 260px
-;`
+  height: 260px;`

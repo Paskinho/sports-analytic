@@ -33,5 +33,6 @@ export const LastStats = () => {
 
 const StyledStats = styled.section`
   min-height: 100vh;
+  padding-top: 20px;
   background-color: #ffdff9;
 `

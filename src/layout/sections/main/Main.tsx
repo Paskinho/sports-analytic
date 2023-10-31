@@ -22,9 +22,10 @@ export const Main = () => {
 };
 
 const StyledMain = styled.div`
-width: 100%;
+  width: 100%;
   min-height: 100vh;
   background-color: #f8eded;
+  margin-top: 70px;
 `
 
 const Photo = styled.img`
@@ -36,7 +37,7 @@ const MainTitle = styled.h1`
   font-size: 1.5em;
 `
 
-const NewsTitle = styled.div `
-font-size: 1em;
+const NewsTitle = styled.div`
+  font-size: 1em;
   font-weight: bold;
 `
