@@ -21,6 +21,7 @@ export const Region = (props: RegionProps) => {
                 <Typography variant={""}>{props.text}</Typography>
                 <Button variant={"primary"} onClick={flippedCard}>Click Me</Button>
                 {/*{{transform: 180deg}}*/}
+                <style>transform: 180deg</style>
             </StyledRegionBack>
         )
 
