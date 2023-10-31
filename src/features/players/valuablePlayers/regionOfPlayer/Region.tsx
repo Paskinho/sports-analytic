@@ -20,6 +20,7 @@ export const Region = (props: RegionProps) => {
                 <Typography variant={""}>{props.title}</Typography>
                 <Typography variant={""}>{props.text}</Typography>
                 <Button variant={"primary"} onClick={flippedCard}>Click Me</Button>
+                {/*{{transform: 180deg}}*/}
             </StyledRegionBack>
         )
 
@@ -42,8 +43,10 @@ const StyledRegion = styled.div`
   width: 100%;
   padding: 20px;
   border: 1px dashed;
-
+  
 `
+
+
 
 const StyledRegionBack = styled.div`
   background-color: rgba(161, 231, 43, 0.99);
