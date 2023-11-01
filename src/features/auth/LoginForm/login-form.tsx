@@ -6,6 +6,7 @@ import {z} from "zod";
 import {zodResolver} from '@hookform/resolvers/zod'
 import s from "./styles.modules.scss"
 import {Checkbox} from "../../../components/ui/checkbox";
+import {ControlledCheckbox} from "../../../components/ui/controlled/controlled-checkbox";
 
 
 const loginSchema = z.object({
@@ -52,7 +53,7 @@ export const LoginForm = () => {
             <TextField {...register("password")}  label='password'
                        errorMessage={errors.password?.message}
             />
-            <Checkbox onCheckedChange={onChange} checked={value} label={'remember me'}  />
+            <ControlledCheckbox label={'remember me'} control={control} name={'rememberMe'}  />
             <Button variant={"primary"} className={s.button}>Login</Button>
         </form>
     );
