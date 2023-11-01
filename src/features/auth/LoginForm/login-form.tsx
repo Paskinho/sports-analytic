@@ -6,6 +6,7 @@ import {z} from "zod";
 import {zodResolver} from '@hookform/resolvers/zod'
 import s from "./styles.modules.scss"
 import {ControlledCheckbox} from "../../../components/ui/controlled/controlled-checkbox";
+import { DevTool } from '@hookform/devtools'
 
 
 const loginSchema = z.object({
@@ -46,6 +47,7 @@ export const LoginForm = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
+            <DevTool control={control} />
             <TextField {...register("email")}  label='email'
             errorMessage={errors.email?.message}
             />
