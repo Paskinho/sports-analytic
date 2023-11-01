@@ -5,7 +5,6 @@ import {useController, useForm} from "react-hook-form";
 import {z} from "zod";
 import {zodResolver} from '@hookform/resolvers/zod'
 import s from "./styles.modules.scss"
-import {Checkbox} from "../../../components/ui/checkbox";
 import {ControlledCheckbox} from "../../../components/ui/controlled/controlled-checkbox";
 
 
