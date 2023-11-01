@@ -35,7 +35,6 @@ export const Login = () => {
     return (
         <StyledLogin>
             <LoginForm/>
-            <Checkbox position={'center'}/>
             <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
             <div>Forgot Password</div>
         </StyledLogin>
