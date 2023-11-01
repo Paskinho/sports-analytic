@@ -4,6 +4,7 @@ import {Button} from "../../../components/ui/button";
 import {LoginForm} from "../LoginForm/login-form";
 import styled from "styled-components";
 import s from "./styles.module.scss"
+import {Checkbox} from "../../../components/ui/checkbox";
 
 
 export const Login = () => {
@@ -34,6 +35,7 @@ export const Login = () => {
     return (
         <StyledLogin>
             <LoginForm/>
+            <Checkbox position={'center'}/>
             <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
             <div>Forgot Password</div>
         </StyledLogin>
