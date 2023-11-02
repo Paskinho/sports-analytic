@@ -26,8 +26,8 @@ export const Menu = (props: MenuProps) => {
                 {/*<Typography variant={'subtitle1'} color={'inherit'}>{props.menuItems[3]}</Typography>*/}
                 {/*<Typography variant={'subtitle1'} color={'inherit'}>{props.menuItems[4]}</Typography>*/}
                 {/*<Typography variant={'subtitle1'} color={'inherit'}>{props.menuItems[5]}</Typography>*/}
-                <Typography className={s.typography} variant={'subtitle1'} color={'inherit'}>{props.menuItems.map((item)=> {
-                    return <Typography variant={'subtitle1'} color={'inherit'}>{item}</Typography>
+                <Typography className={s.typography} variant={'subtitle1'} color={'inherit'}>{props.menuItems.map((item, index)=> {
+                    return <Typography key={index} variant={'subtitle1'} color={'inherit'}>{item}</Typography>
                 })}</Typography>
             </StyledNav>
 
