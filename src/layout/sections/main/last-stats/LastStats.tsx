@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
-import {SectionTitle} from "../../../../components/StatsTitle";
+import {StatsTitle} from "../../../../components/StatsTitle";
 import {LastStat} from "./last-stat/LastStat";
 
 export const LastStats = () => {
     return (
         <StyledStats>
-            <SectionTitle>
+            <StatsTitle>
                 <FlexWrapper>
                     <LastStat statTitle={'Shots'}
                               namePlayerOne={'Salah'}
@@ -25,7 +25,7 @@ export const LastStats = () => {
                               successStatTwo={"61%"}
                     />
                 </FlexWrapper>
-            </SectionTitle>
+            </StatsTitle>
         </StyledStats>
     );
 };

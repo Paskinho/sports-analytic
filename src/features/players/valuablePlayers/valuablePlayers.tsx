@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/StatsTitle";
+import {StatsTitle} from "../../../components/StatsTitle";
 import {Menu} from "../../../components/menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Region} from "./regionOfPlayer/Region";
@@ -17,7 +17,7 @@ const region = ["Europe", "Asia", "Africa", "North America", "South America","Au
 export const ValuablePlayers = () => {
     return (
         <StyledValPlayers>
-            <SectionTitle> VALUABLE PLAYERS</SectionTitle>
+            <StatsTitle> VALUABLE PLAYERS</StatsTitle>
             <Menu menuItems={region}/>
             <Card>
             <FlexWrapper display={'flex'} justify={"space-around"} direction={'row'}>
