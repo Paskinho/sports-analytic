@@ -5,6 +5,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Name>Uladzislau Paskanau</Name>
+            <Name>FC Liverpool</Name>
            <Copyright>Ⓒ 2023 All right reserved</Copyright>
         </StyledFooter>
     );
