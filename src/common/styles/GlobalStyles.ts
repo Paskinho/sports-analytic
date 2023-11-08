@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle `
     place-items: start;
     min-width: 320px;
     min-height: 100vh;
+    color: ${theme.colors.font}
   }
   
   a {
