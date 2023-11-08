@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {theme} from "./Theme"
 
 export const GlobalStyles = createGlobalStyle `
   *,
@@ -30,6 +31,14 @@ export const GlobalStyles = createGlobalStyle `
   button {
     background-color: unset;
     border: none
+  }
+  
+  section:nth-of-type(odd) {
+  background-color: ${theme.colors.primaryBg};
+  }
+
+  section:nth-of-type(event) {
+    background-color: ${theme.colors.secondaryBg};
   }
   
 `
