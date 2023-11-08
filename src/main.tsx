@@ -13,6 +13,7 @@ import {Main} from "./layout/sections/main/Main";
 import {Footer} from "./layout/footer/Footer";
 import {PersonalInformation} from "./features/profile/personal-information";
 import {Statistics} from "./features/statistics/Statistics";
+import {GlobalStyles} from "./common/styles/GlobalStyles";
 
 
 const router = createBrowserRouter([
@@ -54,6 +55,7 @@ const root = createRoot(container);
 root.render(
     <Provider store={store}>
         <BrowserRouter>
+            <GlobalStyles/>
             <Header/>
             <App/>
         </BrowserRouter>
