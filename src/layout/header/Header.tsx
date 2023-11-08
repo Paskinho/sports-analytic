@@ -9,6 +9,8 @@ import {Dropdown, DropdownItem, DropdownItemWithIcon} from "../../components/ui/
 import PersonalOutline from "../../assets/icons/personalOutline";
 import  Logout from '../../assets/icons/logout'
 import Profile from "../../assets/images/Profile.png"
+import {Container} from "../../common/styles/Container";
+import {FlexWrapper} from "../../components/FlexWrapper";
 
 type HeaderProps = {
     isAuth: boolean
@@ -56,6 +58,8 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 
     return (
         <StyledHeader>
+            <Container>
+                <FlexWrapper justify={'space-between'} align={'center'}>
             <StyledNav>
                 <Logo/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
@@ -101,6 +105,8 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                                           // onSelect={onSignOut}
                     />
                 </Dropdown>
+                </FlexWrapper>
+            </Container>
             {/*{!isAuth && <Button variant="primary">Sign In</Button>}*/}
         </StyledHeader>
     )
