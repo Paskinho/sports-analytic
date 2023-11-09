@@ -59,7 +59,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justify={'space-between'} align={'center'}>
+                <FlexWrapper justify={'space-between'} align={'center'} direction={'row'}>
             <StyledNav>
                 <Logo/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
