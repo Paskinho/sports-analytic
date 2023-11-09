@@ -18,7 +18,8 @@ export const GlobalStyles = createGlobalStyle `
     place-items: start;
     min-width: 320px;
     min-height: 100vh;
-    color: ${theme.colors.font}
+    color: ${theme.colors.font};
+    line-height: 1.2
   }
   
   a {
@@ -32,6 +33,10 @@ export const GlobalStyles = createGlobalStyle `
   button {
     background-color: unset;
     border: none
+  }
+  
+  section {
+    padding: 100px 0 ;
   }
   
   section:nth-of-type(odd) {

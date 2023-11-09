@@ -3,10 +3,12 @@ import photo from "../../../assets/images/Ronaldo News.jpeg"
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {LastStats} from "./last-stats/LastStats";
 import {ValuablePlayers} from "../../../features/players/valuablePlayers/valuablePlayers";
+import {Container} from "../../../common/styles/Container";
 
 export const Main = () => {
     return (
         <StyledMain>
+            <Container>
             <FlexWrapper align={"center"} justify={"space-around"}>
                 <div>
                     <MainTitle>FOOTBALL NEWS </MainTitle>
@@ -16,6 +18,7 @@ export const Main = () => {
             </FlexWrapper>
             <LastStats/>
             <ValuablePlayers/>
+            </Container>
         </StyledMain>
 
     );
@@ -26,6 +29,7 @@ const StyledMain = styled.div`
   min-height: 100vh;
   background-color: #f8eded;
   margin-top: 70px;
+  display: flex;
 `
 
 const Photo = styled.img`
@@ -35,6 +39,7 @@ const Photo = styled.img`
 
 const MainTitle = styled.h1`
   font-size: 1.5em;
+  font-weight: 400;
 `
 
 const NewsTitle = styled.div`

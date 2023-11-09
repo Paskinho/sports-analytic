@@ -10,6 +10,7 @@ import Africa from "../../../assets/images/Africa.png"
 import NorthAmerica from "../../../assets/images/NorthAmerica.png"
 import SouthAmerica from "../../../assets/images/SouthAmerica.png"
 import Australia from "../../../assets/images/Australia.png"
+import {Container} from "../../../common/styles/Container";
 
 const region = ["Europe", "Asia", "Africa", "North America", "South America","Australia and Oceania"]
 
@@ -17,6 +18,7 @@ const region = ["Europe", "Asia", "Africa", "North America", "South America","Au
 export const ValuablePlayers = () => {
     return (
         <StyledValPlayers>
+            <Container>
             <StatsTitle> VALUABLE PLAYERS</StatsTitle>
             <Menu menuItems={region}/>
             <Card>
@@ -30,7 +32,7 @@ export const ValuablePlayers = () => {
             </FlexWrapper>
             </Card>
 
-
+            </Container>
         </StyledValPlayers>
     );
 };
