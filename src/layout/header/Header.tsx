@@ -113,7 +113,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 }
 
 const StyledHeader = styled.header`
-  z-index: 2;
+  
   position: fixed;
   top: 0;
   right: 0;
@@ -123,7 +123,7 @@ const StyledHeader = styled.header`
   grid-area: header;
   display: flex;
   justify-content: space-between;
-  padding: 12px 36px;
+  padding: 20px 0;
   align-items: center;
 `
   
@@ -135,4 +135,6 @@ const StyledNav = styled.nav `
   width: 450px;
   justify-content: space-around;
   align-content: start;
+  align-items: center;
+ 
 `
