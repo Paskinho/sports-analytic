@@ -29,7 +29,7 @@ export const Players = () => {
                 <Button onClick={onSearchPlayers} className={s.buttonSearchPlayer} variant={'primary'}>Search</Button>
             </div>
 
-            <div><Player/></div>
+            <div><Player name={""} club={"Liv"}/></div>
             <Button onClick={getPlayers}>Get Players</Button>
             <Table.Root>
                 <Table.Header>
