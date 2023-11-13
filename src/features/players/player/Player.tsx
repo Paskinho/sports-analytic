@@ -49,10 +49,10 @@ export const Player = (props: PlayerType) => {
         </StyledTd>
         <StyledTd>
             <StyledTh>Club</StyledTh>
-            <Typography variant={'caption'}>Liverpool</Typography>
-            <Typography variant={'caption'}>Liverpool</Typography>
-            <Typography variant={'caption'}>Liverpool</Typography>
-            <Typography variant={'caption'}>Liverpool</Typography>
+            <Typography variant={'caption'}>{props.club}</Typography>
+            <Typography variant={'caption'}>{props.club}</Typography>
+            <Typography variant={'caption'}>{props.club}</Typography>
+            <Typography variant={'caption'}>{props.club}</Typography>
         </StyledTd>
         <StyledTd>
             <StyledTh>Age</StyledTh>
