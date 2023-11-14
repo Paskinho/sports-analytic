@@ -27,7 +27,7 @@ export const Player = (props: PlayerType) => {
     }
 
     const addToWatch = () => {
-   return alert("Successfully")
+        return alert("Successfully")
     }
 
     return <StyledTable>
@@ -75,8 +75,5 @@ export const Player = (props: PlayerType) => {
             <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
             <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
         </StyledTd>
-
     </StyledTable>
-
-
 }
