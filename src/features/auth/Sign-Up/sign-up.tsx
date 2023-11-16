@@ -14,6 +14,14 @@ const schema = z
                 path: ['passwordConfirmation'],
             })
         }
+        return data
+    })
+
+type FormType = z.infer<typeof schema>
+
+type SignUpProps = {
+    onSubmit: (data: Omit<FormType, 'passwordConfirmation'>) => void
+}
 
 export const SignUp = () => {
 
