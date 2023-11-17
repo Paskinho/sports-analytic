@@ -8,3 +8,12 @@
   margin-bottom: 27px;
   text-align: center;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 100%;
+  margin-bottom: 60px;
+}

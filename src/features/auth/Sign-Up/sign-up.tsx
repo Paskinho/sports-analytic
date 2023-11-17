@@ -1,8 +1,8 @@
 import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
-import { omit } from 'remeda'
-import { DevTool } from '@hookform/devtools'
+import {omit} from 'remeda'
+import {DevTool} from '@hookform/devtools'
 import {Card} from "../../../components/ui/card";
 import s from "./sign-up.module.scss"
 import {Typography} from "../../../components/ui/typography";
@@ -41,13 +41,20 @@ export const SignUp = (props: SignUpProps) => {
         }
     })
 
-    const handleFormSubmitted = handleSubmit (data => props.onSubmit(omit(data, ['passwordConfirmation'])))
+    const handleFormSubmitted = handleSubmit(data => props.onSubmit(omit(data, ['passwordConfirmation'])))
 
     return (
         <>
-        <DevTool control={control}/>
+            <DevTool control={control}/>
             <Card className={s.card}>
-  <Typography variant={"large"} className={s.title}/>
+                <Typography variant={"large"} className={s.title}>
+                    Sign Up
+                </Typography>
+                <form onSubmit={handleFormSubmitted}>
+                    <div className={s.form}>
+
+                    </div>
+                </form>
             </Card>
         </>
     )
