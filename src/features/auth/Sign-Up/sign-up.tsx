@@ -8,6 +8,7 @@ import s from "./sign-up.module.scss"
 import {Typography} from "../../../components/ui/typography";
 import {ControlledTextField} from "../../../components/ui/controlled/controlled-text-field";
 import {Button} from "../../../components/ui/button";
+import {Link} from "react-router-dom";
 
 const schema = z
     .object({
@@ -79,6 +80,12 @@ export const SignUp = (props: SignUpProps) => {
                         Sign Up
                     </Button>
                 </form>
+                <Typography variant={'body2'} className={s.caption}>
+                    Already have an account?
+                </Typography>
+                <Typography variant="link1" as={Link} to="/sign-in" className={s.signInLink}>
+                    Sign In
+                </Typography>
             </Card>
         </>
     )
