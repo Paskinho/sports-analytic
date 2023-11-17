@@ -6,6 +6,8 @@ import {DevTool} from '@hookform/devtools'
 import {Card} from "../../../components/ui/card";
 import s from "./sign-up.module.scss"
 import {Typography} from "../../../components/ui/typography";
+import {ControlledTextField} from "../../../components/ui/controlled/controlled-text-field";
+import {Button} from "../../../components/ui/button";
 
 const schema = z
     .object({
@@ -52,8 +54,30 @@ export const SignUp = (props: SignUpProps) => {
                 </Typography>
                 <form onSubmit={handleFormSubmitted}>
                     <div className={s.form}>
-
+                        <ControlledTextField
+                            label={'Email'}
+                            placeholder={'Email'}
+                            name={'email'}
+                            control={control}
+                        />
+                        <ControlledTextField
+                            label={'Password'}
+                            placeholder={'Password'}
+                            type={'password'}
+                            name={'password'}
+                            control={control}
+                        />
+                        <ControlledTextField
+                            label={'Confirm password'}
+                            placeholder={'Confirm password'}
+                            type={'password'}
+                            name={'email'}
+                            control={control}
+                        />
                     </div>
+                    <Button type={'submit'} className={s.button}>
+                        Sign Up
+                    </Button>
                 </form>
             </Card>
         </>
