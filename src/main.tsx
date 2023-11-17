@@ -15,6 +15,7 @@ import {PersonalInformation} from "./features/profile/personal-information";
 import {Statistics} from "./features/statistics/Statistics";
 import {GlobalStyles} from "./common/styles/GlobalStyles";
 import {Theme} from "./common/styles/Theme";
+import {SignUp} from "./features/auth/Sign-Up";
 
 
 const router = createBrowserRouter([
@@ -46,7 +47,11 @@ const router = createBrowserRouter([
     {
         path: "statistics",
         element: <Statistics/>
-    }
+    },
+    {
+        path:"register",
+        element: <SignUp/>
+    },
 ])
 
 const container = document.getElementById('root')!;

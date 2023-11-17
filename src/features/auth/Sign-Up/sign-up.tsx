@@ -3,6 +3,9 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import { omit } from 'remeda'
 import { DevTool } from '@hookform/devtools'
+import {Card} from "../../../components/ui/card";
+import s from "./sign-up.module.scss"
+import {Typography} from "../../../components/ui/typography";
 
 const schema = z
     .object({
@@ -42,7 +45,10 @@ export const SignUp = (props: SignUpProps) => {
 
     return (
         <>
-        <DevTool/>
+        <DevTool control={control}/>
+            <Card className={s.card}>
+  <Typography variant={"large"} className={s.title}/>
+            </Card>
         </>
     )
 
