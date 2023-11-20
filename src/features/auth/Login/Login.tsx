@@ -5,6 +5,7 @@ import {LoginForm} from "../LoginForm/login-form";
 import styled from "styled-components";
 import s from "./styles.module.scss"
 import {Checkbox} from "../../../components/ui/checkbox";
+import {Typography} from "../../../components/ui/typography";
 
 
 export const Login = () => {
@@ -30,6 +31,12 @@ export const Login = () => {
         });
     };
 
+    const NavigateToSignUp = () => {
+        return (
+            navigate('/registration')
+        )
+    }
+
 
 
     return (
@@ -37,6 +44,7 @@ export const Login = () => {
             <LoginForm/>
             <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
             <div>Forgot Password</div>
+            <Typography variant={'link1'} onClick={NavigateToSignUp}>Already have account?</Typography>
         </StyledLogin>
     )
 }

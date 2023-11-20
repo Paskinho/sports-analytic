@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <Statistics/>
     },
     {
-        path:"register",
+        path:"registration",
         element: <SignUp/>
     },
 ])
