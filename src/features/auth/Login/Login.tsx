@@ -38,12 +38,18 @@ export const Login = () => {
     }
 
 
+    const NavigateToNewPassword = () => {
+        return (
+            navigate('/newPassword')
+        )
+    }
+
 
     return (
         <StyledLogin>
             <LoginForm/>
             <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
-            <div>Forgot Password</div>
+            <Typography variant={"link1"} onClick={NavigateToNewPassword}>Forgot Password?</Typography>
             <Typography variant={'link1'} onClick={NavigateToSignUp}>Already have account?</Typography>
         </StyledLogin>
     )
