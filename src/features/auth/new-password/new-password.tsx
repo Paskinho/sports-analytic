@@ -17,9 +17,17 @@ type NewPasswordProps = {
 export const newPassword = (props: NewPasswordProps) => {
 const {conrol, handleSubmit} = useForm<FormType>({
     mode: 'onSubmit',
-    resolver: zodResolver(schema)
+    resolver: zodResolver(schema),
+    defaultValues: {
+        password: "",
+    }
 })
 
+    const handleFormSubmitted = handleSubmit(props.onSubmit)
+
+    return (
+
+    )
 
 
 }
