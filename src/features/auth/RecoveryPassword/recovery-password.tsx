@@ -1,7 +1,10 @@
-import { DevTool } from '@hookform/devtools'
+import {DevTool} from '@hookform/devtools'
 import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
+import {Card} from "../../../components/ui/card";
+import s from './recovery-password.module.scss'
+import {Typography} from "../../../components/ui/typography";
 
 
 const schema = z.object({
@@ -11,7 +14,7 @@ const schema = z.object({
 type FormType = z.infer<typeof schema>
 
 type RecoveryPasswordProps = {
-    onSubmit: (data)=> void
+    onSubmit: (data) => void
 }
 
 export const RecoveryPassword = (props: RecoveryPasswordProps) => {
@@ -19,7 +22,7 @@ export const RecoveryPassword = (props: RecoveryPasswordProps) => {
         mode: "OnSubmit",
         resolver: zodResolver(schema),
         defaultValues: {
-            email:''
+            email: ''
         }
     })
 
@@ -28,7 +31,12 @@ export const RecoveryPassword = (props: RecoveryPasswordProps) => {
 
     return (
         <>
-        <DevTool/>
+            <DevTool control={control}/>
+            <Card className={s.card}>
+                <Typography variant={'large'} className={s.title}>
+    Forgot your password?
+                </Typography>
+            </Card>
         </>
     )
 }
