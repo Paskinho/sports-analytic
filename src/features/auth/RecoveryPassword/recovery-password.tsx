@@ -1,4 +1,4 @@
-
+import { DevTool } from '@hookform/devtools'
 import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -25,4 +25,10 @@ export const RecoveryPassword = (props: RecoveryPasswordProps) => {
 
     const handleFormSubmitted = handleSubmit(props.onSubmit)
 
+
+    return (
+        <>
+        <DevTool/>
+        </>
+    )
 }

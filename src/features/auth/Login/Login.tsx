@@ -38,9 +38,9 @@ export const Login = () => {
     }
 
 
-    const NavigateToNewPassword = () => {
+    const NavigateToRecoveryPassword = () => {
         return (
-            navigate('/newPassword')
+            navigate('/recoveryPassword')
         )
     }
 
@@ -49,7 +49,7 @@ export const Login = () => {
         <StyledLogin>
             <LoginForm/>
             <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
-            <Typography variant={"link1"} onClick={NavigateToNewPassword}>Forgot Password?</Typography>
+            <Typography variant={"link1"} onClick={NavigateToRecoveryPassword}>Forgot Password?</Typography>
             <Typography variant={'link1'} onClick={NavigateToSignUp}>Already have account?</Typography>
         </StyledLogin>
     )
