@@ -5,6 +5,7 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {Card} from "../../../components/ui/card";
 import s from './recovery-password.module.scss'
 import {Typography} from "../../../components/ui/typography";
+import {ControlledTextField} from "../../../components/ui/controlled/controlled-text-field";
 
 
 const schema = z.object({
@@ -36,6 +37,14 @@ export const RecoveryPassword = (props: RecoveryPasswordProps) => {
                 <Typography variant={'large'} className={s.title}>
     Forgot your password?
                 </Typography>
+                <form onSubmit={handleFormSubmitted}>
+<div className={s.form}>
+<ControlledTextField placeholder={'Email'} name={'email'} control={control}/>
+</div>
+                    <Typography variant={'body2'}>
+
+                    </Typography>
+                </form>
             </Card>
         </>
     )
