@@ -17,6 +17,7 @@ import {GlobalStyles} from "./common/styles/GlobalStyles";
 import {Theme} from "./common/styles/Theme";
 import {SignUp} from "./features/auth/Sign-Up";
 import {RecoveryPassword} from "./features/auth/RecoveryPassword";
+import {NewPassword} from "./features/auth/new-password";
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
     {
         path:"recoveryPassword",
         element: <RecoveryPassword/>
+    },
+    {
+        path: "newPassword",
+        element: <NewPassword/>
     }
 ])
 
