@@ -4,6 +4,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import {DevTool} from '@hookform/devtools'
 import {Card} from "../../../components/ui/card";
 import s from './new-password.module.scss'
+import {Typography} from "../../../components/ui/typography";
+import {ControlledTextField} from "../../../components/ui/controlled/controlled-text-field";
 
 const schema = z.object({
     password: z.string().nonempty('Enter password'),
@@ -31,7 +33,21 @@ const {control, handleSubmit} = useForm<FormType>({
  <>
  <DevTool control={control}/>
      <Card className={s.card}>
+<Typography variant={'large'} className={s.title}>
+    Create new password
+</Typography>
+         <form onSubmit={handleFormSubmitted}>
+             <ControlledTextField
+             placeholder={"Password"}
+             name={'password'}
+             control={control}
+             type={'password'}
+             containerProps={{className: s.input}}
+             >
 
+             </ControlledTextField>
+
+         </form>
      </Card>
  </>
     )
