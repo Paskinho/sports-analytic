@@ -6,6 +6,8 @@ import {Card} from "../../../components/ui/card";
 import s from './recovery-password.module.scss'
 import {Typography} from "../../../components/ui/typography";
 import {ControlledTextField} from "../../../components/ui/controlled/controlled-text-field";
+import {Button} from "../../../components/ui/button";
+import {Link} from "react-router-dom";
 
 
 const schema = z.object({
@@ -35,16 +37,25 @@ export const RecoveryPassword = (props: RecoveryPasswordProps) => {
             <DevTool control={control}/>
             <Card className={s.card}>
                 <Typography variant={'large'} className={s.title}>
-    Forgot your password?
+                    Forgot your password?
                 </Typography>
                 <form onSubmit={handleFormSubmitted}>
-<div className={s.form}>
-<ControlledTextField placeholder={'Email'} name={'email'} control={control}/>
-</div>
-                    <Typography variant={'body2'}>
-
+                    <div className={s.form}>
+                        <ControlledTextField placeholder={'Email'} name={'email'} control={control}/>
+                    </div>
+                    <Typography variant={'body2'} className={s.instructions}>
+                        Enter you email address and we will send you further instructions
                     </Typography>
+                    <Button className={s.button} fullWidth type={'submit'}>
+                        Send Instructions
+                    </Button>
                 </form>
+                <Typography variant={'body2'} className={s.caption}>
+Did you remember your password?
+                </Typography>
+                <Typography variant={'link1'} as={Link} to={'sing-in'} className={s.loginLink}>
+Try logging in
+                </Typography>
             </Card>
         </>
     )
