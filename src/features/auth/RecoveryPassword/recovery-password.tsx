@@ -51,10 +51,10 @@ export const RecoveryPassword = (props: RecoveryPasswordProps) => {
                     </Button>
                 </form>
                 <Typography variant={'body2'} className={s.caption}>
-Did you remember your password?
+                    Did you remember your password?
                 </Typography>
                 <Typography variant={'link1'} as={Link} to={'sing-in'} className={s.loginLink}>
-Try logging in
+                    Try logging in
                 </Typography>
             </Card>
         </>
