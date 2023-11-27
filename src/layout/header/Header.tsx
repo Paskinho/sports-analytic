@@ -101,6 +101,12 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     onSelect={()=> navigate('/profile')}
                     className={s.userInfoContainer}
                     />
+                    <DropdownItemWithIcon
+
+                        text={"Favorite players"}
+                        onSelect={()=> navigate('/favoritePlayers')}
+                        className={s.userInfoContainer}
+                    />
                     <DropdownItemWithIcon className={s.userInfoContainer} icon={<Logout/>} text={"Sign out"}
                                           // onSelect={onSignOut}
                     />
