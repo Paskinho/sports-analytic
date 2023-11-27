@@ -76,6 +76,11 @@ export const SignUp = (props: SignUpProps) => {
                             control={control}
                         />
                         <ControlledTextField
+                            placeholder={'Confirm email'}
+                            name={'confirm email'}
+                            control={control}
+                        />
+                        <ControlledTextField
                             placeholder={'Password'}
                             type={'password'}
                             name={'password'}
@@ -84,7 +89,7 @@ export const SignUp = (props: SignUpProps) => {
                         <ControlledTextField
                             placeholder={'Confirm password'}
                             type={'password'}
-                            name={'email'}
+                            name={'confirm password'}
                             control={control}
                         />
                     </div>
