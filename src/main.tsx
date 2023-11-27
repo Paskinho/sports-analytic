@@ -17,7 +17,7 @@ import {GlobalStyles} from "./common/styles/GlobalStyles";
 import {Theme} from "./common/styles/Theme";
 import {SignUp} from "./features/auth/Sign-Up";
 import {RecoveryPassword} from "./features/auth/RecoveryPassword";
-import {NewPassword} from "./features/auth/new-password";
+import {NewPassword} from "./features/auth/NewPassword";
 
 
 const router = createBrowserRouter([
