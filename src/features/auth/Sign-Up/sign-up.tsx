@@ -61,6 +61,16 @@ export const SignUp = (props: SignUpProps) => {
                             control={control}
                         />
                         <ControlledTextField
+                            placeholder={'Name'}
+                            name={'Name'}
+                            control={control}
+                        />
+                        <ControlledTextField
+                            placeholder={'SurName'}
+                            name={'SurName'}
+                            control={control}
+                        />
+                        <ControlledTextField
                             placeholder={'Email'}
                             name={'email'}
                             control={control}
