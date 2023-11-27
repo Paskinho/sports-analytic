@@ -100,7 +100,7 @@ export const SignUp = (props: SignUpProps) => {
                 <Typography variant={'body2'} className={s.caption}>
                     Already have an account?
                 </Typography>
-                <Typography variant="link1" as={Link} to="/sign-in" className={s.signInLink}>
+                <Typography variant="link1" as={Link} to="/login" className={s.signInLink}>
                     Sign In
                 </Typography>
             </Card>

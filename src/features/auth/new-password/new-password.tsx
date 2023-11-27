@@ -52,7 +52,6 @@ export const NewPassword = (props: NewPasswordProps) => {
                             Create new password
                         </Button>
                     </ControlledTextField>
-
                 </form>
             </Card>
         </>
