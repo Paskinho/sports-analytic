@@ -56,20 +56,22 @@ export const SignUp = (props: SignUpProps) => {
                 <form onSubmit={handleFormSubmitted}>
                     <div className={s.form}>
                         <ControlledTextField
-                            label={'Email'}
+                            placeholder={'NickName'}
+                            name={'NickName'}
+                            control={control}
+                        />
+                        <ControlledTextField
                             placeholder={'Email'}
                             name={'email'}
                             control={control}
                         />
                         <ControlledTextField
-                            label={'Password'}
                             placeholder={'Password'}
                             type={'password'}
                             name={'password'}
                             control={control}
                         />
                         <ControlledTextField
-                            label={'Confirm password'}
                             placeholder={'Confirm password'}
                             type={'password'}
                             name={'email'}
