@@ -13,24 +13,24 @@ export const StyledTd = styled.td `
   text-align: left;
   border: none;
   padding: 10px 15px;
-  background: #d8d8d8;
+  background: rgba(231, 182, 228, 0.99);
   font-size: 14px;
-  border-left: 1px solid rgba(157, 231, 200, 0.99);
-  border-right: 1px solid rgba(130, 231, 169, 0.99);
+  border-left: 1px solid rgb(87, 8, 29);
+  border-right: 1px solid rgb(87, 8, 29);
 `
 
 export const StyledTh = styled.th `
   text-align: left;
-  border-left: 1px solid rgb(231, 231, 231);
-  border-right: 1px solid #ddd;
+  border-left: 1px solid rgb(87, 8, 29);
+  border-right: 1px solid #57081d;
   padding: 10px 15px;
   font-size: 14px;
   vertical-align: top;
 `
 
 export const StyledTr = styled.tr `
-  border-left: none;
-  border-right: none;
-  background: #f3f3f3;
-  //border: 5px solid black;
+  //border-left: none;
+  //border-right: none;
+  //background: #f3f3f3;
+  ////border: 5px solid black;
 `
