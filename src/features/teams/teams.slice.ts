@@ -9,7 +9,10 @@ const slice = createSlice({
     reducers: {}
 })
 
-const getTeamsInformation = createAsyncThunk()
+const getTeamsInformation = createAsyncThunk('teams', async (arg, thunkApi) => {
+    const res = await teamsApi.getTeamsInformation(arg)
+    return {teams: res.data}
+})
 
 
 export const teamsReducer = slice.reducer
