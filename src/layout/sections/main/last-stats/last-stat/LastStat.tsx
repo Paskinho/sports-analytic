@@ -1,6 +1,7 @@
 import {Typography} from "../../../../../components/ui/typography";
 import styled from "styled-components";
 import {StyledTable, StyledTd, StyledTh, StyledTr} from "../../../../../components/StyledTable";
+import s from "./LastStat.module.scss"
 
 
 type LastStatPropsType = {
@@ -22,29 +23,29 @@ export const LastStat = (props: LastStatPropsType) => {
                     <StyledTd>
                         <StyledTr>
                             <StyledTh>Pos</StyledTh>
-                            <Typography>1</Typography>
-                            <Typography>2</Typography>
+                            <Typography className={s.text}>1</Typography>
+                            <Typography className={s.text}>2</Typography>
                         </StyledTr>
                     </StyledTd>
                     <StyledTd>
                         <StyledTr>
                             <StyledTh>Player</StyledTh>
-                            <Typography>{props.namePlayerOne}</Typography>
-                            <Typography>{props.namePlayerTwo}</Typography>
+                            <Typography className={s.text}>{props.namePlayerOne}</Typography>
+                            <Typography className={s.text}>{props.namePlayerTwo}</Typography>
                         </StyledTr>
                     </StyledTd>
                     <StyledTd>
                         <StyledTr>
                             <StyledTh>{props.statTitle}</StyledTh>
-                            <Typography>{props.statOne}</Typography>
-                            <Typography>{props.statTwo}</Typography>
+                            <Typography className={s.text}>{props.statOne}</Typography>
+                            <Typography className={s.text}>{props.statTwo}</Typography>
                         </StyledTr>
                     </StyledTd>
                     <StyledTd>
                         <StyledTr>
                             <StyledTh>Conversation</StyledTh>
-                            <Typography>{props.successStatOne}</Typography>
-                            <Typography>{props.successStatTwo}</Typography>
+                            <Typography className={s.text}>{props.successStatOne}</Typography>
+                            <Typography className={s.text}>{props.successStatTwo}</Typography>
                         </StyledTr>
                     </StyledTd>
                 </StyledTable>
