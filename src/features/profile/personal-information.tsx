@@ -13,13 +13,14 @@ type PersonalInformationProps = {
     email: string,
     avatar?: string,
     name: string,
+    phone: string,
     onLogout?: () => void
     onAvatarChange: (newAvatar: string) => void
     onNameChange: (newName: string) => void
 }
 
 
-export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogout, onAvatarChange, onNameChange}: PersonalInformationProps) => {
+export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogout, onAvatarChange, onNameChange, phone}: PersonalInformationProps) => {
 
     const handleAvatarChanged = () => {
         onAvatarChange('newAvatar')
@@ -40,7 +41,7 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
     return (
         <StyledProfile>Profile
             <h2>
-                <StyledImg src={Profile}/>
+                <StyledImg src={avatar}/>
             </h2>
             <Button variant={'secondary'} onClick={handleAvatarChanged}>
                 <Camera/>
@@ -54,6 +55,9 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
             </Button>
             <Typography variant={'h1'} className={s.email}>
                 email: {email}
+            </Typography>
+            <Typography variant={'h1'} className={s.email}>
+                phone: {phone}
             </Typography>
             <Button variant={"secondary"} onClick={handleLogout}>
                 <Logout/>
@@ -71,4 +75,6 @@ const StyledImg = styled.img`
 
 const StyledProfile = styled.div `
 background-color: rgba(208,231,225,0.99);
+  margin-top: 100px;
+  width: 500px;
 `
