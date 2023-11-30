@@ -23,7 +23,6 @@ export const Teams = () => {
         dispatch(teamsThunks.getTeamsInformation()).then((res)=> {
             toast.success('Successfully')
         })
-
     }
 
     return (

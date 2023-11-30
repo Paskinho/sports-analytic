@@ -42,10 +42,6 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
     }
 
 
-
-
-
-
     return (
         <StyledProfile>Profile
             <h2>
