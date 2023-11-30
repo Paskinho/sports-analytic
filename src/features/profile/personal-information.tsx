@@ -22,6 +22,9 @@ type PersonalInformationProps = {
 
 export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogout, onAvatarChange, onNameChange, phone}: PersonalInformationProps) => {
 
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+
     const handleAvatarChanged = () => {
         onAvatarChange('newAvatar')
     }
@@ -34,9 +37,14 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
         onLogout()
     }
 
+    const OnChangePassword = () => {
+        return navigate('../newPassword')
+    }
 
-    const dispatch = useAppDispatch()
-    const navigate = useNavigate()
+
+
+
+
 
     return (
         <StyledProfile>Profile
@@ -59,8 +67,12 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
             <Typography variant={'h1'} className={s.email}>
                 phone: {phone}
             </Typography>
+            <Button variant={"secondary"} onClick={OnChangePassword}>
+                Change Password
+            </Button>
             <Button variant={"secondary"} onClick={handleLogout}>
                 <Logout/>
+                Sign Out
             </Button>
         </StyledProfile>
     )
