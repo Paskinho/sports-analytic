@@ -3,6 +3,9 @@ import styled from "styled-components";
 import {Table} from '../../components/ui/table'
 import {useState} from "react";
 import {Card} from "../../components/ui/card";
+import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
+import {teamsThunks} from "./teams.slice";
+import {toast} from "react-toastify";
 
 
 export const Teams = () => {
@@ -13,6 +16,15 @@ export const Teams = () => {
         {key: "Teams", sortable: true, title: "Teams"},
         {key: "updated", sortable: true, title: "Updated"},
     ]
+
+    const dispatch = useAppDispatch()
+
+    const getTeams = (teams: string) => {
+        dispatch(teamsThunks.getTeamsInformation()).then((res)=> {
+            toast.success('Successfully')
+        })
+
+    }
 
     return (
         <StyledTeams>
@@ -32,8 +44,8 @@ export const Teams = () => {
 
             {/*</Table.Root>*/}
 
-            <button>
-                Save Rating
+            <button onClick={getTeams}>
+                Get Teams
             </button>
             </Card>
         </StyledTeams>
