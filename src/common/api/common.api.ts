@@ -15,7 +15,7 @@ export const instance = axios.create ({
     baseURL: 'https://api-football-v1.p.rapidapi.com/v3/',
     withCredentials: true,
     headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'X-RapidAPI-Key': 'ec2759ef83msh761e98cfcedc1b3p1c651bjsn7313dedeb9af',
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
     }

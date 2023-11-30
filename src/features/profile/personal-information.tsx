@@ -19,7 +19,7 @@ type PersonalInformationProps = {
 }
 
 
-export const PersonalInformation = ({email, avatar, name, onLogout, onAvatarChange, onNameChange}: PersonalInformationProps) => {
+export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogout, onAvatarChange, onNameChange}: PersonalInformationProps) => {
 
     const handleAvatarChanged = () => {
         onAvatarChange('newAvatar')

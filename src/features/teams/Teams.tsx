@@ -19,7 +19,7 @@ export const Teams = () => {
 
     const dispatch = useAppDispatch()
 
-    const getTeams = (teams: string) => {
+    const getTeams = (teams: any) => {
         dispatch(teamsThunks.getTeamsInformation()).then((res)=> {
             toast.success('Successfully')
         })
