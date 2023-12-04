@@ -19,6 +19,7 @@ import {SignUp} from "./features/auth/Sign-Up";
 import {RecoveryPassword} from "./features/auth/RecoveryPassword";
 import {NewPassword} from "./features/auth/NewPassword";
 import {Teams} from "./features/teams/Teams";
+import {FavoritePlayers} from "./features/players/favoritePlayers/favoritePlayers";
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
     {
         path: "teams",
         element: <Teams/>
+    },
+    {
+        path: "favoritePlayers",
+        element: <FavoritePlayers/>
     },
 ])
 
