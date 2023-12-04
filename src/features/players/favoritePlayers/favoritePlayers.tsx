@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
-export const FavoritePlayers = () => {
+
+export type FavoritePlayersType = {
+    name: string
+}
+
+export const FavoritePlayers = ({name}: FavoritePlayersType) => {
     return (
         <StyledFavPlayers>
-            Favorite Players
+            <div> Favorite Players </div>
+            {name}
         </StyledFavPlayers>
     )
 }
