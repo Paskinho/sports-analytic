@@ -12,5 +12,6 @@ const slice = createSlice({
 export type PlayerType = {
     name: string
     club: string
+    onAddPlayerToFav: (player)=> void
     like?: number
 }

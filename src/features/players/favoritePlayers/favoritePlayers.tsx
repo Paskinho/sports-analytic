@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import {useState} from "react";
+import {Player} from "../player/Player";
+import {PlayerType} from "../player/player.slice";
 
 
 export type FavoritePlayersType = {
@@ -6,9 +9,17 @@ export type FavoritePlayersType = {
 }
 
 export const FavoritePlayers = ({name}: FavoritePlayersType) => {
+
+    const [favPlayers, setFavPlayers] = useState([])
+
+    const addToFav = (player: PlayerType) => {
+        setFavPlayers([...favPlayers, player])
+    }
+
     return (
         <StyledFavPlayers>
             <div> Favorite Players </div>
+            <Player player={FavoritePlayers}/>
             {name}
         </StyledFavPlayers>
     )

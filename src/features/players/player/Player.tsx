@@ -26,8 +26,8 @@ export const Player = (props: PlayerType) => {
         setLike(like => like + 1)
     }
 
-    const addToWatch = () => {
-        return alert("Successfully")
+    const addToWatch = ({player, onAddPlayerToFav} : PlayerType) => {
+       onAddPlayerToFav(player)
     }
 
     return <StyledTable>
