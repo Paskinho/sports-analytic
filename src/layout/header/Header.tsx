@@ -78,7 +78,9 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                         {userInfo?.name}
                      Uladzislau
                     </Typography>
-                </button>}>
+                </button>}
+                          className={s.dropdown}
+                >
                     <img alt={"Profile logo"}
                              src={Profile}
                          className={s.imgHeader}/>
