@@ -121,7 +121,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 }
 
 const StyledHeader = styled.header`
-  
+ display: flex;
   position: fixed;
   top: 0;
   right: 0;
@@ -129,14 +129,10 @@ const StyledHeader = styled.header`
   box-shadow: 1px 2px 1px 1px lightgray;
   background-color: rgb(255, 44, 0);
   grid-area: header;
-  display: flex;
   justify-content: space-between;
   padding: 20px 0;
   align-items: center;
 `
-  
-  
-
 
 const StyledNav = styled.nav `
   display: flex;
