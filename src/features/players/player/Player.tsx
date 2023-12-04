@@ -8,7 +8,7 @@ import Eye from "../../../assets/icons/eye";
 import {Root} from "../../../components/ui/table";
 
 
-export const Player = (props: PlayerType) => {
+export const Player = (player: PlayerType) => {
 
     const navigate = useNavigate()
 

@@ -19,7 +19,7 @@ export const FavoritePlayers = ({name}: FavoritePlayersType) => {
     return (
         <StyledFavPlayers>
             <div> Favorite Players </div>
-            <Player player={FavoritePlayers}/>
+            <Player  onAddPlayerToFav={addToFav}/>
             {name}
         </StyledFavPlayers>
     )
