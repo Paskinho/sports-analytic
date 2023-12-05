@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {useState} from "react";
-import {Player} from "../player/Player";
+import {FavPlayer, Player} from "../player/Player";
 import {PlayerType} from "../player/player.slice";
 
 
@@ -20,9 +20,11 @@ export const FavoritePlayers = ({name}: FavoritePlayersType) => {
         <StyledFavPlayers>
             <div> Favorite Players </div>
             {favPlayers.map((player)=> (
-                <Player player={player} onAddPlayerToFav={addToFav}/>
+                <Player club={'Liverpool'} player={player} onAddPlayerToFav={addToFav} name={"Virgil"}/>
             ))}
-            {/*{favPlayers.map()} <FavPlayer player={player} onAddToFavPlayer={addToFav}/>*/}
+            {/*{favPlayers.map((player)=> (*/}
+            {/*    <FavPlayer player={player} onAddToFavPlayer={addToFav}/>*/}
+            {/*))}*/}
             {name}
         </StyledFavPlayers>
     )

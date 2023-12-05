@@ -70,22 +70,22 @@ export const Player = (props: PlayerType) => {
         </StyledTd>
         <StyledTd>
             <StyledTh>Watch</StyledTh>
-            <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
-            <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
-            <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
-            <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
+            <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
+            <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
+            <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
+            <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
         </StyledTd>
     </StyledTable>
 }
 
 
-// export const FavPlayer = ({player, onAddToFavPlayer}) => {
-// return (
-//     <div>
-//     <h1>Alisson</h1>
-//     <h2>Liverpool</h2>
-//         <button onClick={()=> onAddToFavPlayer(player)}>Add to Fav</button>
-//     </div>
-// )
-//
-// }
+export const FavPlayer = ({player, onAddToFavPlayer}) => {
+return (
+    <div>
+    <h1>Alisson</h1>
+    <h2>Liverpool</h2>
+        <button onClick={()=> onAddToFavPlayer(player)}>Add to Fav</button>
+    </div>
+)
+
+}
