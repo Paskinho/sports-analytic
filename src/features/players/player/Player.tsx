@@ -26,8 +26,14 @@ export const Player = (props: PlayerType) => {
         setLike(like => like + 1)
     }
 
-    const addToWatch = ({player, onAddPlayerToFav} : PlayerType) => {
+    // type AddToWatchType = {
+    //     player: any,
+    //     onAddPlayerToFav: (player)=> void
+    // }
+
+    const addToWatch = ({player, onAddPlayerToFav}) => {
        onAddPlayerToFav(player)
+        alert('Succesfully added to favorite players')
     }
 
     return <StyledTable>
@@ -70,7 +76,7 @@ export const Player = (props: PlayerType) => {
         </StyledTd>
         <StyledTd>
             <StyledTh>Watch</StyledTh>
-            <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
+            <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
             <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
             <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
             <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
