@@ -8,7 +8,7 @@ import Eye from "../../../assets/icons/eye";
 import {Root} from "../../../components/ui/table";
 
 
-export const Player = (player: PlayerType) => {
+export const Player = (props: PlayerType) => {
 
     const navigate = useNavigate()
 
@@ -76,4 +76,9 @@ export const Player = (player: PlayerType) => {
             <Typography variant={'caption'}><Button onClick={addToWatch}><Eye/></Button></Typography>
         </StyledTd>
     </StyledTable>
+}
+
+
+export const FavPlayer = () => {
+
 }
