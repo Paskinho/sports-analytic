@@ -8,7 +8,7 @@ export type FavoritePlayersType = {
     name: string
 }
 
-export const FavoritePlayers = ({name}: FavoritePlayersType) => {
+export const FavoritePlayers = () => {
 
     const [favPlayers, setFavPlayers] = useState([])
 

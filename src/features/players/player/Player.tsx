@@ -31,8 +31,8 @@ export const Player = (props: PlayerType) => {
     //     onAddPlayerToFav: (player)=> void
     // }
 
-    const addToWatch = ({player, onAddPlayerToFav}) => {
-       onAddPlayerToFav(player)
+    const addToWatch = ({player, onAddPlayerToFavorite}) => {
+       onAddPlayerToFavorite(player)
         alert('Succesfully added to favorite players')
     }
 
