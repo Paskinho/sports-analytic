@@ -1,4 +1,4 @@
-import {Player} from "./player/Player";
+import {FavPlayer, Player} from "./player/Player";
 import {Button} from "../../components/ui/button";
 import s from "../players/styles.module.scss"
 import {playersThunks} from "./players.slice";
@@ -31,6 +31,7 @@ export const Players = () => {
 
             <div>
                 <Player name={""} club={"Liverpool"}/>
+                {/*<FavPlayer/>*/}
             </div>
             <Button onClick={getPlayers}>Get Players</Button>
             <Table.Root>

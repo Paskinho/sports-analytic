@@ -79,6 +79,13 @@ export const Player = (props: PlayerType) => {
 }
 
 
-export const FavPlayer = () => {
-
-}
+// export const FavPlayer = ({player, onAddToFavPlayer}) => {
+// return (
+//     <div>
+//     <h1>Alisson</h1>
+//     <h2>Liverpool</h2>
+//         <button onClick={()=> onAddToFavPlayer(player)}>Add to Fav</button>
+//     </div>
+// )
+//
+// }

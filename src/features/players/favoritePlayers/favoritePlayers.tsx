@@ -19,7 +19,10 @@ export const FavoritePlayers = ({name}: FavoritePlayersType) => {
     return (
         <StyledFavPlayers>
             <div> Favorite Players </div>
-            <Player player={} onAddPlayerToFav={addToFav}/>
+            {favPlayers.map((player)=> (
+                <Player player={player} onAddPlayerToFav={addToFav}/>
+            ))}
+            {/*{favPlayers.map()} <FavPlayer player={player} onAddToFavPlayer={addToFav}/>*/}
             {name}
         </StyledFavPlayers>
     )
