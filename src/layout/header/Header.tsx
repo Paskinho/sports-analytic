@@ -63,7 +63,9 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
             <StyledNav>
                 <Logo onClick={navToHome}/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
-                <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
+                {/*<Dropdown>*/}
+                    <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
+                {/*</Dropdown>*/}
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToStatistics}>Statistics</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToSubscription}>Subscription</Typography>
