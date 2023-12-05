@@ -61,7 +61,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'} direction={'row'}>
             <StyledNav>
-                <Logo/>
+                <Logo onClick={navToHome}/>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
                 <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
