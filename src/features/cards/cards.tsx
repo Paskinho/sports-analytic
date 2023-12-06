@@ -3,6 +3,7 @@ import {z} from "zod";
 import {Column} from "../../components/ui/table";
 import {useState} from "react";
 import {Sort} from "../../common/types";
+import {useParams} from "react-router-dom";
 
 
 const newDeckSchema = z.object({
@@ -15,13 +16,25 @@ const newDeckSchema = z.object({
 type NewCard = z.infer<typeof newDeckSchema>
 export const Cards = () => {
 
+    const { deckId } = useParams<{ deckId: string }>()
+
     const [sort, setSort] = useState<Sort>({key:'age', direction:'asc'})
     const sortString = sort ? `${sort.key} - ${sort.direction}` : null
 
     const [search, serSearch] = useState('')
     const [perPage, setPerPage] = useState(10)
     const [page, setPage] = useState(1)
+    // const {data: deck} = useGetDeckByIdQuery(deckId || '')
+    // const {data: cards, isLoading} = useGetCardsQuery({
+    //     deckId: deckId || '',
+    //     orderBy: sortString,
+    //     currentPage: page,
+    //     itemsPerPge: perPage
+    // })
 
+    if(!deckId) return <div>Deck not found</div>
+
+    // if (isLoading) return <div>Loading...</div>
 
     const columns: Column[] =[
         {key: "player", sortable: true, title: "Player"},
