@@ -1,4 +1,11 @@
-s.cards {
+.cards {
+  padding-top: 50px;
+}
+
+.controls {
   display: flex;
-  padding: 50px;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+  width: 100%;
 }

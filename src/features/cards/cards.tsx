@@ -1,6 +1,6 @@
 import s from "./cards.module.scss"
 import {z} from "zod";
-import {Column} from "../../components/ui/table";
+import {Column, Table} from "../../components/ui/table";
 import {useState} from "react";
 import {Sort} from "../../common/types";
 import {useParams} from "react-router-dom";
@@ -8,6 +8,7 @@ import {Page} from "../../stories/Page";
 import {Typography} from "../../components/ui/typography";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
+import {TextField} from "../../components/ui/text-field";
 
 
 const newDeckSchema = z.object({
@@ -50,16 +51,28 @@ export const Cards = () => {
 
 
     return (
-        <Page>
+        <Page className={s.cards}>
             <img src={'https://logowik.com/content/uploads/images/526_liverpoolfc.jpg'} alt={'Logo'}/>
-            <Typography variant={'large'}>{"Footbal Players"}</Typography>
-            <CreateCardModal deckId={deckId}/>
+            <div>
+                <Typography variant={'large'}>{"Football players"}</Typography>
+                <CreateCardModal deckId={deckId}/>
+            </div>
+            <div className={s.controls}>
+                <TextField/>
+            </div>
+
+            <div>
+                <Table.Root className={'w-full'}>
+                    <Table.Cell>{card.player}</Table.Cell>
+                </Table.Root>
+            </div>
+
         </Page>
-            )
+    )
 
 }
 
-const CreateCardModal = ({deckId}: {deckId: string}) => {
+const CreateCardModal = ({deckId}: { deckId: string }) => {
 
     const [showModal, setShowModal] = useState(false)
     const closeModal = () => setShowModal(false)
