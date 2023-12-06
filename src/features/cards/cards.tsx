@@ -9,6 +9,7 @@ import {Typography} from "../../components/ui/typography";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {TextField} from "../../components/ui/text-field";
+import {FaEdit, FaTrash} from "react-icons/fa";
 
 
 const newDeckSchema = z.object({
@@ -71,13 +72,25 @@ export const Cards = () => {
                             <Table.Cell>{card.country}</Table.Cell>
                             <Table.Cell>{card.club}</Table.Cell>
                             <Table.Cell>{card.age}</Table.Cell>
-                            <Table.Cell>{card.likes}</Table.Cell>
+                            {/*<Table.Cell>{card.likes}</Table.Cell>*/}
+                                <Table.Cell className={'flex gap-4 items-center'}>
+                                    <button className={'unset'}>
+                                        <FaEdit/>
+                                    </button >
+                                    <button className={'unset'}
+                                    onClick={()=> {
+                                        // deleteCard({cardId: card.id})
+                                    }}
+                                    >
+                                        <FaTrash/>
+                                    </button>
+                                </Table.Cell>
                             </Table.Row>
                         ))}
                     </Table.Body>
                 </Table.Root>
             </div>
-
+       <Pagination/>
         </Page>
     )
 
