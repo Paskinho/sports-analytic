@@ -1,5 +1,6 @@
 import s from './pagination.module.scss'
 import {FC} from "react";
+import {usePagination} from "./usePagination";
 
 type PaginationConditionals =
     | {
@@ -33,6 +34,14 @@ export const Pagination: FC<PaginationProps> = ({
                                                     perPageOptions,
                                                     onPerPageChange
                                                 }) => {
+const {
+    paginationRange,
+    isLastPage,
+    isFirstPage,
+    handlePreviousPageClicked,
+    handleNextPageClicked,
+    handleMainPageClicked,
 
+} = usePagination ({})
 
 }
