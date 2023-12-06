@@ -63,7 +63,11 @@ export const Cards = () => {
 
             <div>
                 <Table.Root className={'w-full'}>
+                    <Table.Header columns={columns} sort={sort} onSort={setSort}/>
+                    <Table.Body>
+
                     <Table.Cell>{card.player}</Table.Cell>
+                    </Table.Body>
                 </Table.Root>
             </div>
 
