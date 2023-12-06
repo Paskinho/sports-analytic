@@ -24,6 +24,19 @@ export type PaginationProps = {
     onPerPageChange?: (itemPerPage: number) => void
 } & PaginationConditionals
 
+const classNames = {
+    root: s.root,
+    container: s.container,
+    selectBox: s.selectBox,
+    select: s.select,
+    item: s.item,
+    dots: s.dots,
+    icon: s.icon,
+    pageButton(selected?: boolean) {
+        return clsx(this.item, selected && s.selected)
+    },
+}
+
 
 export const Pagination: FC<PaginationProps> = ({
                                                     count,
@@ -42,6 +55,17 @@ const {
     handleNextPageClicked,
     handleMainPageClicked,
 
-} = usePagination ({})
+} = usePagination ({
+    page,
+    count,
+    onChange,
+    siblings
+})
+
+    return (
+        <div>
+
+        </div>
+    )
 
 }
