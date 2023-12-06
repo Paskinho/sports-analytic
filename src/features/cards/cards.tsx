@@ -6,6 +6,8 @@ import {Sort} from "../../common/types";
 import {useParams} from "react-router-dom";
 import {Page} from "../../stories/Page";
 import {Typography} from "../../components/ui/typography";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
 
 
 const newDeckSchema = z.object({
@@ -51,7 +53,26 @@ export const Cards = () => {
         <Page>
             <img src={'https://logowik.com/content/uploads/images/526_liverpoolfc.jpg'} alt={'Logo'}/>
             <Typography variant={'large'}>{"Footbal Players"}</Typography>
+            <CreateCardModal deckId={deckId}/>
         </Page>
             )
 
+}
+
+const CreateCardModal = ({deckId}: {deckId: string}) => {
+
+    const [showModal, setShowModal] = useState(false)
+    const closeModal = () => setShowModal(false)
+    const openModal = () => setShowModal(true)
+
+    const [createCard] = useCardMutation()
+
+    const {control, handleSubmit} = useForm<NewCard>({
+        resolver: zodResolver(newDeckSchema),
+        defaultValues: {
+            player: '',
+            country: '',
+            club: '',
+        }
+    })
 }
