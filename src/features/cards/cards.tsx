@@ -4,6 +4,8 @@ import {Column} from "../../components/ui/table";
 import {useState} from "react";
 import {Sort} from "../../common/types";
 import {useParams} from "react-router-dom";
+import {Page} from "../../stories/Page";
+import {Typography} from "../../components/ui/typography";
 
 
 const newDeckSchema = z.object({
@@ -16,9 +18,9 @@ const newDeckSchema = z.object({
 type NewCard = z.infer<typeof newDeckSchema>
 export const Cards = () => {
 
-    const { deckId } = useParams<{ deckId: string }>()
+    const {deckId} = useParams<{ deckId: string }>()
 
-    const [sort, setSort] = useState<Sort>({key:'age', direction:'asc'})
+    const [sort, setSort] = useState<Sort>({key: 'age', direction: 'asc'})
     const sortString = sort ? `${sort.key} - ${sort.direction}` : null
 
     const [search, serSearch] = useState('')
@@ -32,11 +34,11 @@ export const Cards = () => {
     //     itemsPerPge: perPage
     // })
 
-    if(!deckId) return <div>Deck not found</div>
+    if (!deckId) return <div>Deck not found</div>
 
     // if (isLoading) return <div>Loading...</div>
 
-    const columns: Column[] =[
+    const columns: Column[] = [
         {key: "player", sortable: true, title: "Player"},
         {key: "country", sortable: true, title: "Country"},
         {key: "club", sortable: true, title: "Club"},
@@ -46,9 +48,10 @@ export const Cards = () => {
 
 
     return (
-        <div className={s.cards}>
-            Cards
-        </div>
-    )
+        <Page>
+            <img src={'https://logowik.com/content/uploads/images/526_liverpoolfc.jpg'} alt={'Logo'}/>
+            <Typography variant={'large'}>{"Footbal Players"}</Typography>
+        </Page>
+            )
 
 }
