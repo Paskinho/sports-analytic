@@ -20,6 +20,7 @@ import {RecoveryPassword} from "./features/auth/RecoveryPassword";
 import {NewPassword} from "./features/auth/NewPassword";
 import {Teams} from "./features/teams/Teams";
 import {FavoritePlayers} from "./features/players/favoritePlayers/favoritePlayers";
+import {Cards} from "./features/cards";
 
 
 const router = createBrowserRouter([
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
     {
         path: "favoritePlayers",
         element: <FavoritePlayers/>
+    },
+    {
+        path: "cards",
+        element: <Cards/>
     },
 ])
 
