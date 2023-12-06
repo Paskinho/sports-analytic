@@ -30,16 +30,16 @@ export const Cards = () => {
     const [perPage, setPerPage] = useState(10)
     const [page, setPage] = useState(1)
     // const {data: deck} = useGetDeckByIdQuery(deckId || '')
-    // const {data: cards, isLoading} = useGetCardsQuery({
-    //     deckId: deckId || '',
-    //     orderBy: sortString,
-    //     currentPage: page,
-    //     itemsPerPge: perPage
-    // })
+    const {data: cards, isLoading} = ({
+        deckId: deckId || '',
+        orderBy: sortString,
+        currentPage: page,
+        itemsPerPge: perPage
+    })
 
     if (!deckId) return <div>Deck not found</div>
 
-    // if (isLoading) return <div>Loading...</div>
+    if (isLoading) return <div>Loading...</div>
 
     const columns: Column[] = [
         {key: "player", sortable: true, title: "Player"},
@@ -65,8 +65,15 @@ export const Cards = () => {
                 <Table.Root className={'w-full'}>
                     <Table.Header columns={columns} sort={sort} onSort={setSort}/>
                     <Table.Body>
-
-                    <Table.Cell>{card.player}</Table.Cell>
+                        {cards?.items.map(card => (
+                            <Table.Row key={card.id}>
+                            <Table.Cell>{card.player}</Table.Cell>
+                            <Table.Cell>{card.country}</Table.Cell>
+                            <Table.Cell>{card.club}</Table.Cell>
+                            <Table.Cell>{card.age}</Table.Cell>
+                            <Table.Cell>{card.likes}</Table.Cell>
+                            </Table.Row>
+                        ))}
                     </Table.Body>
                 </Table.Root>
             </div>
