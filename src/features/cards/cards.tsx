@@ -2,6 +2,7 @@ import s from "./cards.module.scss"
 import {z} from "zod";
 import {Column} from "../../components/ui/table";
 import {useState} from "react";
+import {Sort} from "../../common/types";
 
 
 const newDeckSchema = z.object({
@@ -11,12 +12,16 @@ const newDeckSchema = z.object({
 })
 
 
-
 type NewCard = z.infer<typeof newDeckSchema>
 export const Cards = () => {
 
-    const [sort, setSort] = useState({key:'age', direction:'asc'})
+    const [sort, setSort] = useState<Sort>({key:'age', direction:'asc'})
     const sortString = sort ? `${sort.key} - ${sort.direction}` : null
+
+    const [search, serSearch] = useState('')
+    const [perPage, setPerPage] = useState(10)
+    const [page, setPage] = useState(1)
+
 
     const columns: Column[] =[
         {key: "player", sortable: true, title: "Player"},
