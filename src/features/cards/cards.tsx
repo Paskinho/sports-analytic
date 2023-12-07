@@ -10,6 +10,7 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {TextField} from "../../components/ui/text-field";
 import {FaEdit, FaTrash} from "react-icons/fa";
+import {Pagination} from "../../components/ui/pagination";
 
 
 const newDeckSchema = z.object({
@@ -90,7 +91,7 @@ export const Cards = () => {
                     </Table.Body>
                 </Table.Root>
             </div>
-       <Pagination/>
+       <Pagination page={page} onChange={setPage} count={cards?.pagination?.totalPages || 1}/>
         </Page>
     )
 
@@ -111,5 +112,9 @@ const CreateCardModal = ({deckId}: { deckId: string }) => {
             country: '',
             club: '',
         }
+    })
+
+    const handleCardCreated = handleSubmit((args: NewCard)=> {
+
     })
 }
