@@ -48,30 +48,35 @@ export const Pagination: FC<PaginationProps> = ({
                                                     perPageOptions,
                                                     onPerPageChange
                                                 }) => {
-const {
-    paginationRange,
-    isLastPage,
-    isFirstPage,
-    handlePreviousPageClicked,
-    handleNextPageClicked,
-    handleMainPageClicked,
+    const {
+        paginationRange,
+        isLastPage,
+        isFirstPage,
+        handlePreviousPageClicked,
+        handleNextPageClicked,
+        handleMainPageClicked,
 
-} = usePagination ({
-    page,
-    count,
-    onChange,
-    siblings
-})
+    } = usePagination({
+        page,
+        count,
+        onChange,
+        siblings
+    })
 
     return (
         <div className={classNames.root}>
             <div className={classNames.container}>
                 <PrevButton onClick={handlePreviousPageClicked} disabled={isFirstPage}/>
-                </div>
+            </div>
         </div>
     )
 
 }
+
+const Dots: FC = () => {
+    return <span className={classNames.dots}>&#8230</span>
+}
+
 
 type NavigationButtonProps = {
     onClick: () => void
@@ -85,4 +90,30 @@ const PrevButton: FC<NavigationButtonProps> = ({onClick, disabled}) => {
             <BiChevronLeft className={classNames.icon} size={16}/>
         </button>
     )
+}
+
+type MainPaginationButtonProps = {
+    paginationRange: (number | string) []
+    currentPage: number
+    onClick: (pageNumber: number) => () => void
+}
+
+
+const MainPaginationProps: FC<MainPaginationButtonProps> = ({
+                                                                paginationRange,
+                                                                currentPage,
+                                                                onClick
+                                                            }) => {
+return (
+    <>
+        {paginationRange.map((page:number | string, index)=> {
+            const  isSelected = page === currentPage
+
+            if (typeof page !== "number") {
+                return <Dots/>
+            }
+
+        } )}
+    </>
+)
 }
