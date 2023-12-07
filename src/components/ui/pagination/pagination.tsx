@@ -1,7 +1,7 @@
 import s from './pagination.module.scss'
 import {FC} from "react";
 import {usePagination} from "./usePagination";
-import {BiChevronLeft} from "react-icons/bi";
+import {BiChevronLeft, BiChevronRight} from "react-icons/bi";
 
 type PaginationConditionals =
     | {
@@ -67,6 +67,9 @@ export const Pagination: FC<PaginationProps> = ({
         <div className={classNames.root}>
             <div className={classNames.container}>
                 <PrevButton onClick={handlePreviousPageClicked} disabled={isFirstPage}/>
+                <MainPaginationProps paginationRange={paginationRange} currentPage={page} onClick={handleMainPageClicked}/>
+            <NextButton onClick={handleNextPageClicked} disabled={isFirstPage}/>
+
             </div>
         </div>
     )
@@ -128,10 +131,16 @@ const MainPaginationProps: FC<MainPaginationButtonProps> = ({
                 if (typeof page !== "number") {
                     return <Dots key={index}/>
                 }
-
-                return <PageButton/>
-
+                return <PageButton key={index} page={page} selected={isSelected} onClick={onClick(page)}/>
             })}
         </>
+    )
+}
+
+const NextButton: FC<NavigationButtonProps> = ({onClick, disabled}) => {
+    return (
+        <button className={classNames.item} onClick={onClick} disabled={disabled}>
+            <BiChevronRight className={classNames.icon} size={16}/>
+        </button>
     )
 }
