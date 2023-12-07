@@ -63,14 +63,20 @@ export const Pagination: FC<PaginationProps> = ({
         siblings
     })
 
+    const showPerPageSelect = !!perPage && !!perPageOptions && !!onPerPageChange
+
     return (
         <div className={classNames.root}>
             <div className={classNames.container}>
                 <PrevButton onClick={handlePreviousPageClicked} disabled={isFirstPage}/>
-                <MainPaginationProps paginationRange={paginationRange} currentPage={page} onClick={handleMainPageClicked}/>
-            <NextButton onClick={handleNextPageClicked} disabled={isFirstPage}/>
-
+                <MainPaginationProps paginationRange={paginationRange} currentPage={page}
+                                     onClick={handleMainPageClicked}/>
+                <NextButton onClick={handleNextPageClicked} disabled={isFirstPage}/>
             </div>
+            {showPerPageSelect && (
+                <PerPageSelect{...{perPage, perPageOptions, onPerPageChange}} />
+            )}
+
         </div>
     )
 
@@ -143,4 +149,20 @@ const NextButton: FC<NavigationButtonProps> = ({onClick, disabled}) => {
             <BiChevronRight className={classNames.icon} size={16}/>
         </button>
     )
+}
+
+export type PerPageSelectProps = {
+    perPage: number
+    perPageOptions: number[]
+    onPerPageChange: (itemPerPage: number) => void
+}
+
+export const PerPageSelect: FC<PerPageSelectProps> = ({
+                                                          perPage, perPageOptions, onPerPageChange
+                                                      }) => {
+    const selectOptions = perPageOptions.map(value => ({
+        label: value,
+        value
+    }))
+    return null
 }
