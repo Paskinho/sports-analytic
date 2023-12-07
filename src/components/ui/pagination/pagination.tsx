@@ -73,10 +73,26 @@ export const Pagination: FC<PaginationProps> = ({
 
 }
 
+type PageButtonProps = NavigationButtonProps & {
+    page: number
+    selected: boolean
+}
+
 const Dots: FC = () => {
     return <span className={classNames.dots}>&#8230</span>
 }
 
+const PageButton: FC<PageButtonProps> = ({onClick, page, disabled, selected}) => {
+    return (
+        <button onClick={onClick}
+                disabled={selected || disabled}
+                className={classNames.pageButton(selected)}
+        >
+            {page}
+        </button>
+    )
+
+}
 
 type NavigationButtonProps = {
     onClick: () => void
@@ -104,16 +120,18 @@ const MainPaginationProps: FC<MainPaginationButtonProps> = ({
                                                                 currentPage,
                                                                 onClick
                                                             }) => {
-return (
-    <>
-        {paginationRange.map((page:number | string, index)=> {
-            const  isSelected = page === currentPage
+    return (
+        <>
+            {paginationRange.map((page: number | string, index) => {
+                const isSelected = page === currentPage
 
-            if (typeof page !== "number") {
-                return <Dots/>
-            }
+                if (typeof page !== "number") {
+                    return <Dots key={index}/>
+                }
 
-        } )}
-    </>
-)
+                return <PageButton/>
+
+            })}
+        </>
+    )
 }
