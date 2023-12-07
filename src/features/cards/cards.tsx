@@ -129,8 +129,13 @@ const CreateCardModal = ({deckId}: { deckId: string }) => {
                     <ControlledTextField label={"Player"} control={control} name={'player'}/>
                     <ControlledTextField label={"Country"} control={control} name={'country'}/>
                     <ControlledTextField label={"Club"} control={control} name={'club'}/>
+                    <div className={'flex items-center justify-between'}>
+                        <Button onClick={closeModal} variant={'secondary'} >
+                            Cancel
+                        </Button>
+                        <Button type={'submit'}>Create</Button>
+                    </div>
                 </form>
-
             </Modal>
         </>
     )
