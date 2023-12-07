@@ -11,6 +11,9 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {TextField} from "../../components/ui/text-field";
 import {FaEdit, FaTrash} from "react-icons/fa";
 import {Pagination} from "../../components/ui/pagination";
+import {Button} from "../../components/ui/button";
+import {Modal} from "../../components/ui/modal";
+import {ControlledTextField} from "../../components/ui/controlled/controlled-text-field";
 
 
 const newDeckSchema = z.object({
@@ -69,19 +72,19 @@ export const Cards = () => {
                     <Table.Body>
                         {cards?.items.map(card => (
                             <Table.Row key={card.id}>
-                            <Table.Cell>{card.player}</Table.Cell>
-                            <Table.Cell>{card.country}</Table.Cell>
-                            <Table.Cell>{card.club}</Table.Cell>
-                            <Table.Cell>{card.age}</Table.Cell>
-                            {/*<Table.Cell>{card.likes}</Table.Cell>*/}
+                                <Table.Cell>{card.player}</Table.Cell>
+                                <Table.Cell>{card.country}</Table.Cell>
+                                <Table.Cell>{card.club}</Table.Cell>
+                                <Table.Cell>{card.age}</Table.Cell>
+                                {/*<Table.Cell>{card.likes}</Table.Cell>*/}
                                 <Table.Cell className={'flex gap-4 items-center'}>
                                     <button className={'unset'}>
                                         <FaEdit/>
-                                    </button >
+                                    </button>
                                     <button className={'unset'}
-                                    onClick={()=> {
-                                        // deleteCard({cardId: card.id})
-                                    }}
+                                            onClick={() => {
+                                                // deleteCard({cardId: card.id})
+                                            }}
                                     >
                                         <FaTrash/>
                                     </button>
@@ -91,7 +94,7 @@ export const Cards = () => {
                     </Table.Body>
                 </Table.Root>
             </div>
-       <Pagination page={page} onChange={setPage} count={cards?.pagination?.totalPages || 1}/>
+            <Pagination page={page} onChange={setPage} count={cards?.pagination?.totalPages || 1}/>
         </Page>
     )
 
@@ -114,7 +117,22 @@ const CreateCardModal = ({deckId}: { deckId: string }) => {
         }
     })
 
-    const handleCardCreated = handleSubmit((args: NewCard)=> {
-
+    const handleCardCreated = handleSubmit((args: NewCard) => {
+        createCard({...args, deckId})
     })
+
+    return (
+        <>
+            <Button onClick={openModal}>Add New Card</Button>
+            <Modal open={showModal} onClose={closeModal} title={"Create player card"}>
+                <form onSubmit={handleCardCreated} className={"gap-4 flex flex-column"}>
+                    <ControlledTextField label={"Player"} control={control} name={'player'}/>
+                    <ControlledTextField label={"Country"} control={control} name={'country'}/>
+                    <ControlledTextField label={"Club"} control={control} name={'club'}/>
+                </form>
+
+            </Modal>
+        </>
+    )
+
 }
