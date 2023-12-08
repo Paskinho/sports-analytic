@@ -44,7 +44,6 @@ export const Login = () => {
         )
     }
 
-
     return (
         <StyledLogin>
             <LoginForm/>
