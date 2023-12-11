@@ -10,21 +10,14 @@ export type Card = {
     id: string
     deckId: string
     userId: string
-    question: string
-    answer: string
-    grade: number
-    shots: number
-    questionImg?: any
-    answerImg?: any
-    answerVideo?: any
-    questionVideo?: any
-    comments?: any
-    type?: any
-    rating: number
-    moreId?: any
+    player: string
+    club: string
+    country: string
+    age: number
+    likes: number
     created: string
     updated: string
 }
 
-export type CreateCardInput = Pick<Card, 'question' | 'answer' | 'deckId'>
+export type CreateCardInput = Pick<Card, 'player' | 'country' | 'deckId'>
 export type DeleteCardInput = { cardId: Card['id'] }

@@ -14,6 +14,7 @@ import {Pagination} from "../../components/ui/pagination";
 import {Button} from "../../components/ui/button";
 import {Modal} from "../../components/ui/modal";
 import {ControlledTextField} from "../../components/ui/controlled/controlled-text-field";
+import {useDeleteCardMutation} from "../../services/cards";
 
 
 const newDeckSchema = z.object({
@@ -27,11 +28,11 @@ type NewCard = z.infer<typeof newDeckSchema>
 export const Cards = () => {
 
     const {deckId} = useParams<{ deckId: string }>()
-
+    const [deleteCard] = useDeleteCardMutation()
     const [sort, setSort] = useState<Sort>({key: 'age', direction: 'asc'})
     const sortString = sort ? `${sort.key} - ${sort.direction}` : null
 
-    const [search, serSearch] = useState('')
+    const [search, setSearch] = useState('')
     const [perPage, setPerPage] = useState(10)
     const [page, setPage] = useState(1)
     // const {data: deck} = useGetDeckByIdQuery(deckId || '')
@@ -63,7 +64,7 @@ export const Cards = () => {
                 <CreateCardModal deckId={deckId}/>
             </div>
             <div className={s.controls}>
-                <TextField/>
+                <TextField placeholder={'Search'} value={search} onValueChange={setSearch}/>
             </div>
 
             <div>
