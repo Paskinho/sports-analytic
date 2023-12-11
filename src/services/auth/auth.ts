@@ -36,6 +36,23 @@ export const authApi = createApi({
                 body: {password},
             })
         }),
-        logout: builder.mutation({})
+        logout: builder.mutation<unknown, any>({
+            query:() => ({
+                url: 'auth/logout',
+                method: 'POST',
+            }),
+            async onQueryStarted(_, {dispatch, queryFullfilled}) {
+                const patchResult = dispatch(
+                    authApi.util.updatedQueryData('getMe', undefined, ()=>{
+                        return null
+                    })
+                )
+                try {
+                    await queryFullfilled
+                } catch {
+                    patchResult.undo()
+                }
+            }
+        })
     })
 })
