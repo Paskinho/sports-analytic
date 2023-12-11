@@ -51,7 +51,7 @@ export const authApi = createApi({
                     await queryFullfilled
                 } catch {
                     patchResult.undo()
-                }
+                } // просмотреть
             }
         })
     })
