@@ -10,13 +10,32 @@ export const authApi = createApi({
     }),
     endPoints: builder => ({
         getMe: builder.query<User | null, void>({
-        query: () => 'auth/me',
+            query: () => 'auth/me',
             extraOptions: {maxRetries: false},
             providesTags: ['Me']
         }),
         login: builder.mutation<LoginArgs, any>({
-
-        })
-
+            query: ({email, password}) => ({
+                url: 'auth/login',
+                method: 'POST',
+                body: {email, password},
+            }),
+            inValidatesTags: ['Me']
+        }),
+        signUp: builder.mutation({
+            query: body => ({
+                url: `auth/sign-up`,
+                method: 'POST',
+                body,
+            }),
+        }),
+        resetPassword: builder.mutation<unknown, { token: string; password: string }>({
+            query: ({token, password}) => ({
+                url: `auth/reset-password/${token}`,
+                method: "POST",
+                body: {password},
+            })
+        }),
+        logout: builder.mutation({})
     })
 })
