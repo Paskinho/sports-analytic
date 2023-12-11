@@ -17,6 +17,7 @@ import {ControlledTextField} from "../../components/ui/controlled/controlled-tex
 import {useCreateCardMutation, useDeleteCardMutation, useGetCardsQuery} from "../../services/cards/cards";
 import * as dayjs from "dayjs";
 import {toast} from "react-toastify";
+import {useGetDeckByIdQuery} from "../../services/decks/decks";
 
 
 const newDeckSchema = z.object({
