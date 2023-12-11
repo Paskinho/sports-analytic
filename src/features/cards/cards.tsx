@@ -14,7 +14,7 @@ import {Pagination} from "../../components/ui/pagination";
 import {Button} from "../../components/ui/button";
 import {Modal} from "../../components/ui/modal";
 import {ControlledTextField} from "../../components/ui/controlled/controlled-text-field";
-import {useDeleteCardMutation, useGetCardsQuery} from "../../services/cards";
+import {useDeleteCardMutation, useGetCardsQuery} from "../../services/cards/cards";
 import * as dayjs from "dayjs";
 import {toast} from "react-toastify";
 

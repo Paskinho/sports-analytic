@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { isEmpty } from 'remeda'
 
-import { Paginated } from '../common/types'
+import { Paginated } from '../../common/types'
 
 import { Card, CreateCardInput, DeleteCardInput, GetCardsParams } from './types'
 
