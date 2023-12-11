@@ -14,7 +14,9 @@ import {Pagination} from "../../components/ui/pagination";
 import {Button} from "../../components/ui/button";
 import {Modal} from "../../components/ui/modal";
 import {ControlledTextField} from "../../components/ui/controlled/controlled-text-field";
-import {useDeleteCardMutation} from "../../services/cards";
+import {useDeleteCardMutation, useGetCardsQuery} from "../../services/cards";
+import * as dayjs from "dayjs";
+import {toast} from "react-toastify";
 
 
 const newDeckSchema = z.object({
@@ -36,7 +38,7 @@ export const Cards = () => {
     const [perPage, setPerPage] = useState(10)
     const [page, setPage] = useState(1)
     // const {data: deck} = useGetDeckByIdQuery(deckId || '')
-    const {data: cards, isLoading} = ({
+    const {data: cards, isLoading} = useGetCardsQuery({
         deckId: deckId || '',
         orderBy: sortString,
         currentPage: page,
@@ -52,7 +54,8 @@ export const Cards = () => {
         {key: "country", sortable: true, title: "Country"},
         {key: "club", sortable: true, title: "Club"},
         {key: "age", sortable: true, title: "Age"},
-        {key: "likes", sortable: true, title: 'Likes'}
+        {key: "likes", sortable: true, title: 'Likes'},
+        {key: "updated", sortable: true, title: 'Updated'}
     ]
 
 
@@ -76,15 +79,16 @@ export const Cards = () => {
                                 <Table.Cell>{card.player}</Table.Cell>
                                 <Table.Cell>{card.country}</Table.Cell>
                                 <Table.Cell>{card.club}</Table.Cell>
+                                <Table.Cell>{dayjs(card.updated).format('L, LT')}</Table.Cell>
                                 <Table.Cell>{card.age}</Table.Cell>
-                                {/*<Table.Cell>{card.likes}</Table.Cell>*/}
+                                <Table.Cell>{card.likes}</Table.Cell>
                                 <Table.Cell className={'flex gap-4 items-center'}>
                                     <button className={'unset'}>
                                         <FaEdit/>
                                     </button>
                                     <button className={'unset'}
                                             onClick={() => {
-                                                // deleteCard({cardId: card.id})
+                                                deleteCard({cardId: card.id})
                                             }}
                                     >
                                         <FaTrash/>
@@ -107,7 +111,7 @@ const CreateCardModal = ({deckId}: { deckId: string }) => {
     const closeModal = () => setShowModal(false)
     const openModal = () => setShowModal(true)
 
-    const [createCard] = useCardMutation()
+    const [createCard] = useCreateCardMutation()
 
     const {control, handleSubmit} = useForm<NewCard>({
         resolver: zodResolver(newDeckSchema),
@@ -119,7 +123,12 @@ const CreateCardModal = ({deckId}: { deckId: string }) => {
     })
 
     const handleCardCreated = handleSubmit((args: NewCard) => {
-        createCard({...args, deckId})
+        createCard({...args, deckId}).unwrap().then(() => {
+            toast.success("Card of player created succesfully")
+            closeModal()
+        }).catch(err => {
+            toast.error(err.data.message)
+        })
     })
 
     return (
@@ -131,7 +140,7 @@ const CreateCardModal = ({deckId}: { deckId: string }) => {
                     <ControlledTextField label={"Country"} control={control} name={'country'}/>
                     <ControlledTextField label={"Club"} control={control} name={'club'}/>
                     <div className={'flex items-center justify-between'}>
-                        <Button onClick={closeModal} variant={'secondary'} >
+                        <Button onClick={closeModal} variant={'secondary'}>
                             Cancel
                         </Button>
                         <Button type={'submit'}>Create</Button>
