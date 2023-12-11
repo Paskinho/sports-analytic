@@ -1,10 +1,12 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query";
+export type LoginArgs = {
+    email: string
+    password: string
+}
 
-export const authApi = createApi({
-    reducerPath: 'authApi',
-    tagTypes: ['Me'],
-    baseQuery: fetchBaseQuery({
-        baseUrl: import.meta.env.VITE_BASE_API_URL,
-        credentials: 'include'
-    })
-})
+export type User = {
+    id: string
+    email: string
+    name: string
+    isEmailVerified: boolean
+    avatar: string
+}
