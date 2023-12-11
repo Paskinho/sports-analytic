@@ -14,7 +14,7 @@ import {Pagination} from "../../components/ui/pagination";
 import {Button} from "../../components/ui/button";
 import {Modal} from "../../components/ui/modal";
 import {ControlledTextField} from "../../components/ui/controlled/controlled-text-field";
-import {useDeleteCardMutation, useGetCardsQuery} from "../../services/cards/cards";
+import {useCreateCardMutation, useDeleteCardMutation, useGetCardsQuery} from "../../services/cards/cards";
 import * as dayjs from "dayjs";
 import {toast} from "react-toastify";
 
@@ -37,7 +37,7 @@ export const Cards = () => {
     const [search, setSearch] = useState('')
     const [perPage, setPerPage] = useState(10)
     const [page, setPage] = useState(1)
-    // const {data: deck} = useGetDeckByIdQuery(deckId || '')
+    const {data: deck} = useGetDeckByIdQuery(deckId || '')
     const {data: cards, isLoading} = useGetCardsQuery({
         deckId: deckId || '',
         orderBy: sortString,
