@@ -48,7 +48,10 @@ export const Login = () => {
     return (
         <Card className={s.card}>
             <StyledLogin>
-                <Typography variant={'large'}>Sign in</Typography>
+                <div className={s.header}>
+                    <Typography variant={'large'}>Sign in</Typography>
+                </div>
+
                 <LoginForm/>
                 <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
                 <Typography variant={"link1"} onClick={NavigateToRecoveryPassword}>Forgot Password?</Typography>

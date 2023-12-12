@@ -4,7 +4,7 @@ import {TextField} from "../../../components/ui/text-field";
 import {useController, useForm} from "react-hook-form";
 import {z} from "zod";
 import {zodResolver} from '@hookform/resolvers/zod'
-import s from "./styles.modules.scss"
+import s from "./styles.module.scss"
 import {ControlledCheckbox} from "../../../components/ui/controlled/controlled-checkbox";
 import { DevTool } from '@hookform/devtools'
 import {ControlledTextField} from "../../../components/ui/controlled/controlled-text-field";
