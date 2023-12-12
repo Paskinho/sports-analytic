@@ -6,6 +6,7 @@ import styled from "styled-components";
 import s from "./styles.module.scss"
 import {Checkbox} from "../../../components/ui/checkbox";
 import {Typography} from "../../../components/ui/typography";
+import {Card} from "../../../components/ui/card";
 
 
 export const Login = () => {
@@ -21,12 +22,12 @@ export const Login = () => {
         }
         dispatch(authThunks.login(payload))
             .unwrap()
-            .then((res)=> {
+            .then((res) => {
                 toast.success('Successfully login')
-                setTimeout(()=> {
+                setTimeout(() => {
                     navigate('/')
                 }, 1000)
-            }).catch((err)=> {
+            }).catch((err) => {
             toast.error(err.e.response.data.error)
         });
     };
@@ -45,15 +46,18 @@ export const Login = () => {
     }
 
     return (
-        <StyledLogin>
-            <LoginForm/>
-            <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
-            <Typography variant={"link1"} onClick={NavigateToRecoveryPassword}>Forgot Password?</Typography>
-            <Typography variant={'link1'} onClick={NavigateToSignUp}>Registration now</Typography>
-        </StyledLogin>
+        <Card className={s.card}>
+            <StyledLogin>
+                <Typography variant={'large'}>Sign in</Typography>
+                <LoginForm/>
+                <Button variant={'primary'} onClick={loginHandler} className={s.button}>SignIn</Button>
+                <Typography variant={"link1"} onClick={NavigateToRecoveryPassword}>Forgot Password?</Typography>
+                <Typography variant={'link1'} onClick={NavigateToSignUp}>Registration now</Typography>
+            </StyledLogin>
+        </Card>
     )
 }
 
-const StyledLogin = styled.div `
-padding: 100px;
+const StyledLogin = styled.div`
+  
 `

@@ -7,7 +7,7 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Dropdown, DropdownItem, DropdownItemWithIcon} from "../../components/ui/dropdown";
 import PersonalOutline from "../../assets/icons/personalOutline";
-import  Logout from '../../assets/icons/logout'
+import Logout from '../../assets/icons/logout'
 import Profile from "../../assets/images/Profile.png"
 import {Container} from "../../common/styles/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
@@ -52,7 +52,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
     }
 
     const navToProfile = () => {
-        return navigate ("Profile")
+        return navigate("Profile")
     }
 
 
@@ -60,61 +60,63 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'} direction={'row'}>
-            <StyledNav>
-                <Logo onClick={navToHome}/>
-                <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
-                {/*<Dropdown>*/}
-                    <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
-                {/*</Dropdown>*/}
-                <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
-                <Typography variant={'subtitle1'} color={'inherit'} onClick={navToStatistics}>Statistics</Typography>
-                <Typography variant={'subtitle1'} color={'inherit'} onClick={navToSubscription}>Subscription</Typography>
-            </StyledNav>
-            <div className={s.button}>
-                <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
+                    <StyledNav>
+                        <Logo onClick={navToHome}/>
+                        <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
+                        {/*<Dropdown>*/}
+                        <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
+                        {/*</Dropdown>*/}
+                        <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
+                        <Typography variant={'subtitle1'} color={'inherit'}
+                                    onClick={navToStatistics}>Statistics</Typography>
+                        <Typography variant={'subtitle1'} color={'inherit'}
+                                    onClick={navToSubscription}>Subscription</Typography>
+                    </StyledNav>
+                    <div className={s.button}>
+                        <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
 
-            </div>
-            {/*{isAuth && (*/}
-                <Dropdown trigger={<button>
-                    <Typography variant='subtitle' className={s.userName}>
-                        {userInfo?.name}
-                     Uladzislau
-                    </Typography>
-                </button>}
-                          className={s.dropdown}
-                >
-                    <img alt={"Profile logo"}
+                    </div>
+                    {/*{isAuth && (*/}
+                    <Dropdown trigger={<button>
+                        <Typography variant='subtitle' className={s.userName}>
+                            {userInfo?.name}
+                            Uladzislau
+                        </Typography>
+                    </button>}
+                              className={s.dropdown}
+                    >
+                        <img alt={"Profile logo"}
                              src={Profile}
-                         className={s.imgHeader}/>
-                             {/*onClick={navToProfile}/>*/}
-                    <DropdownItem>
-                        <div className={s.userInfoContainer}>
-                            {/*<img alt={"Profile logo"}*/}
-                            {/*     src={Profile}*/}
-                            {/*className={s.imgHeader}*/}
-                            {/*/>*/}
-                       <div className={s.userDetails}>
-                           <Typography variant={'subtitle2'}>{userInfo?.name}Uladzislau</Typography>
-                           <Typography variant={'caption'}>{userInfo?.email}v.paskanov@gmail.com</Typography>
-                       </div>
-                        </div>
-                    </DropdownItem>
-                    <DropdownItemWithIcon
-                    icon={<PersonalOutline/>}
-                    text={"Profile"}
-                    onSelect={()=> navigate('/profile')}
-                    className={s.userInfoContainer}
-                    />
-                    <DropdownItemWithIcon
+                             className={s.imgHeader}/>
+                        {/*onClick={navToProfile}/>*/}
+                        <DropdownItem>
+                            <div className={s.userInfoContainer}>
+                                {/*<img alt={"Profile logo"}*/}
+                                {/*     src={Profile}*/}
+                                {/*className={s.imgHeader}*/}
+                                {/*/>*/}
+                                <div className={s.userDetails}>
+                                    <Typography variant={'subtitle2'}>{userInfo?.name}Uladzislau</Typography>
+                                    <Typography variant={'caption'}>{userInfo?.email}v.paskanov@gmail.com</Typography>
+                                </div>
+                            </div>
+                        </DropdownItem>
+                        <DropdownItemWithIcon
+                            icon={<PersonalOutline/>}
+                            text={"Profile"}
+                            onSelect={() => navigate('/profile')}
+                            className={s.userInfoContainer}
+                        />
+                        <DropdownItemWithIcon
 
-                        text={"Favorite players"}
-                        onSelect={()=> navigate('/favoritePlayers')}
-                        className={s.userInfoContainer}
-                    />
-                    <DropdownItemWithIcon className={s.userInfoContainer} icon={<Logout/>} text={"Sign out"}
-                                          // onSelect={onSignOut}
-                    />
-                </Dropdown>
+                            text={"Favorite players"}
+                            onSelect={() => navigate('/favoritePlayers')}
+                            className={s.userInfoContainer}
+                        />
+                        <DropdownItemWithIcon className={s.userInfoContainer} icon={<Logout/>} text={"Sign out"}
+                            // onSelect={onSignOut}
+                        />
+                    </Dropdown>
                 </FlexWrapper>
             </Container>
             {/*{!isAuth && <Button variant="primary">Sign In</Button>}*/}
@@ -123,7 +125,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
 }
 
 const StyledHeader = styled.header`
- display: flex;
+  display: flex;
   position: fixed;
   top: 0;
   right: 0;
@@ -136,11 +138,11 @@ const StyledHeader = styled.header`
   align-items: center;
 `
 
-const StyledNav = styled.nav `
+const StyledNav = styled.nav`
   display: flex;
   width: 450px;
   justify-content: space-around;
   align-content: start;
   align-items: center;
- 
+
 `
