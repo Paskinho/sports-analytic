@@ -78,7 +78,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     </div>
                     {/*{isAuth && (*/}
                     <Dropdown trigger={<button>
-                        <Typography variant='subtitle' className={s.userName}>
+                        <Typography variant='subtitle1' className={s.userName}>
                             {userInfo?.name}
                             Uladzislau
                         </Typography>

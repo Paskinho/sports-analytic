@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
+import AppLogo from "../../../src/assets/images/Logo.jpg"
 
 export const Logo = () => {
     return (
         <div>
-            <StyledImg src='https://cdn4.vectorstock.com/i/1000x1000/49/18/soccer-and-football-player-man-logo-vector-31364918.jpg'/>
+            <StyledImg src={AppLogo}/>
         </div>
     );
 };
