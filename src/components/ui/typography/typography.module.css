@@ -11,6 +11,7 @@
     @include typography(var(--font-size-xxl), var(--line-height-l), var(--font-weight-bold));
 font-weight: bold;
     font-size: xx-large;
+    color: #E5DDC8;
 }
 
 .h1 {
@@ -63,7 +64,7 @@ color: #DB1F48;
     @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
 
     cursor: pointer;
-    color: var(--color-text-link);
+    color: #E5DDC8;
     text-decoration: underline;
 }
 
