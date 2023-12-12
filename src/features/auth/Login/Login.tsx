@@ -46,6 +46,7 @@ export const Login = () => {
     }
 
     return (
+        <>
         <Card className={s.card}>
             <StyledLogin>
                 <div className={s.header}>
@@ -58,6 +59,8 @@ export const Login = () => {
                 <Typography variant={'link1'} onClick={NavigateToSignUp}>Registration now</Typography>
             </StyledLogin>
         </Card>
+        </>
+
     )
 }
 

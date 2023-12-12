@@ -9,6 +9,8 @@
 
 .large {
     @include typography(var(--font-size-xxl), var(--line-height-l), var(--font-weight-bold));
+font-weight: bold;
+    font-size: xx-large;
 }
 
 .h1 {
