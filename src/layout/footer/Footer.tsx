@@ -20,10 +20,10 @@ const StyledFooter = styled.footer `
 `
 
 const Name = styled.span `
-    color: #E5DDC8;
+    color: #004369;
 `
 
 const Copyright = styled.h6 `
-color: #E5DDC8
+color:#004369
 `
 
