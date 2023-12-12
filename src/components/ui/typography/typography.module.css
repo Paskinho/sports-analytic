@@ -31,7 +31,7 @@ font-weight: bold;
 
 .subtitle1 {
     @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-bold));
-    color: white;
+    color: #E5DDC8;
     cursor: pointer;
 }
 

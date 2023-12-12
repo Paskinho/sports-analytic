@@ -15,15 +15,15 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer `
-  background-color: #d8f6ef;
   min-height: 20vh;
   margin-top: 50px;
 `
 
 const Name = styled.span `
+    color: #E5DDC8;
 `
 
 const Copyright = styled.h6 `
-
+color: #E5DDC8
 `
 
