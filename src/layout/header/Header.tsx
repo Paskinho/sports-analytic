@@ -131,7 +131,7 @@ const StyledHeader = styled.header`
   right: 0;
   left: 0;
   box-shadow: 1px 2px 1px 1px lightgray;
-  background-color: rgb(255, 44, 0);
+  background-color: #01949A;
   grid-area: header;
   justify-content: space-between;
   padding: 20px 0;
