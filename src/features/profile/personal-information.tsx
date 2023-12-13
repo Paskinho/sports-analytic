@@ -48,7 +48,7 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
             <h2>
                 <StyledImg src={avatar}/>
             </h2>
-            <Button variant={'primary'} onClick={handleAvatarChanged}>
+            <Button className={s.camera} variant={'primary'} onClick={handleAvatarChanged}>
                 <Camera/>
             </Button>
             <Typography variant={'h1'} className={s.name}>

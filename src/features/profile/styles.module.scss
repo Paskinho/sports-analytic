@@ -6,7 +6,6 @@
 
 .email {
   margin-bottom: 13px;
-  color: var(--color-dark-100);
   text-align: center;
 }
 
@@ -15,4 +14,8 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
+}
+
+.camera {
+  max-width: 100%;
 }
