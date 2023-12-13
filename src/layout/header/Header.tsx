@@ -89,7 +89,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                              src={Profile}
                              className={s.imgHeader}/>
                         {/*onClick={navToProfile}/>*/}
-                        <DropdownItem>
+                        <DropdownItem >
                             <div className={s.userInfoContainer}>
                                 {/*<img alt={"Profile logo"}*/}
                                 {/*     src={Profile}*/}
