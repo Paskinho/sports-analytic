@@ -2,11 +2,14 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {StatsTitle} from "../../../../components/StatsTitle";
 import {LastStat} from "./last-stat/LastStat";
+import {Typography} from "../../../../components/ui/typography";
+import s from './LastStats.module.scss'
 
 export const LastStats = () => {
     return (
         <StyledStats>
             <StatsTitle>
+                <Typography variant={'large'} className={s.title}>LAST STATS</Typography>
                 <FlexWrapper>
                     <LastStat statTitle={'Shots'}
                               namePlayerOne={'Salah'}
