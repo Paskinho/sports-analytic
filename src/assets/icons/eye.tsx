@@ -17,6 +17,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) =
         />
     </svg>
 )
+
 const ForwardRef = forwardRef(SvgComponent)
 
 export default memo(ForwardRef)

@@ -27,7 +27,6 @@ export const Main = () => {
 const StyledMain = styled.div`
   width: 100%;
   min-height: 100vh;
-  background-color: #f8eded;
   margin-top: 70px;
   display: flex;
 `
