@@ -51,10 +51,12 @@ export const LoginForm = () => {
             <DevTool control={control} />
             <ControlledTextField className={s.textField} {...register("email")}  label='email'
             errorMessage={errors.email?.message} control={control}
+                                 placeholder={'email'}
             />
             <ControlledTextField {...register("password")}  label='password'
                        errorMessage={errors.password?.message}
                                  control={control}
+                                 placeholder={'password'}
             />
             <ControlledCheckbox className={s.checkbox} label={'remember me'} control={control} name={'rememberMe'}  />
             <Button variant={"primary"} className={s.button}>Login</Button>

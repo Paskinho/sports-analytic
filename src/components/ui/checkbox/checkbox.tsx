@@ -8,6 +8,7 @@ import { clsx } from "clsx";
 import { Typography } from "../typography";
 
 import s from "./checkbox.module.scss";
+import Check from "../../../assets/icons/check";
 export type CheckboxProps = {
     className?: string;
     checked?: boolean;

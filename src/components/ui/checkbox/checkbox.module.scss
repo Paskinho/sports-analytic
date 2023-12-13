@@ -22,11 +22,11 @@
   align-items: center;
   justify-content: center;
 
-  width: 18px;
-  height: 18px;
+  width: 10px;
+  height: 10px;
 
   background-color: var(--color-dark-900);
-  border: 2px solid var(--color-light-900);
+  border: 1px solid cadetblue;
   border-radius: 2px;
 
   &:focus {
