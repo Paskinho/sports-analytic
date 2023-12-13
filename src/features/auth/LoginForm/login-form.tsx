@@ -57,6 +57,7 @@ export const LoginForm = () => {
                        errorMessage={errors.password?.message}
                                  control={control}
                                  placeholder={'password'}
+                                 type={'password'}
             />
             <ControlledCheckbox className={s.checkbox} label={'remember me'} control={control} name={'rememberMe'}  />
             <Button variant={"primary"} className={s.button}>Login</Button>

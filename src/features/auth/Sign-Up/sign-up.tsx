@@ -97,7 +97,7 @@ export const SignUp = (props: SignUpProps) => {
                         Sign Up
                     </Button>
                 </form>
-                <Typography variant={'body2'} className={s.caption}>
+                <Typography variant={'subtitle1'} className={s.caption}>
                     Already have an account?
                 </Typography>
                 <Typography variant="link1" as={Link} to="/login" className={s.signInLink}>
