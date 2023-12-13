@@ -16,11 +16,12 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: #E5DDC8;
+  color: rgba(229 221 200 /80%);
 
   background: transparent;
   border: 1px solid #01949A;
   outline: 0;
+
 
 
   transition: border-color 0.2s;
@@ -36,6 +37,7 @@
 
   &:hover {
     background: #DB1F48;
+
   }
 
   &.error {
