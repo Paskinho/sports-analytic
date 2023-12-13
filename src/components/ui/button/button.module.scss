@@ -61,12 +61,12 @@
 .secondary {
   @include button;
 
-  color: var(--color-light-100);
-  background-color: var(--color-dark-300);
-  box-shadow: 0 2px 10px 0 #6d6d6d40;
+  color: #E5DDC8;
+  background-color:#DB1F48 ;
+  box-shadow: 0 2px 10px 0 #01949A;
 
   &:hover:enabled {
-    background-color: var(--color-dark-100);
+    background-color:#DB1F48
   }
 
   &:active:enabled {

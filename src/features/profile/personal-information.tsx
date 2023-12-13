@@ -48,14 +48,14 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
             <h2>
                 <StyledImg src={avatar}/>
             </h2>
-            <Button variant={'secondary'} onClick={handleAvatarChanged}>
+            <Button variant={'primary'} onClick={handleAvatarChanged}>
                 <Camera/>
             </Button>
             <Typography variant={'h1'} className={s.name}>
                 name: {name}
                 {/*{!name && <TextField></TextField>}*/}
             </Typography>
-            <Button variant={'secondary'} onClick={handleNameChanged}>
+            <Button variant={'primary'} onClick={handleNameChanged}>
                 <Edit/>
             </Button>
             <Typography variant={'h1'} className={s.email}>
@@ -64,7 +64,7 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
             <Typography variant={'h1'} className={s.email}>
                 phone: {phone}
             </Typography>
-            <Button variant={"secondary"} onClick={OnChangePassword}>
+            <Button variant={"primary"} onClick={OnChangePassword}>
                 Change Password
             </Button>
             <Button variant={"secondary"} onClick={handleLogout}>
