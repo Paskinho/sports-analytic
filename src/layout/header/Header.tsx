@@ -11,7 +11,7 @@ import Logout from '../../assets/icons/logout'
 import Profile from "../../assets/images/Profile.png"
 import {Container} from "../../common/styles/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import Star from '../../assets/icons/favorite'
+import Star from '../../assets/icons/star'
 
 type HeaderProps = {
     isAuth: boolean
@@ -109,7 +109,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             className={s.userInfoContainer}
                         />
                         <DropdownItemWithIcon
-                            // icon={<Star/>}
+                            icon={<Star/>}
                             text={"Favorite players"}
                             onSelect={() => navigate('/favoritePlayers')}
                             className={s.userInfoContainer}
