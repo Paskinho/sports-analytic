@@ -47,17 +47,18 @@ export const LoginForm = () => {
     })
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
             <DevTool control={control} />
             <ControlledTextField className={s.textField} {...register("email")}  label='email'
             errorMessage={errors.email?.message} control={control}
                                  placeholder={'email'}
             />
-            <ControlledTextField {...register("password")}  label='password'
+            <ControlledTextField className={s.textField} {...register("password")}  label='password'
                        errorMessage={errors.password?.message}
                                  control={control}
                                  placeholder={'password'}
                                  type={'password'}
+                                 name={'password'}
             />
             <ControlledCheckbox className={s.checkbox} label={'remember me'} control={control} name={'rememberMe'}  />
             <Button variant={"primary"} className={s.button}>Login</Button>

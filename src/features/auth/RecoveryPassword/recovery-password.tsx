@@ -43,14 +43,14 @@ export const RecoveryPassword = (props: RecoveryPasswordProps) => {
                     <div className={s.form}>
                         <ControlledTextField placeholder={'Email'} name={'email'} control={control}/>
                     </div>
-                    <Typography variant={'body2'} className={s.instructions}>
+                    <Typography variant={'subtitle1'} className={s.instructions}>
                         Enter you email address and we will send you further instructions
                     </Typography>
                     <Button className={s.button} fullWidth type={'submit'}>
                         Send Instructions
                     </Button>
                 </form>
-                <Typography variant={'body2'} className={s.caption}>
+                <Typography variant={'subtitle1'} className={s.caption}>
                     Did you remember your password?
                 </Typography>
                 <Typography variant={'link1'} as={Link} to={'sing-in'} className={s.loginLink}>
