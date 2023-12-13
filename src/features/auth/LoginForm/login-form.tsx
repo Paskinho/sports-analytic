@@ -56,7 +56,7 @@ export const LoginForm = () => {
                        errorMessage={errors.password?.message}
                                  control={control}
             />
-            <ControlledCheckbox label={'remember me'} control={control} name={'rememberMe'}  />
+            <ControlledCheckbox className={s.checkbox} label={'remember me'} control={control} name={'rememberMe'}  />
             <Button variant={"primary"} className={s.button}>Login</Button>
         </form>
     );

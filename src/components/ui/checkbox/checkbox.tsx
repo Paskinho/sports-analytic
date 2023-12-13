@@ -59,7 +59,7 @@ export const Checkbox: FC<CheckboxProps> = ({
                                     className={classNames.indicator}
                                     forceMount
                                 >
-                                    {/*<Check />*/}
+                                    <Check />
                                 </CheckboxRadix.Indicator>
                             )}
                         </CheckboxRadix.Root>
