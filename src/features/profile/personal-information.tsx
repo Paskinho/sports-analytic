@@ -43,7 +43,8 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
 
 
     return (
-        <StyledProfile>Profile
+        <StyledProfile>
+            <Typography variant={'large'}>Profile</Typography>
             <h2>
                 <StyledImg src={avatar}/>
             </h2>
@@ -82,7 +83,6 @@ const StyledImg = styled.img`
 `
 
 const StyledProfile = styled.div `
-background-color: rgba(208,231,225,0.99);
+background-color: #E5DDC8;
   margin-top: 100px;
-  width: 500px;
 `

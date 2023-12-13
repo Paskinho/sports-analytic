@@ -78,7 +78,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     </div>
                     {/*{isAuth && (*/}
                     <Dropdown trigger={<button>
-                        <Typography variant='subtitle1' className={s.userName}>
+                        <Typography variant='subtitle1' >
                             {userInfo?.name}
                             Uladzislau
                         </Typography>
@@ -89,7 +89,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                              src={Profile}
                              className={s.imgHeader}/>
                         {/*onClick={navToProfile}/>*/}
-                        <DropdownItem >
+                        <DropdownItem>
                             <div className={s.userInfoContainer}>
                                 {/*<img alt={"Profile logo"}*/}
                                 {/*     src={Profile}*/}
@@ -97,7 +97,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                                 {/*/>*/}
                                 <div className={s.userDetails}>
                                     <Typography variant={'subtitle2'}>{userInfo?.name}Uladzislau</Typography>
-                                    <Typography variant={'caption'}>{userInfo?.email}v.paskanov@gmail.com</Typography>
+                                    <Typography variant={'subtitle2'}>{userInfo?.email}v.paskanov@gmail.com</Typography>
                                 </div>
                             </div>
                         </DropdownItem>
@@ -108,7 +108,6 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             className={s.userInfoContainer}
                         />
                         <DropdownItemWithIcon
-
                             text={"Favorite players"}
                             onSelect={() => navigate('/favoritePlayers')}
                             className={s.userInfoContainer}
