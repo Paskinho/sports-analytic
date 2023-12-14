@@ -10,11 +10,12 @@ import axios from "axios";
 //
 // })
 
-const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api-football-v1.p.rapidapi.com/v3/');
+
+const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api-football-v1.p.rapidapi.com/v3/')
 
 export const instance = axios.create({
     method: 'GET',
-    baseURL: 'https://corsproxy.io/?https://api-football-v1.p.rapidapi.com/v3/',
+    baseURL: 'https://api-football-v1.p.rapidapi.com/v3/',
     withCredentials: true,
     headers: {
         // 'Access-Control-Allow-Origin': '*',
