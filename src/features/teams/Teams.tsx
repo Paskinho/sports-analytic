@@ -10,7 +10,15 @@ import s from "./teams.module.scss"
 import {Button} from "../../components/ui/button";
 
 
-export const Teams = () => {
+export type TeamsProps = {
+    club: string
+    country: string
+    logo: string
+    rating: number
+
+}
+
+export const Teams = ({club, country, logo, rating}:TeamsProps) => {
 
     const [sort, setSort] = useState({key: "updated", direction: 'asc'})
 
@@ -37,16 +45,14 @@ export const Teams = () => {
                     <Table.Body>
                         <Table.Row>
                             <Table.Cell>
-
                             </Table.Cell>
                         </Table.Row>
-
                     </Table.Body>
                 </Table.Header>
 
             </Table.Root>
 
-            <Button type={'primary'} onClick={getTeams}>
+            <Button className={s.button} type={'primary'} onClick={getTeams}>
                 Get Teams
             </Button>
             </Card>
