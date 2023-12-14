@@ -40,32 +40,32 @@ export const Player = (props: PlayerType) => {
         <StyledTd>
             <StyledTh>Player</StyledTh>
             <div>
-                <Typography variant={'caption'} onClick={Virg}>Virgil Van Dijk</Typography>
+                <Typography variant={'subtitle1'} onClick={Virg}>Virgil Van Dijk</Typography>
             </div>
-            <div><Typography variant={'caption'} onClick={Virg}>Mohamed Salah</Typography></div>
-            <div><Typography variant={'caption'} onClick={Virg}>Darwin Nunez</Typography></div>
-            <div><Typography variant={'caption'} onClick={Virg}>Alisson Becker</Typography></div>
+            <div><Typography variant={'subtitle1'} onClick={Virg}>Mohamed Salah</Typography></div>
+            <div><Typography variant={'subtitle1'} onClick={Virg}>Darwin Nunez</Typography></div>
+            <div><Typography variant={'subtitle1'} onClick={Virg}>Alisson Becker</Typography></div>
         </StyledTd>
         <StyledTd>
             <StyledTh>Country</StyledTh>
-            <Typography variant={'caption'}>Netherlands</Typography>
-            <Typography variant={'caption'}>Egypt</Typography>
-            <Typography variant={'caption'}>Uruguay</Typography>
-            <Typography variant={'caption'}>Brazil</Typography>
+            <Typography variant={'subtitle1'}>Netherlands</Typography>
+            <Typography variant={'subtitle1'}>Egypt</Typography>
+            <Typography variant={'subtitle1'}>Uruguay</Typography>
+            <Typography variant={'subtitle1'}>Brazil</Typography>
         </StyledTd>
         <StyledTd>
             <StyledTh>Club</StyledTh>
-            <Typography variant={'caption'}>{props.club}</Typography>
-            <Typography variant={'caption'}>{props.club}</Typography>
-            <Typography variant={'caption'}>{props.club}</Typography>
-            <Typography variant={'caption'}>{props.club}</Typography>
+            <Typography variant={'subtitle1'}>{props.club}</Typography>
+            <Typography variant={'subtitle1'}>{props.club}</Typography>
+            <Typography variant={'subtitle1'}>{props.club}</Typography>
+            <Typography variant={'subtitle1'}>{props.club}</Typography>
         </StyledTd>
         <StyledTd>
             <StyledTh>Age</StyledTh>
-            <Typography variant={'caption'}>31</Typography>
-            <Typography variant={'caption'}>31</Typography>
-            <Typography variant={'caption'}>24</Typography>
-            <Typography variant={'caption'}>30</Typography>
+            <Typography variant={'subtitle1'}>31</Typography>
+            <Typography variant={'subtitle1'}>31</Typography>
+            <Typography variant={'subtitle1'}>24</Typography>
+            <Typography variant={'subtitle1'}>30</Typography>
         </StyledTd>
         <StyledTd>
             <StyledTh>Likes</StyledTh>

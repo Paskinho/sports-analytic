@@ -40,7 +40,7 @@ export const GlobalStyles = createGlobalStyle `
   }
   
   section:nth-of-type(odd) {
-  background-color: ${theme.colors.primaryBg};
+  // background-color: ${theme.colors.primaryBg};
   }
 
   section:nth-of-type(event) {
