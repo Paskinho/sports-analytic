@@ -5,7 +5,8 @@ import {useState} from "react";
 import {Card} from "../../components/ui/card";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {teamsThunks} from "./teams.slice";
-import {toast} from "react-toastify";
+import {toast} from "react-toastify";;
+import s from "./teams.module.scss"
 
 
 export const Teams = () => {
@@ -26,32 +27,29 @@ export const Teams = () => {
     }
 
     return (
-        <StyledTeams>
+        // <Page className={s.main}>
+        <div className={s.main}>
             <Card>
             <Typography>Teams rating on {Date()} </Typography>
-            {/*<Table.Root>*/}
-            {/*    <Table.Header columns={columns} sort={sort} onSort={setSort}>*/}
-            {/*        <Table.Body>*/}
-            {/*            <Table.Row>*/}
-            {/*                <Table.Cell>*/}
+            <Table.Root>
+                <Table.Header columns={columns} sort={sort} onSort={setSort}>
+                    <Table.Body>
+                        <Table.Row>
+                            <Table.Cell>
 
-            {/*                </Table.Cell>*/}
-            {/*            </Table.Row>*/}
+                            </Table.Cell>
+                        </Table.Row>
 
-            {/*        </Table.Body>*/}
-            {/*    </Table.Header>*/}
+                    </Table.Body>
+                </Table.Header>
 
-            {/*</Table.Root>*/}
+            </Table.Root>
 
             <button onClick={getTeams}>
                 Get Teams
             </button>
             </Card>
-        </StyledTeams>
-
+        </div>
     )
 }
 
-const StyledTeams = styled.div`
-  padding-top: 100px;
-`
