@@ -7,6 +7,7 @@ import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {teamsThunks} from "./teams.slice";
 import {toast} from "react-toastify";;
 import s from "./teams.module.scss"
+import {Button} from "../../components/ui/button";
 
 
 export const Teams = () => {
@@ -29,7 +30,7 @@ export const Teams = () => {
     return (
         // <Page className={s.main}>
         <div className={s.main}>
-            <Card>
+            <Card className={s.card}>
             <Typography>Teams rating on {Date()} </Typography>
             <Table.Root>
                 <Table.Header columns={columns} sort={sort} onSort={setSort}>
@@ -45,9 +46,9 @@ export const Teams = () => {
 
             </Table.Root>
 
-            <button onClick={getTeams}>
+            <Button type={'primary'} onClick={getTeams}>
                 Get Teams
-            </button>
+            </Button>
             </Card>
         </div>
     )
