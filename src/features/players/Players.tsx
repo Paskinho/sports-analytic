@@ -4,7 +4,11 @@ import s from "../players/styles.module.scss"
 import {playersThunks} from "./players.slice";
 import {toast} from "react-toastify";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
-import {Table}  from '../../components/ui/table'
+import {Table} from '../../components/ui/table'
+import {ControlledTextField} from "../../components/ui/controlled/controlled-text-field";
+import React from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
 
 
 export const Players = () => {
@@ -17,15 +21,25 @@ export const Players = () => {
     }
 
     const getPlayers = (players: any) => {
-         dispatch(playersThunks.getPlayers()).then((res) => {
+        dispatch(playersThunks.getPlayers()).then((res) => {
             toast.success('Successfully')
         })
 
     }
 
+    const {
+        control, register, handleSubmit,
+        formState: {errors}
+    } = useForm({})
+
     return (
         <div className={s.players}>
-            <div><input placeholder={"Search player"}/>
+            <div><ControlledTextField
+                className={s.search}
+                control={control}
+                placeholder={'Search Players'}
+                name={'searchPlayers'}
+            />
                 <Button onClick={onSearchPlayers} className={s.buttonSearchPlayer} variant={'primary'}>Search</Button>
             </div>
 
