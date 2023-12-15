@@ -24,10 +24,10 @@ export const instance = axios.create({
     }
 });
 
-
-try {
-    const response = await axios.request(instance);
-    console.log(response.data);
-} catch (error) {
-    console.error(error);
-}
+//
+// try {
+//     const response = await axios.request(instance);
+//     console.log(response.data);
+// } catch (error) {
+//     console.error(error);
+// }
