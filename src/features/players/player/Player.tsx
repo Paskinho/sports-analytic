@@ -6,6 +6,8 @@ import {Button} from "../../../components/ui/button";
 import {useState} from "react";
 import Eye from "../../../assets/icons/eye";
 import {Root} from "../../../components/ui/table";
+import s from "../../teams/teams.module.scss";
+import {Table} from '../../../components/ui/table'
 
 
 export const Player = (props: PlayerType) => {
@@ -81,7 +83,14 @@ export const Player = (props: PlayerType) => {
             <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
             <Typography variant={'caption'}><Button onClick={()=> addToWatch}><Eye/></Button></Typography>
         </StyledTd>
+        {/*<Table.Root style={{ width: '100%' }}>*/}
+        {/*    <Table.Header columns={columns} sort={sort} onSort={setSort} />*/}
+        {/*    <Table.Body>*/}
+        {/*    </Table.Body>*/}
+        {/*</Table.Root>*/}
     </StyledTable>
+
+
 }
 
 
