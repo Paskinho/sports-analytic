@@ -64,15 +64,28 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     <StyledNav>
                         <Logo onClick={navToHome}/>
                         <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
-                        {/*<Dropdown>*/}
-                        <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
-                        {/*</Dropdown>*/}
+                        <Dropdown trigger={<button>
+                            <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
+
+                        </button>}>
+                            <div className={s.userInfoContainer}>
+                            <DropdownItem>
+                                <div className={s.dropdownItems}>
+                                <Typography variant={'subtitle1'}>Europe</Typography>
+                                <Typography variant={'subtitle1'}>South America</Typography>
+                                <Typography variant={'subtitle1'}>Asia</Typography>
+                                <Typography variant={'subtitle1'}>Africa</Typography>
+                                <Typography variant={'subtitle1'}>North America</Typography>
+                                </div>
+                            </DropdownItem>
+                            </div>
+                        </Dropdown>
                         <Typography variant={'subtitle1'} color={'inherit'} onClick={navToTeams}>Teams</Typography>
                         <Typography variant={'subtitle1'} color={'inherit'}
                                     onClick={navToStatistics}>Statistics</Typography>
                         <Typography variant={'subtitle1'} color={'inherit'}
                                     onClick={navToSubscription}>Subscription</Typography>
-                    </StyledNav>
+
                     <div className={s.button}>
                         <Button variant={"primary"} onClick={navToLogin}>Sign In</Button>
 
@@ -96,7 +109,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                                 {/*     src={Profile}*/}
                                 {/*className={s.imgHeader}*/}
                                 {/*/>*/}
-                                <div className={s.userDetails}>
+                                <div className={s.dropdownItems}>
                                     <Typography variant={'subtitle2'}>{userInfo?.name}Uladzislau</Typography>
                                     <Typography variant={'subtitle2'}>{userInfo?.email}v.paskanov@gmail.com</Typography>
                                 </div>
@@ -118,6 +131,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             // onSelect={onSignOut}
                         />
                     </Dropdown>
+                    </StyledNav>
                 </FlexWrapper>
             </Container>
             {/*{!isAuth && <Button variant="primary">Sign In</Button>}*/}
