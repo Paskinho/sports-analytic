@@ -68,7 +68,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
 
                         </button>}>
-                            <div className={s.userInfoContainer}>
+                            <div className={s.dropdownContainer}>
                             <DropdownItem>
                                 <div className={s.dropdownItems}>
                                 <Typography variant={'subtitle1'}>Europe</Typography>
@@ -104,7 +104,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                              className={s.imgHeader}/>
                         {/*onClick={navToProfile}/>*/}
                         <DropdownItem>
-                            <div className={s.userInfoContainer}>
+                            <div className={s.dropdownContainer}>
                                 {/*<img alt={"Profile logo"}*/}
                                 {/*     src={Profile}*/}
                                 {/*className={s.imgHeader}*/}

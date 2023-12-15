@@ -31,15 +31,17 @@
 .dropdownItems{
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  //margin-top: 50px;
 }
 
-.userInfoContainer {
+.dropdownContainer {
   display: flex;
   gap: 8px;
   align-items: center;
   background-color: #004369;
   width: 100%;
-  height: 50px;
+  //height: 150px;
   color: #E5DDC8;
 }
 
