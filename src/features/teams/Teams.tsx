@@ -40,16 +40,28 @@ export const Teams = ({club, country, logo, rating}:TeamsProps) => {
         <div className={s.main}>
             <Card className={s.card}>
             <Typography>Teams rating on {Date()} </Typography>
-            <Table.Root>
-                <Table.Header columns={columns} sort={sort} onSort={setSort}>
+            <Table.Root style={{ width: '100%' }}>
+                <Table.Header columns={columns} sort={sort} onSort={setSort}/>
                     <Table.Body>
+                        <Table.Row key={1}>
+                            <Table.Cell>{club} Liverpool</Table.Cell>
+                            <Table.Cell>{country} Englang</Table.Cell>
+                            <Table.Cell>{logo}</Table.Cell>
+                            <Table.Cell>{rating} 87</Table.Cell>
+                        </Table.Row>
                         <Table.Row>
-                            <Table.Cell>
-                            </Table.Cell>
+                            <Table.Cell>{club}</Table.Cell>
+                            <Table.Cell>{country}</Table.Cell>
+                            <Table.Cell>{logo}</Table.Cell>
+                            <Table.Cell>{rating}</Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell>{club}</Table.Cell>
+                            <Table.Cell>{country}</Table.Cell>
+                            <Table.Cell>{logo}</Table.Cell>
+                            <Table.Cell>{rating}</Table.Cell>
                         </Table.Row>
                     </Table.Body>
-                </Table.Header>
-
             </Table.Root>
 
             <Button className={s.button} type={'primary'} onClick={getTeams}>
