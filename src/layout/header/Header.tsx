@@ -64,6 +64,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                     <StyledNav>
                         <Logo onClick={navToHome}/>
                         <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
+
                         <Dropdown trigger={<button>
                             <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
 
@@ -71,6 +72,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             <div className={s.dropdownContainer}>
                             <DropdownItem>
                                 <div className={s.dropdownItems}>
+                                <Typography variant={'subtitle1'} onClick={navToPlayers}>ALl players</Typography>
                                 <Typography variant={'subtitle1'}>Europe</Typography>
                                 <Typography variant={'subtitle1'}>South America</Typography>
                                 <Typography variant={'subtitle1'}>Asia</Typography>

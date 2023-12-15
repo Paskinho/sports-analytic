@@ -48,13 +48,13 @@ export const Players = () => {
                 {/*<FavPlayer/>*/}
             </div>
             <Button onClick={getPlayers}>Get Players</Button>
-            <Table.Root>
-                <Table.Header>
-                    <Table.Body>
-                        asf
-                    </Table.Body>
-                </Table.Header>
-            </Table.Root>
+            {/*<Table.Root>*/}
+            {/*    <Table.Header>*/}
+            {/*        <Table.Body>*/}
+            {/*            asf*/}
+            {/*        </Table.Body>*/}
+            {/*    </Table.Header>*/}
+            {/*</Table.Root>*/}
         </div>
     )
 }
