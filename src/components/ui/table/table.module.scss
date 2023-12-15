@@ -1,7 +1,7 @@
 .table {
   border-collapse: collapse;
   color: var(--color-text-primary);
-  border: 1px solid var(--color-dark-500);
+  border: 1px solid #01949A;
 }
 
 .chevronDown {
@@ -17,6 +17,7 @@
 
   background-color: #004369;
   color:#E5DDC8;
+  border: 1px solid #01949A;
 
   > span {
     user-select: none;
@@ -41,7 +42,7 @@
   line-height: var(--line-height-m);
 
   background-color: #004369;
-  border-bottom: 1px solid var(--color-dark-500);
+  border: 1px solid #01949A;
   color:#E5DDC8;
 }
 

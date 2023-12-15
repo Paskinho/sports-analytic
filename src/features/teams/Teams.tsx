@@ -41,25 +41,25 @@ export const Teams = ({club, country, logo, rating}:TeamsProps) => {
             <Card className={s.card}>
             <Typography>Teams rating on {Date()} </Typography>
             <Table.Root style={{ width: '100%' }}>
-                <Table.Header columns={columns} sort={sort} onSort={setSort}/>
+                <Table.Header columns={columns} sort={sort} onSort={setSort} />
                     <Table.Body>
                         <Table.Row key={1}>
                             <Table.Cell>{club} Liverpool</Table.Cell>
-                            <Table.Cell>{country} Englang</Table.Cell>
-                            <Table.Cell>{logo}</Table.Cell>
+                            <Table.Cell>{country} England</Table.Cell>
+                            <Table.Cell>{logo} <img alt={'Liverpool'}/></Table.Cell>
                             <Table.Cell>{rating} 87</Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell>{club}</Table.Cell>
-                            <Table.Cell>{country}</Table.Cell>
+                            <Table.Cell>{club} Man City</Table.Cell>
+                            <Table.Cell>{country} England</Table.Cell>
                             <Table.Cell>{logo}</Table.Cell>
-                            <Table.Cell>{rating}</Table.Cell>
+                            <Table.Cell>{rating} 84</Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell>{club}</Table.Cell>
-                            <Table.Cell>{country}</Table.Cell>
+                            <Table.Cell>{club} Bayer</Table.Cell>
+                            <Table.Cell>{country} Germany</Table.Cell>
                             <Table.Cell>{logo}</Table.Cell>
-                            <Table.Cell>{rating}</Table.Cell>
+                            <Table.Cell>{rating} 82</Table.Cell>
                         </Table.Row>
                     </Table.Body>
             </Table.Root>
