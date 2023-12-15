@@ -46,7 +46,7 @@ export const Teams = ({club, country, logo, rating}:TeamsProps) => {
                         <Table.Row key={1}>
                             <Table.Cell>{club} Liverpool</Table.Cell>
                             <Table.Cell>{country} England</Table.Cell>
-                            <Table.Cell>{logo} <img alt={'Liverpool'}/></Table.Cell>
+                            <Table.Cell>{logo} <img className={s.img} alt={'Liverpool'} src={'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png'}/></Table.Cell>
                             <Table.Cell>{rating} 87</Table.Cell>
                         </Table.Row>
                         <Table.Row>

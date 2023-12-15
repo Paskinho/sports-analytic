@@ -141,7 +141,7 @@ const StyledHeader = styled.header`
 
 const StyledNav = styled.nav`
   display: flex;
-  width: 450px;
+  width: 100%;
   justify-content: space-around;
   align-content: start;
   align-items: center;
