@@ -51,13 +51,13 @@ export const Teams = ({club, country, logo, rating}:TeamsProps) => {
                             <Table.Cell>{logo} <img className={s.img} alt={'Liverpool'} src={'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png'}/></Table.Cell>
                             <Table.Cell>{rating} 87</Table.Cell>
                         </Table.Row>
-                        <Table.Row>
+                        <Table.Row key={2}>
                             <Table.Cell>{club} Man City</Table.Cell>
                             <Table.Cell>{country} England</Table.Cell>
                             <Table.Cell>{logo}</Table.Cell>
                             <Table.Cell>{rating} 84</Table.Cell>
                         </Table.Row>
-                        <Table.Row>
+                        <Table.Row key={3}>
                             <Table.Cell>{club} Bayer Leverkusen</Table.Cell>
                             <Table.Cell>{country} Germany</Table.Cell>
                             <Table.Cell>{logo}</Table.Cell>
