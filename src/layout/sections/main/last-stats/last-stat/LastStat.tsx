@@ -24,14 +24,12 @@ export const LastStat = (props: LastStatPropsType) => {
         {key: "Pos", title: "Position"},
         {key: "Player", title: "Player"},
         {key: "Shots", title: "Shots"},
-        {key: "Conversation", title: "Age"},
-
+        {key: "Conversation", title: "Conversation"},
     ]
 
     return (
-        <StyledDiv>
-            <Card>
-                <Typography>Shots</Typography>
+            <Card className={s.card}>
+                <Typography>{props.statTitle}</Typography>
                 <Table.Root style={{width: '100%'}}>
                     <Table.Header columns={columns}/>
                     <Table.Body>
@@ -51,24 +49,5 @@ export const LastStat = (props: LastStatPropsType) => {
                 </Table.Root>
             </Card>
 
-        </StyledDiv>
     );
 };
-
-
-const StatTitle = styled.h3`
-  display: flex;
-
-`
-
-const StatDescription = styled.div`
-`
-
-const StyledDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 200px;
-  width: 150px;
-`
-

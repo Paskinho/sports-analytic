@@ -27,6 +27,14 @@ export const LastStats = () => {
                               successStatOne={"74%"}
                               successStatTwo={"61%"}
                     />
+                    <LastStat statTitle={'Key Passes'}
+                              namePlayerOne={'Alexandr-Arnold'}
+                              namePlayerTwo={"Salah"}
+                              statOne={78}
+                              statTwo={64}
+                              successStatOne={"64"}
+                              successStatTwo={"51%"}
+                    />
                 </FlexWrapper>
             </StatsTitle>
         </StyledStats>
