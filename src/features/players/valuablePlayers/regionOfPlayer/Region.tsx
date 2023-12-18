@@ -30,8 +30,8 @@ export const Region = (props: RegionProps) => {
     return (
         <StyledRegion>
             <Image src={props.image} alt=''/>
-            <Typography variant={""}>{props.title}</Typography>
-            <Typography variant={""}>{props.text}</Typography>
+            <Typography variant={"subtitle1"}>{props.title}</Typography>
+            <Typography variant={"subtitle1"}>{props.text}</Typography>
             <Button variant={"primary"} onClick={(flippedCard)}>Click Me</Button>
             <Toggle onClick={flippedCard}/>
         </StyledRegion>
@@ -39,7 +39,7 @@ export const Region = (props: RegionProps) => {
 };
 
 const StyledRegion = styled.div`
-  background-color: lightgoldenrodyellow;
+  background-color: #004369;
   max-width: 540px;
   width: 100%;
   padding: 20px;

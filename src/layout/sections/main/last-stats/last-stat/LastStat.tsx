@@ -23,7 +23,7 @@ export const LastStat = (props: LastStatPropsType) => {
     const columns = [
         {key: "Pos", title: "Position"},
         {key: "Player", title: "Player"},
-        {key: "Shots", title: "Shots"},
+        {key: "Stat", title: `${props.statTitle}`},
         {key: "Conversation", title: "Conversation"},
     ]
 
