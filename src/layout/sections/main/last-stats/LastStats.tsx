@@ -10,7 +10,7 @@ export const LastStats = () => {
         <StyledStats>
             <StatsTitle>
                 <Typography variant={'large'} className={s.title}>LAST STATS</Typography>
-                <FlexWrapper>
+                <FlexWrapper className={s.flexWrapper}>
                     <LastStat statTitle={'Shots'}
                               namePlayerOne={'Salah'}
                               namePlayerTwo={"Nunez"}
@@ -45,4 +45,6 @@ export const LastStats = () => {
 const StyledStats = styled.section`
   min-height: 100vh;
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
 `
