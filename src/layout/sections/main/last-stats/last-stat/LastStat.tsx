@@ -34,42 +34,23 @@ export const LastStat = (props: LastStatPropsType) => {
                 <Typography>Shots</Typography>
                 <Table.Root style={{width: '100%'}}>
                     <Table.Header columns={columns}/>
-
+                    <Table.Body>
+                        <Table.Row key={1}>
+                            <Table.Cell>1</Table.Cell>
+                            <Table.Cell>{props.namePlayerOne}</Table.Cell>
+                            <Table.Cell>{props.statOne}</Table.Cell>
+                            <Table.Cell>{props.successStatOne}</Table.Cell>
+                        </Table.Row>
+                        <Table.Row key={2}>
+                            <Table.Cell>1</Table.Cell>
+                            <Table.Cell>{props.namePlayerTwo}</Table.Cell>
+                            <Table.Cell>{props.statTwo}</Table.Cell>
+                            <Table.Cell>{props.successStatTwo}</Table.Cell>
+                        </Table.Row>
+                    </Table.Body>
                 </Table.Root>
-            </Card>a
-            <StatTitle>{props.statTitle}</StatTitle>
-            <StatDescription>
-                <StyledTable>
-                    <StyledTd>
-                        <StyledTr>
-                            <StyledTh>Pos</StyledTh>
-                            <Typography className={s.text}>1</Typography>
-                            <Typography className={s.text}>2</Typography>
-                        </StyledTr>
-                    </StyledTd>
-                    <StyledTd>
-                        <StyledTr>
-                            <StyledTh>Player</StyledTh>
-                            <Typography className={s.text}>{props.namePlayerOne}</Typography>
-                            <Typography className={s.text}>{props.namePlayerTwo}</Typography>
-                        </StyledTr>
-                    </StyledTd>
-                    <StyledTd>
-                        <StyledTr>
-                            <StyledTh>{props.statTitle}</StyledTh>
-                            <Typography className={s.text}>{props.statOne}</Typography>
-                            <Typography className={s.text}>{props.statTwo}</Typography>
-                        </StyledTr>
-                    </StyledTd>
-                    <StyledTd>
-                        <StyledTr>
-                            <StyledTh>Conversation</StyledTh>
-                            <Typography className={s.text}>{props.successStatOne}</Typography>
-                            <Typography className={s.text}>{props.successStatTwo}</Typography>
-                        </StyledTr>
-                    </StyledTd>
-                </StyledTable>
-            </StatDescription>
+            </Card>
+
         </StyledDiv>
     );
 };
