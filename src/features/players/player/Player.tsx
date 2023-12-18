@@ -8,9 +8,24 @@ import Eye from "../../../assets/icons/eye";
 import {Root} from "../../../components/ui/table";
 import s from "../../teams/teams.module.scss";
 import {Table} from '../../../components/ui/table'
+import {useAppDispatch} from "../../../common/components/hooks/useAppDispatch";
+import {Card} from "../../../components/ui/card";
 
 
 export const Player = (props: PlayerType) => {
+
+    const [sort, setSort] = useState({key: "updated", direction: 'asc'})
+
+    const columns  = [
+        {key: "Player", sortable: true, title: "Player"},
+        {key: "Country", sortable: true, title: "Country"},
+        {key: "Club", sortable: false, title: "Club"},
+        {key: "Age", sortable: true, title: "Age"},
+        {key: "Likes", sortable: true, title: "Likes"},
+        {key: "Watch", sortable: false, title: "Watch"},
+    ]
+
+    const dispatch = useAppDispatch()
 
     const navigate = useNavigate()
 
@@ -38,7 +53,18 @@ export const Player = (props: PlayerType) => {
         alert('Succesfully added to favorite players')
     }
 
-    return <StyledTable>
+    return (
+        <div>
+            <Card>
+<Typography>All players</Typography>
+                <Table.Root style={{width: '100%'}}>
+                    <Table.Header/>
+                    <Table.Body>
+
+                    </Table.Body>
+                </Table.Root>
+            </Card>
+    <StyledTable>
         <StyledTd>
             <StyledTh>Player</StyledTh>
             <div>
@@ -89,7 +115,8 @@ export const Player = (props: PlayerType) => {
         {/*    </Table.Body>*/}
         {/*</Table.Root>*/}
     </StyledTable>
-
+        </div>
+    )
 
 }
 
