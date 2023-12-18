@@ -24,6 +24,7 @@
     display: flex;
     gap: 4px;
     align-items: center;
+    flex-direction: column;
   }
 
   &.sortable > span {
@@ -40,6 +41,7 @@
 
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
+
 
   background-color: #004369;
   border: 1px solid #01949A;

@@ -22,7 +22,7 @@ export const Teams = ({club, country, logo, rating}:TeamsProps) => {
 
     const [sort, setSort] = useState({key: "updated", direction: 'asc'})
 
-    const columns = [
+    const columns  = [
         {key: "Teams", sortable: true, title: "Teams"},
         {key: "Country", sortable: true, title: "Country"},
         {key: "Logo", sortable: false, title: "Logo"},
@@ -43,7 +43,7 @@ export const Teams = ({club, country, logo, rating}:TeamsProps) => {
             <Card className={s.card}>
             <Typography>Teams rating on {Date()} </Typography>
             <Table.Root style={{ width: '100%' }}>
-                <Table.Header classNamr={s.column} columns={columns} sort={sort} onSort={setSort} />
+                <Table.Header className={s.column} columns={columns} sort={sort} onSort={setSort} />
                     <Table.Body>
                         <Table.Row key={1}>
                             <Table.Cell>{club} Liverpool</Table.Cell>
