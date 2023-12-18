@@ -54,13 +54,13 @@ export const Teams = ({club, country, logo, rating}:TeamsProps) => {
                         <Table.Row key={2}>
                             <Table.Cell>{club} Man City</Table.Cell>
                             <Table.Cell>{country} England</Table.Cell>
-                            <Table.Cell>{logo}</Table.Cell>
+                            <Table.Cell>{logo} <img className={s.img} alt={'ManCity'} src={'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png'}/></Table.Cell>
                             <Table.Cell>{rating} 84</Table.Cell>
                         </Table.Row>
                         <Table.Row key={3}>
                             <Table.Cell>{club} Bayer Leverkusen</Table.Cell>
                             <Table.Cell>{country} Germany</Table.Cell>
-                            <Table.Cell>{logo}</Table.Cell>
+                            <Table.Cell>{logo}<img className={s.img} alt={'Bayer'} src={'https://thumbs.dreamstime.com/b/close-up-waving-flag-bayer-leverkusen-football-club-logo-d-rendering-france-85559082.jpg'}/></Table.Cell>
                             <Table.Cell>{rating} 82</Table.Cell>
                         </Table.Row>
                     </Table.Body>
