@@ -61,10 +61,10 @@ export const Player = (props: PlayerType) => {
                     <Table.Header columns={columns} sort={sort} onSort={setSort}/>
                     <Table.Body>
                      <Table.Row key={1}>
-                         <Table.Cell onClick={Virg}>Virgil Van Dijk</Table.Cell>
-                         <Table.Cell>Netherlands</Table.Cell>
-                         <Table.Cell>Liverpool</Table.Cell>
-                         <Table.Cell>31</Table.Cell>
+                         <Table.Cell onClick={Virg} className={s.cell}>Virgil Van Dijk</Table.Cell>
+                         <Table.Cell className={s.cell}>Netherlands</Table.Cell>
+                         <Table.Cell className={s.cell}>Liverpool</Table.Cell>
+                         <Table.Cell className={s.cell}>31</Table.Cell>
                          <Table.Cell><Button onClick={addLike}>{like}</Button></Table.Cell>
                          <Table.Cell><Button onClick={addToWatch}><Eye/></Button></Table.Cell>
                      </Table.Row>

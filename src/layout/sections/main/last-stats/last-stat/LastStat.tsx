@@ -2,6 +2,9 @@ import {Typography} from "../../../../../components/ui/typography";
 import styled from "styled-components";
 import {StyledTable, StyledTd, StyledTh, StyledTr} from "../../../../../components/StyledTable";
 import s from "./LastStat.module.scss"
+import {Card} from "../../../../../components/ui/card";
+import {Table} from '../../../../../components/ui/table'
+import {useState} from "react";
 
 
 type LastStatPropsType = {
@@ -15,8 +18,25 @@ type LastStatPropsType = {
 }
 
 export const LastStat = (props: LastStatPropsType) => {
+
+
+    const columns = [
+        {key: "Pos", title: "Position"},
+        {key: "Player", title: "Player"},
+        {key: "Shots", title: "Shots"},
+        {key: "Conversation", title: "Age"},
+
+    ]
+
     return (
         <StyledDiv>
+            <Card>
+                <Typography>Shots</Typography>
+                <Table.Root style={{width: '100%'}}>
+                    <Table.Header columns={columns}/>
+
+                </Table.Root>
+            </Card>a
             <StatTitle>{props.statTitle}</StatTitle>
             <StatDescription>
                 <StyledTable>
