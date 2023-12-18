@@ -56,7 +56,7 @@ export const Player = (props: PlayerType) => {
     return (
         <div>
             <Card className={s.card}>
-                <Typography>All players</Typography>
+                <Typography variant={'h1'}>All players</Typography>
                 <Table.Root style={{width: '100%'}}>
                     <Table.Header columns={columns} sort={sort} onSort={setSort}/>
                     <Table.Body>

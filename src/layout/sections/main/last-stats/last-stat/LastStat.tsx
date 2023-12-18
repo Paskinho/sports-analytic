@@ -29,7 +29,7 @@ export const LastStat = (props: LastStatPropsType) => {
 
     return (
             <Card className={s.card}>
-                <Typography>{props.statTitle}</Typography>
+                <Typography variant={'h1'}>{props.statTitle}</Typography>
                 <Table.Root style={{width: '100%'}}>
                     <Table.Header columns={columns}/>
                     <Table.Body>
