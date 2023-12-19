@@ -63,7 +63,18 @@ export const Player = (props: PlayerType) => {
     //     onAddPlayerToFav: (player)=> void
     // }
 
+     const FavPlayer = ({player, onAddToFavPlayer}) => {
+        return (
+            <div>
+                <ul>
+                    {favorites.map((player)=> (
+                        <li key={player.id}>{player.name}</li>
+                    ))}
+                </ul>
+            </div>
+        )
 
+    }
 
     return (
         <div>
@@ -113,13 +124,3 @@ export const Player = (props: PlayerType) => {
 }
 
 
-export const FavPlayer = ({player, onAddToFavPlayer}) => {
-    return (
-        <div>
-            <h1>Alisson</h1>
-            <h2>Liverpool</h2>
-            <button onClick={() => onAddToFavPlayer(player)}>Add to Fav</button>
-        </div>
-    )
-
-}

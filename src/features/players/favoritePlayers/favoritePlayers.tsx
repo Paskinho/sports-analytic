@@ -8,7 +8,7 @@ export type FavoritePlayersType = {
     name: string
 }
 
-export const FavoritePlayers = () => {
+export const FavoritePlayers = (props: any) => {
 
     // const [players, setPlayers] = useState([
     //     {id: 1, name: 'Virgil Van Dijk', country: "Netherlands", club: "Liverpool", age: 31, likes: 0, watch: false},
@@ -37,9 +37,7 @@ export const FavoritePlayers = () => {
             </ul>
             <div> Favorite Players </div>
             <ul>
-                {favorites.map((player)=> (
-                    <li key={player.id}>{player.name}</li>
-                ))}
+                {props.onAddPlayerToFav}
 
             </ul>
         </StyledFavPlayers>
