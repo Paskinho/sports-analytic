@@ -32,6 +32,12 @@ export const Player = (props: PlayerType) => {
         {id: 4, name: 'Alisson Becker', country: "Brazil", club: "Liverpool", age: 30, likes: 0, watch: false},
     ])
 
+    const [favorites, setFavorites] = useState([]);
+
+    const addToWatch = ({player, onAddPlayerToFavorite}) => {
+        onAddPlayerToFavorite(player)
+        alert('Succesfully added to favorite players')
+    }
 
     const dispatch = useAppDispatch()
 
@@ -56,10 +62,7 @@ export const Player = (props: PlayerType) => {
     //     onAddPlayerToFav: (player)=> void
     // }
 
-    const addToWatch = ({player, onAddPlayerToFavorite}) => {
-        onAddPlayerToFavorite(player)
-        alert('Succesfully added to favorite players')
-    }
+
 
     return (
         <div>
@@ -103,6 +106,13 @@ export const Player = (props: PlayerType) => {
                     </Table.Body>
                 </Table.Root>
             </Card>
+            <ul>
+                {players.map((player)=> (
+                    <li key={player.id}>
+
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 
