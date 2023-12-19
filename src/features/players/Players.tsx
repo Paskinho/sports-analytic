@@ -47,6 +47,7 @@ export const Players = () => {
                 <Player name={""} club={"Liverpool"}/>
                 {/*<FavPlayer/>*/}
             </div>
+
             <Button onClick={getPlayers}>Get Players</Button>
             {/*<Table.Root>*/}
             {/*    <Table.Header>*/}
