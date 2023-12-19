@@ -26,10 +26,18 @@ export const Player = (props: PlayerType) => {
     ]
 
 
+    const [players, setPlayers] = useState([
+        {id: 1, name: 'Virgil Van Dijk', country: "Netherlands", club: "Liverpool", age: 31, likes: 0, watch: false},
+        {id: 2, name: 'Mohamed Salah', country: "Egypt", club: "Liverpool", age: 31, likes: 0, watch: false},
+        {id: 3, name: 'Darwin Nunez', country: "Uruguay", club: "Liverpool", age: 24, likes: 0, watch: false},
+        {id: 4, name: 'Alisson Becker', country: "Brazil", club: "Liverpool", age: 30, likes: 0, watch: false},
+    ])
 
-    const addToWatch = ({player}) => {
-        // setFavorites([...favorites, player]);
-        alert('Succesfully added to favorite players')
+    const [favorites, setFavorites] = useState([]);
+
+    const addToWatch = (player) => {
+        setFavorites([...favorites, player]);
+
     }
 
     const dispatch = useAppDispatch()
