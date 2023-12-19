@@ -37,7 +37,7 @@ export const FavoritePlayers = (props: any) => {
             </ul>
             <div> Favorite Players </div>
             <ul>
-                <Player name={'1'} club={'1'} onAddPlayerToFav={addToFav}/>
+                <Player onAddPlayerToFav={addToFav}/>
 
             </ul>
         </StyledFavPlayers>

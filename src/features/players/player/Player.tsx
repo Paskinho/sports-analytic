@@ -1,6 +1,6 @@
 import {Typography} from "../../../components/ui/typography";
 import {useNavigate} from "react-router-dom";
-import {PlayerType} from "./player.slice";
+// import {PlayerType} from "./player.slice";
 import {StyledTable, StyledTd, StyledTh} from "../../../components/StyledTable";
 import {Button} from "../../../components/ui/button";
 import {useState} from "react";
@@ -11,6 +11,10 @@ import {Table} from '../../../components/ui/table'
 import {useAppDispatch} from "../../../common/components/hooks/useAppDispatch";
 import {Card} from "../../../components/ui/card";
 
+
+type PlayerType = {
+    onAddPlayerToFav: (player)=> void
+}
 
 export const Player = (props: PlayerType) => {
 
@@ -61,18 +65,18 @@ export const Player = (props: PlayerType) => {
     //     onAddPlayerToFav: (player)=> void
     // }
 
-     const FavPlayer = ({player, onAddToFavPlayer}) => {
-        return (
-            <div>
-                <ul>
-                    {favorites.map((player)=> (
-                        <li key={player.id}>{player.name}</li>
-                    ))}
-                </ul>
-            </div>
-        )
-
-    }
+    //  const FavPlayer = ({player, onAddToFavPlayer}) => {
+    //     return (
+    //         <div>
+    //             <ul>
+    //                 {favorites.map((player)=> (
+    //                     <li key={player.id}>{player.name}</li>
+    //                 ))}
+    //             </ul>
+    //         </div>
+    //     )
+    //
+    // }
 
     return (
         <div>
