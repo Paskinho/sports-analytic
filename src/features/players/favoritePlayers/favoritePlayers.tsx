@@ -28,12 +28,12 @@ export const FavoritePlayers = (props: any) => {
         <StyledFavPlayers>
             <div>All players</div>
             <ul>
-                {players.map((player) => (
-                    <li key={player.id}>
-                        {player.name}
-                        <button onClick={() => addToWatch(player)}>Add to Favorites</button>
-                    </li>
-                    ))}
+                {/*{players.map((player) => (*/}
+                {/*    <li key={player.id}>*/}
+                {/*        {player.name}*/}
+                {/*        <button onClick={() => addToWatch(player)}>Add to Favorites</button>*/}
+                {/*    </li>*/}
+                {/*    ))}*/}
             </ul>
             <div> Favorite Players </div>
             <ul>
