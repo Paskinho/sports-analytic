@@ -17,35 +17,33 @@ export const FavoritePlayers = () => {
         {id: 4, name: 'Alisson Becker', country: "Brazil", club: "Liverpool", age: 30, likes: 0, watch: false},
     ])
 
+
+
     const [favorites, setFavorites] = useState([]);
 
-    const addToWatch = ({player}) => {
+    const addToWatch = (player) => {
         setFavorites([...favorites, player]);
-        alert('Succesfully added to favorite players')
+
     }
 
     return (
         <StyledFavPlayers>
             <div>All players</div>
             <ul>
-                {players.map((player: any) => (
+                {players.map((player) => (
                     <li key={player.id}>
                         {player.name}
-                        <button onClick={() => addToWatch(player.name)}>Add to Favorites</button>
+                        <button onClick={() => addToWatch(player)}>Add to Favorites</button>
                     </li>
                     ))}
             </ul>
             <div> Favorite Players </div>
             <ul>
-                {favorites.map((player: any)=> (
+                {favorites.map((player)=> (
                     <li key={player.id}>{player.name}</li>
                 ))}
 
             </ul>
-            {/*{favPlayers.map((player)=> (*/}
-            {/*    <FavPlayer player={player} onAddToFavPlayer={addToFav}/>*/}
-            {/*))}*/}
-            {/*{name}*/}
         </StyledFavPlayers>
     )
 }
@@ -55,4 +53,5 @@ display: flex;
   padding-top: 100px;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 `
