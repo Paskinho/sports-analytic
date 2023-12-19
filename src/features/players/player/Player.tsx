@@ -11,7 +11,6 @@ import {Table} from '../../../components/ui/table'
 import {useAppDispatch} from "../../../common/components/hooks/useAppDispatch";
 import {Card} from "../../../components/ui/card";
 
-
 type PlayerType = {
     onAddPlayerToFav: (player)=> void
 }
@@ -29,14 +28,12 @@ export const Player = (props: PlayerType) => {
         {key: "Watch", sortable: false, title: "Watch"},
     ]
 
-
     const [players, setPlayers] = useState([
         {id: 1, name: 'Virgil Van Dijk', country: "Netherlands", club: "Liverpool", age: 31, likes: 0, watch: false},
         {id: 2, name: 'Mohamed Salah', country: "Egypt", club: "Liverpool", age: 31, likes: 0, watch: false},
         {id: 3, name: 'Darwin Nunez', country: "Uruguay", club: "Liverpool", age: 24, likes: 0, watch: false},
         {id: 4, name: 'Alisson Becker', country: "Brazil", club: "Liverpool", age: 30, likes: 0, watch: false},
     ])
-
 
     const addToWatch = (player) => {
        props.onAddPlayerToFav(player)
@@ -122,7 +119,6 @@ export const Player = (props: PlayerType) => {
             </Card>
         </div>
     )
-
 }
 
 
