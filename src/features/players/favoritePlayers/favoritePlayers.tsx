@@ -17,12 +17,12 @@ export const FavoritePlayers = (props: any) => {
     //     {id: 4, name: 'Alisson Becker', country: "Brazil", club: "Liverpool", age: 30, likes: 0, watch: false},
     // ])
     //
-    // const [favorites, setFavorites] = useState([]);
-    //
-    // const addToWatch = (player) => {
-    //     setFavorites([...favorites, player]);
-    //
-    // }
+    const [favorites, setFavorites] = useState([]);
+
+    const addToFav = (player) => {
+        setFavorites([...favorites, player]);
+
+    }
 
     return (
         <StyledFavPlayers>
@@ -37,7 +37,7 @@ export const FavoritePlayers = (props: any) => {
             </ul>
             <div> Favorite Players </div>
             <ul>
-                {props.onAddPlayerToFav}
+                <Player name={'1'} club={'1'} onAddPlayerToFav={addToFav}/>
 
             </ul>
         </StyledFavPlayers>

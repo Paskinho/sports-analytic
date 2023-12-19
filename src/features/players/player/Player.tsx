@@ -33,11 +33,9 @@ export const Player = (props: PlayerType) => {
         {id: 4, name: 'Alisson Becker', country: "Brazil", club: "Liverpool", age: 30, likes: 0, watch: false},
     ])
 
-    const [favorites, setFavorites] = useState([]);
 
     const addToWatch = (player) => {
-        setFavorites([...favorites, player]);
-
+       props.onAddPlayerToFav(player)
     }
 
     const dispatch = useAppDispatch()
