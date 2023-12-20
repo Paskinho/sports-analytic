@@ -14,7 +14,7 @@ import axios from "axios";
 const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api-football-v1.p.rapidapi.com/v3/')
 
 export const instance = axios.create({
-    // method: 'GET',
+    method: 'GET',
     baseURL: 'https://api-football-v1.p.rapidapi.com/v3/',
     withCredentials: true,
     headers: {
