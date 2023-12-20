@@ -19,12 +19,12 @@ export const instance = axios.create({
     withCredentials: true,
     headers: {
         // 'Access-Control-Allow-Origin': '*',
-        'X-RapidAPI-Key': '9632728134msh4ac72251815e590p17fa26jsn8e7d8d692b1b',
-        'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+        'x-rapidapi-key': '9632728134msh4ac72251815e590p17fa26jsn8e7d8d692b1b',
+        'x-rapidapi-host': 'api-football-v1.p.rapidapi.com'
     }
 });
 
-//
+
 // try {
 //     const response = await axios.request(instance);
 //     console.log(response.data);
