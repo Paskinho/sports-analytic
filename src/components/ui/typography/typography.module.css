@@ -46,7 +46,8 @@ color: #01949A;
 }
 
 .subtitle2 {
-    @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-bold));
+    @include typography(var(--font-size-xl), var(--line-height-m), var(--font-weight-bold));
+    color: #E5DDC8;
 }
 
 .overline {
