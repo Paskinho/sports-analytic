@@ -5,6 +5,7 @@ import Netherlands from '../../../../assets/images/Netherlands.png'
 import Liverpool from '../../../../assets/images/Liverpool.png'
 import {Table} from "../../../../components/ui/table";
 import {Typography} from "../../../../components/ui/typography";
+import {Card} from "../../../../components/ui/card";
 
 
 type VirgilProps = {
@@ -17,11 +18,13 @@ type VirgilProps = {
 
 export const Virgil = ({name, games, nationality, club, age}: VirgilProps) => {
 
-    return <div className={s.page}>
+    return (
+        <Card className={s.page}>
+
         <div>
-        <Typography className={s.title} variant={'large'}>#4 Virgil Van Dijk</Typography>
+        <Typography variant={'large'}>#4 Virgil Van Dijk</Typography>
     </div>
-        <div className={s.page}>
+        <div className={s.playerInfo}>
         <img className={s.img} src={"https://backend.liverpoolfc.com/sites/default/files/styles/xl/public/2023-07/virgil-van-dijk-statement-cover-.webp?itok=9Oyo-aSV"}/>
     <StyledFormPlayer>
         <div>age: 31 ()</div>
@@ -29,13 +32,14 @@ export const Virgil = ({name, games, nationality, club, age}: VirgilProps) => {
         <div>  Club: Liverpool <img className={s.logo} alt={Liverpool} src={Liverpool}/></div>
         <div>  games: {games}</div>
         <Button>Watching for Virgil {name}</Button>
-
         {/*<Table.Root style={{width: '100%'}}>*/}
         {/*    <Table.Header/>*/}
         {/*</Table.Root>*/}
     </StyledFormPlayer>
         </div>
-    </div>
+
+        </Card>
+    )
 }
 
 // const Img = styled.image `

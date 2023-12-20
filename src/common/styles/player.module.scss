@@ -6,11 +6,13 @@
 
 .page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 100px;
   padding: 20px;
   justify-content: flex-start;
   align-content: flex-start;
+  gap: 20px;
+  background-color:#004369 ;
 }
 
 .flipped {
@@ -29,6 +31,9 @@
   border-radius: 20px;
 }
 
-.title {
-  color: #004369;
+
+.playerInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
