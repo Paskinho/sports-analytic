@@ -14,12 +14,12 @@ import axios from "axios";
 const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api-football-v1.p.rapidapi.com/v3/')
 
 export const instance = axios.create({
-    method: 'GET',
+    // method: 'GET',
     baseURL: 'https://api-football-v1.p.rapidapi.com/v3/',
     withCredentials: true,
     headers: {
         // 'Access-Control-Allow-Origin': '*',
-        'X-RapidAPI-Key': 'ec2759ef83msh761e98cfcedc1b3p1c651bjsn7313dedeb9af',
+        'X-RapidAPI-Key': '9632728134msh4ac72251815e590p17fa26jsn8e7d8d692b1b',
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
     }
 });
