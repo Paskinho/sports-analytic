@@ -46,22 +46,22 @@ export const Virgil = ({name, games, nationality, club, age}: VirgilProps) => {
                 <Table.Body>
                     <Table.Row key={1}>
                         <Table.Cell>Games</Table.Cell>
-                        <Table.Cell>23</Table.Cell>
+                        <Table.Cell className={s.cellStat}>23</Table.Cell>
                         <Table.Cell>1</Table.Cell>
                     </Table.Row>
                     <Table.Row key={2}>
                         <Table.Cell>Goals</Table.Cell>
-                        <Table.Cell>2</Table.Cell>
+                        <Table.Cell className={s.cellStat}>2</Table.Cell>
                         <Table.Cell>8</Table.Cell>
                     </Table.Row>
                     <Table.Row key={3}>
                         <Table.Cell>Assist</Table.Cell>
-                        <Table.Cell>1</Table.Cell>
+                        <Table.Cell className={s.cellStat}>1</Table.Cell>
                         <Table.Cell>9</Table.Cell>
                     </Table.Row>
                     <Table.Row key={4}>
                         <Table.Cell>Rating from Paskinho System</Table.Cell>
-                        <Table.Cell>7.89</Table.Cell>
+                        <Table.Cell className={s.cellStat}>7.89</Table.Cell>
                         <Table.Cell>2</Table.Cell>
                     </Table.Row>
                 </Table.Body>

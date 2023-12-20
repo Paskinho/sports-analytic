@@ -12,7 +12,10 @@
   justify-content: flex-start;
   align-content: flex-start;
   gap: 20px;
-  background-color:#004369 ;
+  background-color: #004369;
+  //background-image: url("https://www.footyrenders.com/render/virgil-van-dijk-14.png");
+  //background-size: cover;
+  border-radius:20px;
 }
 
 .flipped {
@@ -36,4 +39,8 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.cellStat {
+  background-color: #09619f;
 }
