@@ -4,10 +4,10 @@
   border-radius: 20px;
 }
 
-.page{
+.page {
   display: flex;
-  flex-direction: column;
-  margin-top: 100px ;
+  flex-direction: row;
+  margin-top: 100px;
   padding: 20px;
   justify-content: flex-start;
   align-content: flex-start;
@@ -18,7 +18,7 @@
 }
 
 .flag {
-  width:40px;
+  width: 40px;
   height: 25px;
   border-radius: 20px;
 }
@@ -27,4 +27,8 @@
   width: 25px;
   height: 35px;
   border-radius: 20px;
+}
+
+.title {
+  color: #004369;
 }
