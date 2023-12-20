@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Button} from "../../../../components/ui/button";
 import Netherlands from '../../../../assets/images/Netherlands.png'
 import Liverpool from '../../../../assets/images/Liverpool.png'
+import {Table} from "../../../../components/ui/table";
 
 
 type VirgilProps = {
@@ -23,7 +24,10 @@ export const Virgil = ({name, games, nationality, club, age}: VirgilProps) => {
         <div>Nationality: Netherlands <img className={s.flag} alt={'Netherlands'} src={Netherlands}/></div>
         <div>  Club: Liverpool <img className={s.logo} alt={Liverpool} src={Liverpool}/></div>
         <div>  games: {games}</div>
-        <Button>Watching for {name}</Button>
+        <Button>Watching for Virgil {name}</Button>
+        {/*<Table.Root style={{width: '100%'}}>*/}
+        {/*    <Table.Header/>*/}
+        {/*</Table.Root>*/}
     </StyledFormPlayer>
     </div>
 }
