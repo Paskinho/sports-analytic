@@ -12,7 +12,8 @@ import Profile from "../../assets/images/Profile.png"
 import {Container} from "../../common/styles/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import Star from '../../assets/icons/star'
-import React from "react";
+import React, {useState} from "react";
+import {useGetMeQuery} from "../../services/auth/auth";
 
 type HeaderProps = {
     isAuth: boolean
@@ -57,9 +58,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
         return navigate("Profile")
     }
 
-    const handleNameChanged = () => {
-        alert('Change theme')
-    }
+    const handleNameChanged = useHandleThemeChanged()
 
     return (
         <StyledHeader>
@@ -146,6 +145,15 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
             {/*{!isAuth && <Button variant="primary">Sign In</Button>}*/}
         </StyledHeader>
     )
+}
+
+function useHandleThemeChanged () {
+    const [state, setState] = useState(false)
+
+    return () => {
+        document.body.classList.toggle('dark-mode', state)
+        setState(!state)
+    }
 }
 
 const StyledHeader = styled.header`
