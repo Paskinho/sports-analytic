@@ -12,6 +12,7 @@ import Profile from "../../assets/images/Profile.png"
 import {Container} from "../../common/styles/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import Star from '../../assets/icons/star'
+import React from "react";
 
 type HeaderProps = {
     isAuth: boolean
@@ -56,12 +57,18 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
         return navigate("Profile")
     }
 
+    const handleNameChanged = () => {
+        alert('Change theme')
+    }
 
     return (
         <StyledHeader>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'} direction={'row'}>
                     <StyledNav>
+                        <Button className={s.buttonHeader} variant={'primary'} onClick={handleNameChanged}>
+                            Change theme
+                        </Button>
                         <Logo onClick={navToHome}/>
                         <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
 

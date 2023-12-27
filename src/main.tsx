@@ -21,6 +21,7 @@ import {NewPassword} from "./features/auth/NewPassword";
 import {Teams} from "./features/teams/Teams";
 import {FavoritePlayers} from "./features/players/favoritePlayers/favoritePlayers";
 import {Cards} from "./features/cards";
+import {Button} from "./components/ui/button";
 
 
 
@@ -84,6 +85,7 @@ const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 
+
 root.render(
     <Provider store={store}>
         <BrowserRouter>
@@ -93,6 +95,7 @@ root.render(
             <App/>
         </BrowserRouter>
         <RouterProvider router={router}/>
+
         <Footer/>
     </Provider>
 );
