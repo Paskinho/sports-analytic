@@ -27,7 +27,11 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
     const navigate = useNavigate()
     const [editMode, setEditMode] = useState(false)
 
-    const handleAvatarChanged = () => {
+    const handleAvatarChanged = (e: any) => {
+        if (e.target.files.length) {
+            e.target.files
+        }
+
         onAvatarChange('newAvatar')
     }
 
