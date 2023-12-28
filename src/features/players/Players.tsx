@@ -18,9 +18,9 @@ export const Players = ({players}) => {
 
     const [searchItem, setSearchItem] = useState('')
 
-    const filteredPlayers = players.filter(player =>
-    player.toLowerCase().includes(searchItem.toLowerCase())
-    )
+    // const filteredPlayers = players.filter(player =>
+    // player.toLowerCase().includes(searchItem.toLowerCase())
+    // )
 
     const onSearchPlayers = () => {
         return alert("Successfully search")
@@ -55,11 +55,12 @@ export const Players = ({players}) => {
             </div>
 
             <Button onClick={getPlayers}>Get Players</Button>
-            <ul>
-                {filteredPlayers.map((player,index)=> (
-                    <li key={index}>{player}</li>
-                ))}
-            </ul>
+
+            {/*<ul>*/}
+            {/*    {filteredPlayers.map((player,index)=> (*/}
+            {/*        <li key={index}>{player}</li>*/}
+            {/*    ))}*/}
+            {/*</ul>*/}
             {/*<Table.Root>*/}
             {/*    <Table.Header>*/}
             {/*        <Table.Body>*/}

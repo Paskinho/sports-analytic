@@ -8,6 +8,7 @@ import {Button} from "../../components/ui/button";
 import Camera from "../../assets/icons/camera";
 import Logout from "../../assets/icons/logout";
 import s from "./styles.module.scss"
+import {useState} from "react";
 
 type PersonalInformationProps = {
     email: string,
@@ -24,6 +25,7 @@ export const PersonalInformation = ({email, avatar, name = "Uladzsislau", onLogo
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
+    const [editMode, setEditMode] = useState(false)
 
     const handleAvatarChanged = () => {
         onAvatarChange('newAvatar')
