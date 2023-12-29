@@ -35,6 +35,8 @@ export const Statistics = () => {
         return alert('Success create')
     })
 
+    const [selectedPlayer, setSelectedPlayer] = useState([])
+
     const columns = [
         {key: "Player", title: "Player"},
         {key: "Param", title: "Param"},
@@ -58,6 +60,12 @@ export const Statistics = () => {
             </Modal>
             <Table.Root style={{width: "100%"}}>
                 <Table.Header columns={columns}/>
+                <Table.Body>
+                    <Table.Row key={1}>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                    </Table.Row>
+                </Table.Body>
             </Table.Root>
         </StyledDivStatistics>
     );
