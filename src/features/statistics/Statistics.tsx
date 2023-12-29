@@ -35,6 +35,10 @@ export const Statistics = () => {
         return alert('Success create')
     })
 
+    const addPlayerToCompare = () => {
+
+    }
+
 
     return (
         <StyledDivStatistics>
@@ -46,18 +50,20 @@ export const Statistics = () => {
                 <form onSubmit={formCreated}>
                     <TextField label={"Compare player №1"}/>
                     <TextField label={"Compare player №2"}/>
-                    <Button type={'submit'}>Add</Button>
+                    <Button type={'submit'} onClick={addPlayerToCompare}>Add</Button>
                 </form>
             </Modal>
-            <Table.Root />
+            <Table.Root>
+
+            </Table.Root>
         </StyledDivStatistics>
     );
 };
 
 const StyledDivStatistics = styled.div`
   display: flex;
+  margin-top: 100px;
   //justify-content: center;
   //align-items: center;
   flex-direction: column;
-
 `
