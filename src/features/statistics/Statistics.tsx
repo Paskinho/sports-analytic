@@ -35,6 +35,12 @@ export const Statistics = () => {
         return alert('Success create')
     })
 
+    const columns = [
+        {key: "Player", title: "Player"},
+        {key: "Param", title: "Param"},
+    ]
+
+
     const addPlayerToCompare = () => {
 
     }
@@ -42,9 +48,6 @@ export const Statistics = () => {
 
     return (
         <StyledDivStatistics>
-            GLOBAL STATISTICS
-            GLOBAL STATISTICS
-            GLOBAL STATISTICS
             <Checkbox>+</Checkbox>
             <Modal open={showModal} onClose={closeModal} title={'Create compare'}>
                 <form onSubmit={formCreated}>
@@ -53,8 +56,8 @@ export const Statistics = () => {
                     <Button type={'submit'} onClick={addPlayerToCompare}>Add</Button>
                 </form>
             </Modal>
-            <Table.Root>
-
+            <Table.Root style={{width: "100%"}}>
+                <Table.Header columns={columns}/>
             </Table.Root>
         </StyledDivStatistics>
     );
