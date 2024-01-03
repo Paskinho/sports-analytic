@@ -2,7 +2,7 @@ import {instance} from "../../common/api/common.api";
 
 export const playersApi = {
     getPlayers: (arg: ArgPlayersType) => {
-        return instance.get('players', {params: {...arg}})
+        return instance.get('players', {params: arg})
     }
 }
 

@@ -9,6 +9,7 @@ import {ControlledTextField} from "../../components/ui/controlled/controlled-tex
 import React, {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
+import {PlayerType} from "./player/player.slice";
 
 
 export const Players = ({players}) => {
@@ -26,8 +27,9 @@ export const Players = ({players}) => {
         return alert("Successfully search")
     }
 
-    const getPlayers = (players: any) => {
+    const getPlayers = (players: PlayerType) => {
         dispatch(playersThunks.getPlayers()).then((res) => {
+            // {players}
             // toast.success('Successfully')
         })
     }
