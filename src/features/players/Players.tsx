@@ -29,6 +29,7 @@ export const Players = ({players}) => {
 
     const getPlayers = (players: PlayerType) => {
         dispatch(playersThunks.getPlayers()).then((res) => {
+            return {players} // УТОЧНИТЬ!
             // {players}
             // toast.success('Successfully')
         })
