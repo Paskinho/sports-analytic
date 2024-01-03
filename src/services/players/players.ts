@@ -6,5 +6,14 @@ export const playersApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl:import.meta.env.VITE_BASE_API_URL,
         credentials: 'include'
+    }),
+    endPoints: builder => ({
+        getPlayers: builder.query({
+            query: ({id, season}) => ({
+                url: 'players',
+                method: 'GET',
+                body: {id, season}
+            })
+        })
     })
 })
