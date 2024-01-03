@@ -1,6 +1,6 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query";
 
-export const playersApi = createApi({
+const playersApi = createApi({
     reducerPath: 'playersApi',
     tagTypes: ['Players'],
     baseQuery: fetchBaseQuery({
@@ -17,3 +17,5 @@ export const playersApi = createApi({
         })
     })
 })
+
+export const {usePlayerQuery} = playersApi
