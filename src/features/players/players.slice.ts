@@ -8,7 +8,7 @@ const slice = createSlice({
     reducers: {}
 })
 
-const getPlayers = createAsyncThunk<{ catalog: any }>('players', async (arg, thunkApi) => {
+const getPlayers = createAsyncThunk<{ players: any }>('players', async (arg, thunkApi) => {
     const res = await playersApi.getPlayers(arg)
     return {players: res.data}
 })
