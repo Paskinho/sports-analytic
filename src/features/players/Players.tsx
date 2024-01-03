@@ -54,7 +54,7 @@ export const Players = ({players}) => {
             </div>
 
             <Button onClick={getPlayers}>Get Players</Button>
-
+            {players}
             {/*<ul>*/}
             {/*    {filteredPlayers.map((player,index)=> (*/}
             {/*        <li key={index}>{player}</li>*/}
