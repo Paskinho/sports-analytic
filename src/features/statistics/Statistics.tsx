@@ -60,11 +60,13 @@ export const Statistics = () => {
             </Modal>
             <Table.Root style={{width: "100%"}}>
                 <Table.Header columns={columns}/>
-                <Table.Body>
+                <Table.Body>{selectedPlayer.map((player)=> (
                     <Table.Row key={1}>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
+                            <Table.Cell></Table.Cell>
+                            <Table.Cell></Table.Cell>
+
                     </Table.Row>
+                ))}
                 </Table.Body>
             </Table.Root>
         </StyledDivStatistics>

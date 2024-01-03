@@ -15,8 +15,9 @@ const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api-football-
 export const instance = axios.create({
     method: 'GET',
     baseURL: 'https://api-football-v1.p.rapidapi.com/v3/',
-    withCredentials: true,
+    // withCredentials: true,
     headers: {
+        // "content-type": "application/json",
         // 'Access-Control-Allow-Origin': '*',
         'x-rapidapi-key': '9632728134msh4ac72251815e590p17fa26jsn8e7d8d692b1b',
         'x-rapidapi-host': 'api-football-v1.p.rapidapi.com'
