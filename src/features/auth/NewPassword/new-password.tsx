@@ -50,9 +50,9 @@ export const NewPassword = (props: NewPasswordProps) => {
                     <Typography variant={'caption'} className={s.instructions}>
                         Create new password and we will send you further instructions to email
                     </Typography>
-                        <Button fullWidth type={"submit"}>
-                            Create new password
-                        </Button>
+                    <Button fullWidth type={"submit"}>
+                        Create new password
+                    </Button>
                 </form>
             </Card>
         </>

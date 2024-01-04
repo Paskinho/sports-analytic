@@ -37,13 +37,13 @@ export const authApi = createApi({
             })
         }),
         logout: builder.mutation<unknown, any>({
-            query:() => ({
+            query: () => ({
                 url: 'auth/logout',
                 method: 'POST',
             }),
             async onQueryStarted(_, {dispatch, queryFullfilled}) {
                 const patchResult = dispatch(
-                    authApi.util.updatedQueryData('getMe', undefined, ()=>{
+                    authApi.util.updatedQueryData('getMe', undefined, () => {
                         return null
                     })
                 )
@@ -57,4 +57,4 @@ export const authApi = createApi({
     })
 })
 
-export const { useGetMeQuery, useLogoutMutation, useLoginMutation, useSignUpMutation } = authApi
+export const {useGetMeQuery, useLogoutMutation, useLoginMutation, useSignUpMutation} = authApi
