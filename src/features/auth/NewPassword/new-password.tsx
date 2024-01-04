@@ -45,12 +45,12 @@ export const NewPassword = (props: NewPasswordProps) => {
                         type={'password'}
                         containerProps={{className: s.input}}
                     >
-                        <Typography variant={'caption'} className={s.instructions}>
-                            Create new password and we will send you further instructions to email
-                        </Typography>
-                        <Button fullWidth type={"submit"}>
-                            Create new password
-                        </Button>
+                        {/*<Typography variant={'caption'} className={s.instructions}>*/}
+                        {/*    Create new password and we will send you further instructions to email*/}
+                        {/*</Typography>*/}
+                    {/*    <Button fullWidth type={"submit"}>*/}
+                    {/*        Create new password*/}
+                    {/*    </Button>*/}
                     </ControlledTextField>
                 </form>
             </Card>
