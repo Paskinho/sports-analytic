@@ -39,6 +39,7 @@ font-weight: bold;
 
 .subtitle1:hover {
 color: #01949A;
+    transition: 0.2 ease-in-out;;
 }
 
 .body2 {
