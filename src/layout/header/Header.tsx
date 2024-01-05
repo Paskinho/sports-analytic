@@ -69,11 +69,9 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             Change theme
                         </Button>
                         <Logo onClick={navToHome}/>
-                        <Typography classname={s.headerText} variant={'subtitle1'} color={'inherit'} onClick={navToHome} >Home</Typography>
-
+                        <Typography classname={s.headerText} variant={'subtitle1'} color={'inherit'} onClick={navToHome}>Home</Typography>
                         <Dropdown trigger={<button>
                             <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
-
                         </button>}>
                             <div className={s.dropdownContainer}>
                             <DropdownItem>
