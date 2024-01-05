@@ -64,12 +64,12 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'} direction={'row'}>
-                    <StyledNav>
+                    <div className={s.nav}>
                         <Button className={s.buttonHeader} variant={'primary'} onClick={handleNameChanged}>
                             Change theme
                         </Button>
                         <Logo onClick={navToHome}/>
-                        <Typography variant={'subtitle1'} color={'inherit'} onClick={navToHome} classname={s.headerText}>Home</Typography>
+                        <Typography classname={s.headerText} variant={'subtitle1'} color={'inherit'} onClick={navToHome} >Home</Typography>
 
                         <Dropdown trigger={<button>
                             <Typography variant={'subtitle1'} color={'inherit'} onClick={navToPlayers}>Players</Typography>
@@ -139,7 +139,7 @@ export const Header = ({isAuth, userInfo}: HeaderProps) => {
                             // onSelect={onSignOut}
                         />
                     </Dropdown>
-                    </StyledNav>
+                    </div>
                 </FlexWrapper>
             </Container>
             {/*{!isAuth && <Button variant="primary">Sign In</Button>}*/}
@@ -168,13 +168,4 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   padding: 20px 0;
   align-items: center;
-`
-
-const StyledNav = styled.nav`
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-content: start;
-  align-items: center;
-
 `

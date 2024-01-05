@@ -1,13 +1,9 @@
-.header {
-  height: 70px;
-  box-shadow: 1px 2px 1px 1px lightgray;
-  background-color: rgb(255, 44, 0);
-  grid-area: header;
+.nav {
   display: flex;
-  width: 1500px;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
+  align-content: start;
   align-items: center;
-  padding-right: 50px;
 }
 
 .button {
@@ -63,11 +59,12 @@
   //width: 100%
 }
 
-//.headerText {
-//  //transition: 0.2 ease-in-out;
-//}
-//
-//.headerText:hover {
-//  transition: 0.2 ease-in-out;
-//
-//}
+.headerText {
+  //transition: 0.2 ease-in-out;
+
+}
+
+.headerText:hover {
+  transition: 5ms;
+  font-size: 120%;
+}
