@@ -13,3 +13,34 @@
 
   background-color: rgb(0 0 0 / 50%);
 }
+
+.loader {
+  position: relative;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+
+  border: 3px solid #fff;
+  border-radius: 50%;
+
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+
+  border: 3px solid transparent;
+  border-bottom-color: var(--color-accent-500);
+  border-radius: 50%;
+}
