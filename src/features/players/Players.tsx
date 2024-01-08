@@ -6,7 +6,7 @@ import {toast} from "react-toastify";
 import {useAppDispatch} from "../../common/components/hooks/useAppDispatch";
 import {Table} from '../../components/ui/table'
 import {ControlledTextField} from "../../components/ui/controlled/controlled-text-field";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {PlayerType} from "./player/player.slice";
@@ -40,6 +40,10 @@ export const Players = ({players}) => {
         control, register, handleSubmit,
         formState: {errors}
     } = useForm({})
+
+    useEffect(()=> {
+        fetch('https://api-football-v1.p.rapidapi.com/v3/players').then(res => res.json()).then(data => data)
+    })
 
     return (
         <div className={s.players}>
