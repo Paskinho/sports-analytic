@@ -7,7 +7,7 @@ export type SpinnerProps = {
     fullscreen?: boolean;
     size?: CSSProperties['width']
 } & ComponentPropsWithoutRef<'span'>
->
+
 
 export const Spinner = forwardRef<ElementRef<'span'>, SpinnerProps>(
     ({className, fullscreen, size = '48px', style, ...rest}, ref) => {
