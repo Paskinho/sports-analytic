@@ -56,7 +56,7 @@ export const Players = ({players}) => {
                 <Player name={""} club={"Liverpool"}/>
                 {/*<FavPlayer/>*/}
             </div>
-            <Spinner/>
+            {/*<Spinner fullscreen/>*/}
             <Button onClick={getPlayers}>Get Players</Button>
             {players}
             {/*<ul>*/}

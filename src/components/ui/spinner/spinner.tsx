@@ -15,9 +15,7 @@ export const Spinner = forwardRef<ElementRef<'span'>, SpinnerProps>(
             height: size,
             width: size,
             ...style,
-        }
-        satisfies
-        CSSProperties
+        } satisfies CSSProperties
 
         if (fullscreen) {
             return (
