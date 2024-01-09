@@ -20,12 +20,12 @@ export const Players = () => {
 
     const [searchItem, setSearchItem] = useState('')
 
-    // const filteredPlayers = players.filter(player =>
-    // player.toLowerCase().includes(searchItem.toLowerCase())
-    // )
 
-    const onSearchPlayers = () => {
-        return alert("Successfully search")
+    const onSearchPlayers = ({players}) => {
+        return (
+            players.filter(player =>
+                player.toLowerCase().includes(searchItem.toLowerCase())
+            ))
     }
 
     const getPlayers = (players: PlayerType) => {
@@ -42,18 +42,19 @@ export const Players = () => {
     } = useForm({})
 
     // request for API
-
-    const [players, setPlayers] = useState([])
-
-    useEffect(() => {
-        fetch('https://api-football-v1.p.rapidapi.com/v3/players')
-            .then(res => res.json())
-            .then(data => setPlayers(data))
-    }, [])
+    //
+    // const [players, setPlayers] = useState([])
+    //
+    // useEffect(() => {
+    //     fetch('https://api-football-v1.p.rapidapi.com/v3/players')
+    //         .then(res => res.json())
+    //         .then(data => setPlayers(data))
+    // }, [])
 
     return (
         <div className={s.players}>
-            <div><ControlledTextField
+            <div>
+                <ControlledTextField
                 className={s.search}
                 control={control}
                 placeholder={'Search Players'}
@@ -73,7 +74,7 @@ export const Players = () => {
             {/*    {players.map(player => (*/}
             {/*        <li key={player.id}>{player.name}</li>*/}
             {/*    ))}*/}
-            {/*</ul>* for request to api render players/}
+            {/*</ul>*/}
 
 
             {/*{players}*/}
