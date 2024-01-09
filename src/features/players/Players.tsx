@@ -41,9 +41,11 @@ export const Players = () => {
         formState: {errors}
     } = useForm({})
 
+    // request for API
+
     const [players, setPlayers] = useState([])
 
-    useEffect(()=> {
+    useEffect(() => {
         fetch('https://api-football-v1.p.rapidapi.com/v3/players')
             .then(res => res.json())
             .then(data => setPlayers(data))
@@ -66,9 +68,14 @@ export const Players = () => {
             </div>
             {/*<Spinner fullscreen/>*/}
             <Button onClick={getPlayers}>Get Players</Button>
-            {players.map(player => (
-                <li key={player.id}>{player.name}</li>
-            ))}
+
+            {/*<ul>*/}
+            {/*    {players.map(player => (*/}
+            {/*        <li key={player.id}>{player.name}</li>*/}
+            {/*    ))}*/}
+            {/*</ul>* for request to api render players/}
+
+
             {/*{players}*/}
             {/*<ul>*/}
             {/*    {filteredPlayers.map((player,index)=> (*/}
