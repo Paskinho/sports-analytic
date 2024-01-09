@@ -13,7 +13,7 @@ import {PlayerType} from "./player/player.slice";
 import {Spinner} from "../../components/ui/spinner";
 
 
-export const Players = ({players}) => {
+export const Players = () => {
 
 
     const dispatch = useAppDispatch()
@@ -41,9 +41,13 @@ export const Players = ({players}) => {
         formState: {errors}
     } = useForm({})
 
+    const [players, setPlayers] = useState([])
+
     useEffect(()=> {
-        fetch('https://api-football-v1.p.rapidapi.com/v3/players').then(res => res.json()).then(data => data)
-    })
+        fetch('https://api-football-v1.p.rapidapi.com/v3/players')
+            .then(res => res.json())
+            .then(data => setPlayers(data))
+    }, [])
 
     return (
         <div className={s.players}>
@@ -62,7 +66,10 @@ export const Players = ({players}) => {
             </div>
             {/*<Spinner fullscreen/>*/}
             <Button onClick={getPlayers}>Get Players</Button>
-            {players}
+            {players.map(player => (
+                <li key={player.id}>{player.name}</li>
+            ))}
+            {/*{players}*/}
             {/*<ul>*/}
             {/*    {filteredPlayers.map((player,index)=> (*/}
             {/*        <li key={index}>{player}</li>*/}
